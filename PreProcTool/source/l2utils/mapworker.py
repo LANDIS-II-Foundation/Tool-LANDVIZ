@@ -1,4 +1,5 @@
 import sys, os
+import logging
 from osgeo import gdal
 from osgeo import osr
 import numpy as np

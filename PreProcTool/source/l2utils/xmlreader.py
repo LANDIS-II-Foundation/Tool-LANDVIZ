@@ -3,7 +3,7 @@
 import sys, os, logging
 from lxml import etree
 
-class XMLeader(object):
+class XMLreader(object):
     # constructor
     def __init__(self, xmlFile, xsdFile = None): 
         try:

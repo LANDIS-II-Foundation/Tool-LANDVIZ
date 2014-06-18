@@ -1,0 +1,26 @@
+06/18/2014 04:11:55 PM landis.main               INFO     Start LANDIS-II PreProcTool
+06/18/2014 04:11:55 PM collector.setupConfig     INFO     Setup application configuration
+06/18/2014 04:11:55 PM collector.setupConfig     DEBUG    Detect Application Folder: C:\LandisVisualizationDevel\PreProcTool\source\main.py
+06/18/2014 04:11:55 PM collector.setupConfig     DEBUG    Detect Project File: C:\LandisVisualizationDevel\SampleData\preproc_sample_project_dev.xml
+06/18/2014 04:11:55 PM collector.setupConfig     DEBUG    Detect Output Folder: C:\LandisVisualizationDevel\sample_output
+06/18/2014 04:11:55 PM collector.createProject   INFO     Create Project
+06/18/2014 04:11:55 PM collector.createProject   DEBUG    Load Information from project file: C:\LandisVisualizationDevel\SampleData\preproc_sample_project_dev.xml
+06/18/2014 04:11:55 PM collector.createProject   INFO     Project name: "Sample Project Name"
+06/18/2014 04:11:55 PM collector.loadSRS         INFO     Load spatial refrence and geo extent from the project xml file
+06/18/2014 04:11:55 PM collector.loadSRS         DEBUG    SRS definition: PROJCS["UTM Zone 15, Northern Hemisphere",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9108"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-93],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["Meter",1]]
+06/18/2014 04:11:55 PM collector.loadSRS         DEBUG    geo extent: {'lry': '5104517.522', 'lrx': '566034.718', 'ulx': '293234.718', 'uly': '5314517.522'}
+06/18/2014 04:11:55 PM collector.loadMapPrefs    INFO     Load Map Preferences form project xml file
+06/18/2014 04:11:55 PM collector.loadMapPrefs    DEBUG    Zoom: [{'max': '11', 'init': '9', 'min': '8'}]
+06/18/2014 04:11:55 PM collector.loadMapPrefs    DEBUG    Basemap: [{'source': 'terrain', 'saturation': '0', 'contrast': '1', 'brightness': '0'}]
+06/18/2014 04:11:55 PM collector.loadDataStruct  INFO     Load Datastructure from Lanids Metadata
+06/18/2014 04:11:55 PM output.genOutputDirs      INFO     Generate output directories
+06/18/2014 04:11:55 PM preworker.prepairTables   INFO     Start prepairing Table Output
+06/18/2014 04:11:55 PM preworker.prepairTables   INFO     End prepairing Table Output [time: 0.0 sec]
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     Start prepairing Map Output
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     scenario: baseline climates
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     extension: Base Wind
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     output: severity
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     prepair year = 0 [year not available]
+06/18/2014 04:11:55 PM preworker.prepairMaps     INFO     prepair year = 5
+06/18/2014 04:11:55 PM preworker.prepairMaps     ERROR    local variable 'logOpenInputDS' referenced before assignment
+06/18/2014 04:11:55 PM preworker.prepairMaps     DEBUG    <type 'exceptions.UnboundLocalError'>::preworker.py::70
