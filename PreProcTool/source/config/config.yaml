@@ -1,0 +1,54 @@
+APPLICATION:
+    PATH: dummy
+    FILE: dummy
+
+PROJECT:
+    INPUT_XML: dummy
+    OUTPUT_DIR: dummy
+
+METADATA:
+    DIR: Metadata
+
+XSD:
+    PROJECT: config\xsd\project_file.xsd
+    PROJECTION: config\xsd\projection.xsd
+    METADATA: config\xsd\metadata.xsd
+
+XPATH:
+    PROJECTNAME: /landisPreProcProject
+    SCENARIOLIST: /landisPreProcProject/input/scenarios/scenario
+    SCENARIOREPLICATION: /landisMetadata/extension/scenario-replication
+    EXTENSION: /landisMetadata/extension
+    OUTPUT: /landisMetadata/extension/outputs/output
+    PROJECTION: /landisPreProcProject/input/spatialRefernce/projection
+    GEOEXTENT: /landisPreProcProject/input/spatialRefernce/extent
+    CSVFIELD: /landisMetadata/output/fields/field
+    MAPZOOM: /landisPreProcProject/output/webVisConfig/map/zoom
+    BASEMAP: /landisPreProcProject/output/webVisConfig/map/baseMap
+    CLASSESCOLROS: /landisPreProcProject/output/webVisConfig/map/defaultClassesColors
+
+ATTRIB:
+    PROJECTNAME: projectName
+    SCENARIOPATH: inputPath
+    SCENARIONAME: displayName
+    TIMEMAX: timeMin
+    TIMEMAX: timeMax
+    RASTERCELLSIZE: rasterOutCellArea
+    PROJ4: proj4
+    ULX: ulx
+    ULY: uly
+    LRX: lrx
+    LRY: lry
+    EXTENSIONNAME: name
+    TIMEINTERVAL: timeInterval
+    OUTPUTTYPE: type
+    OUTPUTNAME: name
+    VISUALIZE: visualize
+    FILEPATHTEMPLATE: filePath
+    MAPUNIT: unit
+    DATATYPE: dataType
+    METADATAFILEPATH: MetadataFilePath
+    CSVFILEPATH: filePath
+
+DEFAULT:
+    PROJECTTITLE: LANDIS-II-Visualization 
