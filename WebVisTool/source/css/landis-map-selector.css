@@ -1,0 +1,80 @@
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+::-webkit-focus-inner {border:0;}
+
+.map-control .map-control-container {
+    position:relative;
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.map-control .map-control-button {
+  background: url(../img/map_selector.png) no-repeat 0px 0px;
+  position: relative;
+  height:30px;
+  padding-left: 30px;
+
+  margin-right: 10px;
+  cursor: pointer;
+
+  float: left;
+
+}
+.map-control .map-control-button > span {
+  line-height: 30px;
+  font-size: 11pt;
+  padding-left: 5px;
+}
+
+.map-control .map-control-button:hover {
+    background-position: 0px -30px;
+    color: #39f;
+}
+
+.dropdown-map-control {
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    max-width:800px;
+}
+
+.dropdown-map-control .output-list {
+  float: left;
+  border: 1px solid #999;
+  width: 300px;
+
+  
+}
+
+.dropdown-map-control .output-list .extension-container {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.dropdown-map-control .output-list .extension-container:last-child {
+  border-right: 0;
+}
+
+.dropdown-map-control .output-list .extension-container .extension-topic {
+  padding: 4px 10px;
+  margin: 0;
+  background-color: #eee;
+  font-weight: bold;
+}
+.dropdown-map-control .output-list .extension-container .extension-topic.selected {
+  background-color: #39f;
+  color: #eee;
+}
+
+.dropdown-map-control .output-list .extension-container .extension-outputs{
+  overflow-y:scroll;
+  padding: 5px 5px;
+  max-height: 120px;
+
+}

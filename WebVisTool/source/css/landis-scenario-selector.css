@@ -1,0 +1,40 @@
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+::-webkit-focus-inner {border:0;}
+
+.scenario-selector .scenario-selector-container {
+  position:relative;
+  color: #666;
+  font-size: 11pt;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.scenario-selector-button {
+  background: url(../img/scenario_selector.png) no-repeat 0px 0px;
+  position: relative;
+  height:30px;
+  padding-left: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  float: left;
+}
+
+.scenario-selector-button > span {
+  line-height: 30px;
+  font-size: 11pt;
+  padding-left: 5px;
+}
+
+.scenario-selector-button:hover {
+  background-position: 0px -30px;
+  color: #39f;
+}
+
+.dropdown-scenario-selector{
+  color: #666;
+  font-size: 9pt;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0;
+}
