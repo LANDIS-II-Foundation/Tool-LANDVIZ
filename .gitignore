@@ -7,5 +7,6 @@ PreProcTool/build/dist/PreProcTool
 PreProcTool/build/installer/Landis Pre Proc Tool-cache
 PreProcTool/build/installer/Landis Pre Proc Tool-SetupFiles
 PreProcTool/build/pyinstaller
+PreProcTool/build/installer
 PreProcTool/build/gdal-data
 PreProcTool/build/*.spec
