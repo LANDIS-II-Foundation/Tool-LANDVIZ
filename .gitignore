@@ -2,3 +2,9 @@
 # PreProcTool #
 ###############
 PreProcTool/WinDevelEnv
+PreProcTool/build/build/PreProcTool
+PreProcTool/build/dist/PreProcTool
+PreProcTool/build/installer/Landis Pre Proc Tool-cache
+PreProcTool/build/installer/Landis Pre Proc Tool-SetupFiles
+PreProcTool/build/pyinstaller
+PreProcTool/build/*.spec
