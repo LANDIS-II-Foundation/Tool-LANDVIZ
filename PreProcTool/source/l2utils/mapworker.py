@@ -2,72 +2,37 @@ import sys, os
 from osgeo import gdal
 from osgeo import osr
 import numpy as np
-import time
 from scipy import stats
 
 class Mapworker(object):
 
     def __init__(self, srsWKT, geoExtent, scaleType):
-
-        #self.loadSRSFromFile(ecoregion)
         self.in_prj = srsWKT
-                
-        #Get GeoTransform
         self.geoExtent = geoExtent
-
         self.scaleType = scaleType.lower()
 
         
     def process(self, in_fn, out_fn):
-        #print in_fn
-
         #Open Map
-        try:
-            # start = time.time()
-            self.openInputDataset(in_fn)
-            # print "openDataset:", time.time() - start
-        except Exception as e:
-            print "Exception@Mapworker.openDataset:", e
-            exc_type, exc_obj, exc_tb = sys.exc_info()
-            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
-            sys.exit()
-
-        # start = time.time()      
+        self.openInputDataset(in_fn)
+        # Create OutputDataset and get Stats
         statistics = self.createOutputDataset()
-        # print "createOutputDataset:", time.time() - start
-
-        # start = time.time()  
+        # Export OutputDataset to PNG
         self.exportToPng(self.out_ds, out_fn)
-        # print "exportToPng:", time.time() - start
-
-        # print "------------------"
 
         self.in_ds = None
         self.out_ds = None
 
         return statistics
 
-    def loadSRSFromFile(self, ecoregion):
-    
-        #Open File
-        ds = gdal.Open(ecoregion, gdal.GA_ReadOnly)
-        if ds is None:
-            return -1
-            
-        #Get Projection
-        self.in_prj = ds.GetProjectionRef()
-                
-        #Get GeoTransform
-        self.in_gt = ds.GetGeoTransform()
-        
-        ds = None
 
     def openInputDataset(self, in_fn):
         try:
+            logOpenInputDS = logging.getLogger('mapworker.inputDataset')
+
             self.in_ds = gdal.Open(in_fn, gdal.GA_Update)
             if self.in_ds is None:
-                return -1
+                raise Exception ('Can\'t open input dataset: {}'.format(in_fn))
 
             self.in_band_1 = self.in_ds.GetRasterBand(1)
 
@@ -94,15 +59,20 @@ class Mapworker(object):
                 stats = self.in_band_1.GetStatistics(0, 1)
                 self.in_min = stats[0]
                 self.in_max = stats[1]
+
         except Exception as e:
-            print "Exception@Mapworker.openDataset_IN:", e
+            logOpenInputDS.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logOpenInputDS.debug(exc_type, fname, exc_tb.tb_lineno)
+
             sys.exit()
 
     def createOutputDataset(self):
         try:
+            logCreateOutDS = logging.getLogger('mapworker.outputDataset')
+
             format = "MEM"  
             driver = gdal.GetDriverByName( format ) 
 
@@ -122,12 +92,9 @@ class Mapworker(object):
             # self.out_ds.GetRasterBand(4).SetNoDataValue(self.in_band_1.GetNoDataValue())
             statsDict = {}
             statsDict['minMaxUnmasked'] = list([self.in_min, self.in_max])
-            #print 'minMax:', self.in_min, self.in_max
             statsDict['gdalDataType'] = int(self.in_band_1.DataType)
-            #print 'gdalDataType:', self.in_band_1.DataType
 
             #statsDict['scaleType'] = self.scaleType
-            #print 'scaleType:', self.scaleType
 
             if self.scaleType == 'ordinal':
                 maskvalue1 = 1.0
@@ -141,20 +108,15 @@ class Mapworker(object):
             if self.scaleType == 'nominal':
                 statsDict['minMaxMasked'] = [np.asscalar(np.amin(data_test_masked)), np.asscalar(np.amax(data_test_masked))]
                 statsDict['middle'] = (stats.mode(data_test_masked)[0]).tolist()
-                #print 'mode', stats.mode(data_test_masked)
                 statsDict['uniqueValsMaksed'] = (np.unique(data_test_masked)).tolist()
-                #print 'unique values', np.unique(data_test_masked)
                 
             if self.scaleType == 'ordinal':
                 statsDict['minMaxMasked'] = [np.asscalar(np.amin(data_test_masked)), np.asscalar(np.amax(data_test_masked))]
-                #print 'min max', np.amin(data_test_masked), np.amax(data_test_masked)
                 statsDict['middle'] = np.asscalar(np.median(data_test_masked))
-                #print 'median', np.median(data_test_masked)
             
             if self.scaleType == 'continuous':
                 statsDict['minMaxMasked'] = [np.asscalar(np.amin(data_test_masked)), np.asscalar(np.amax(data_test_masked))]
-                statsDict['middle'] =  np.asscalar(np.mean(data_test_masked))
-               # print 'mean', np.mean(data_test_masked)                
+                statsDict['middle'] =  np.asscalar(np.mean(data_test_masked))          
 
             for i in range(0, self.in_ds.RasterYSize, self.in_yBlockSize):  
                 if i + self.in_yBlockSize < self.in_ds.RasterYSize:  
@@ -171,7 +133,7 @@ class Mapworker(object):
                     
                     o = np.empty((rows, cols), np.uint8)
                     o.fill(255)
-                   # self.out_ds.GetRasterBand(4).WriteArray(o, j, i)
+                    # self.out_ds.GetRasterBand(4).WriteArray(o, j, i)
 
                     z = np.zeros((rows, cols), np.uint8)
 
@@ -220,10 +182,12 @@ class Mapworker(object):
             return statsDict
 
         except Exception as e:
-            print "Exception@Mapworker.createOutputDataset:", e
+            logCreateOutDS.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logCreateOutDS.debug(exc_type, fname, exc_tb.tb_lineno)
+
             sys.exit()
                     
 
