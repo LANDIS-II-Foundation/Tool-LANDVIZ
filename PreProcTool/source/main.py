@@ -82,19 +82,9 @@ def main(script, *args):
 
         outputworker = utils.OutputWorker(PROJECT, CONFIG)
         outputworker.generateOutputDirs()
-
-        # FIXME move timing stuff to preworker ...
-        logMain.info('Start prepairing Table Output')
-        start = time.time()
-        preworker.prepairTables()
-        end = time.time()
-        logMain.info('End prepairing Table Output [time: {} sec]'.format(end - start))
-
-        logMain.info('Start prepairing Map Output')
-        start = time.time()
+        
+        preworker.prepairTables()        
         preworker.prepairMaps()
-        end = time.time()
-        logMain.info('End prepairing Map Output [time: {} sec]'.format(end - start))
 
         outputworker.saveMetadataJson()
         outputworker.copyWebbase()

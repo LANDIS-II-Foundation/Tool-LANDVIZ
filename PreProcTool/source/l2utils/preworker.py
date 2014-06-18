@@ -3,7 +3,7 @@
 import sys, os, shutil, math, logging
 import l2data as landis, l2utils as utils
 import tilertools
-import json
+import json, time
 
 class Preworker(object):
     """
@@ -18,6 +18,8 @@ class Preworker(object):
     def prepairTables(self):
         try:
             logPrepairTables = logging.getLogger('preworker.prepairTables')
+            logPrepairTables.info('Start prepairing Table Output')
+            start = time.time()
             for s in self.PROJECT:
                 for e in s:
                     for o in e:
@@ -25,6 +27,8 @@ class Preworker(object):
                             src = o.csvFilePath
                             dst = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex)) + "\\" +str(o.outputIndex) + ".csv"
                             shutil.copyfile(src, dst)
+            end = time.time()
+            logPrepairTables.info('End prepairing Table Output [time: {} sec]'.format(end - start))
         except Exception as e:
             logPrepairTables.error('{}'.format(e))
 
@@ -40,15 +44,18 @@ class Preworker(object):
             maxZoom = self.PROJECT.zoomMax
             z = self.PROJECT.getZoomString()
 
+            logPrepairMaps = logging.getLogger('preworker.prepairMaps')
+            logPrepairMaps.info('Start prepairing Map Output')
+            start = time.time()
+
             for s in self.PROJECT:
                 for e in s:
                     for o in e:
                         if o.outputType == "Map":
-                            print '---------'
-                            print 'scenario: ', s.scenarioName
-                            print 'extension: ', e.extensionName
-                            print 'output: ', o.outputName
-                            #print o.filePathTemplate
+                            logPrepairMaps.info('scenario: {}'.format(s.scenarioName))
+                            logPrepairMaps.info('extension: {}'.format(e.extensionName))
+                            logPrepairMaps.info('output: {}'.format(o.outputName))
+            
                             #FIXME: year 0 ??? s.timeMin + e.timeInterval
                             tempPathConcat = list()
                             for year in range(s.timeMin, s.timeMax + e.timeInterval, e.timeInterval):
@@ -59,22 +66,16 @@ class Preworker(object):
                                     tempPath = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex)) + "\\" + str(year) + ".png"
                                     tempPathConcat.append(tempPath)
                                     mw = utils.Mapworker(self.PROJECT.spatialReferenceWKT, self.PROJECT.geoExtent, o.dataType)
-                                    print 'prepair year = {}'.format(year)
+                                    logPrepairMaps.info('prepair year = {}'.format(year))
                                     stats = mw.process(rasterMapAtYear, tempPath)
                                     #print stats
                                     o.addStats(year, stats)
 
-                                    # generate tiles with modified gdal2tiles
-                                    tilesOutputDirTT = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex)) #, str(year))
-                                    #tilesOutputDirG2T = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex), str(year))
-                                    #gdal2tiles = utils.GDAL2Tiles( ['-r', 'near', '-z', str(minZoom)+'-'+str(maxZoom), '-w', 'none', tempPath, tilesOutputDirG2T] )
-                                    #gdal2tiles.process()
+                                    tilesOutputDirTT = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex))
                   
-                                    # os.remove(tempPath)
-                                    # os.remove(tempPath+".aux.xml")
                                 else:
                                     #rasterMapAtYear not exists ... data replacement?
-                                    print 'prepair year = {} [year not available]'.format(year)
+                                    logPrepairMaps.info('prepair year = {} [year not available]'.format(year))
                             #tiling mit tilertools                            
                             tiling = tilertools.GdalTiler(['-s', '-p', 'xyz', '-z', z, '-t', tilesOutputDirTT] + tempPathConcat)
 
@@ -111,16 +112,22 @@ class Preworker(object):
                             f = open(os.path.normpath(os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex)) + '\metadata.stats.json'), 'w')
                             print >> f, j
                             f.close()
+            end = time.time()
+            logPrepairMaps.info('End prepairing Map Output [time: {} sec]'.format(end - start))
         except Exception as e:
-            print "Exception@Preworker.prepairMaps:", e
+            logPrepairMaps.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logPrepairMaps.debug('{}::{}::{}'.format(exc_type, fname, exc_tb.tb_lineno))
+
             sys.exit()
 
     def createNominalClassification(self, min, max, middle, scaleType):
         try:
             # FIXME: classcount not fixed (from input file)
+            logNominal = logging.getLogger('preworker.nominalClass')
+
             classification = {}
             classification['drawReverse'] = False
                        
@@ -131,15 +138,19 @@ class Preworker(object):
 
             return classification
         except Exception as e:
-            print "Exception@Preworker.createClassification:", e
+            logNominal.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logNominal.debug('{}::{}::{}'.format(exc_type, fname, exc_tb.tb_lineno))
+
             sys.exit()
 
     def createOrdinalClassification(self, min, max, middle, scaleType):
         try:
             # FIXME: classcount not fixed (from input file)
+            logOrdinal = logging.getLogger('preworker.ordinalClass')
+
             classCount = 4;
             classification = {}
             classification['drawReverse'] = False
@@ -161,15 +172,18 @@ class Preworker(object):
 
             return classification
         except Exception as e:
-            print "Exception@Preworker.createClassification:", e
+            logOrdinal.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logOrdinal.debug('{}::{}::{}'.format(exc_type, fname, exc_tb.tb_lineno))
+
             sys.exit()
 
     def createContinuousClassification(self, min, max, middle, scaleType):
             # FIXME: classcount not fixed (from input file)
         try:
+            logContinuous = logging.getLogger('preworker.continuousClass')
             classCount = 4;
             classification = {}
             classification['drawReverse'] = False
@@ -239,14 +253,17 @@ class Preworker(object):
             return classification
 
         except Exception as e:
-            print "Exception@Preworker.createClassification:", e
+            logContinuous.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logContinuous.debug('{}::{}::{}'.format(exc_type, fname, exc_tb.tb_lineno))
+
             sys.exit()
 
     def getOperator(self, value):
         try:
+            logOperator = logging.getLogger('preworker.getOperator')
             if(value > 0):
                 digits = math.trunc(math.log10(math.fabs(value)))
             else:
@@ -256,18 +273,13 @@ class Preworker(object):
             else:
                 return 10**(digits-2)
         except Exception as e:
-            print "Exception@Preworker.getOperator:", e
+            logOperator.error('{}'.format(e))
+
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-            print(exc_type, fname, exc_tb.tb_lineno)
+            logOperator.debug('{}::{}::{}'.format(exc_type, fname, exc_tb.tb_lineno))
+
             sys.exit()
             
     def getFilePath(self, pathTemplate, year):
         return (((pathTemplate.replace('{timestep}', year)).replace('[', '')).replace(']', '')).replace('/', '\\')
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    main()

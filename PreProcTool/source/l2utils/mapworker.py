@@ -233,25 +233,4 @@ class Mapworker(object):
         export_ds = driver.CreateCopy(out_fn, ds)
         export_ds.SetProjection(ds.GetProjectionRef())
         export_ds.SetGeoTransform(ds.GetGeoTransform())
-        export_ds = None
-
-def main():
-    LANDIS = Mapworker("EcoRegions.img")
-
-    LANDIS.process("input/acersacc-0.img","output/acersacc-0.png")
-    LANDIS.process("input/acersacc-1.img","output/acersacc-1.png")
-    LANDIS.process("input/acersacc-10.img","output/acersacc-10.png")
-    LANDIS.process("input/acersacc-20.img","output/acersacc-20.png")
-    
-    LANDIS.process("input/poputrem-0.img","output/poputrem-0.png")
-    LANDIS.process("input/poputrem-1.img","output/poputrem-1.png")
-    LANDIS.process("input/poputrem-10.img","output/poputrem-10.png")
-    LANDIS.process("input/poputrem-20.img","output/poputrem-20.png")
-    
-    # LANDIS.process("bio-reclass1-0.img", "bio-reclass1-0.png")
-    # LANDIS.process("bio-reclass1-10.img", "bio-reclass1-10.png")
-    # LANDIS.process("bio-reclass1-20.img", "bio-reclass1-20.png")
-    # LANDIS.process("bio-reclass1-30.img", "bio-reclass1-30.png")
-
-if __name__ == '__main__':
-    main()   
+        export_ds = None 
