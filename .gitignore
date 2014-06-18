@@ -9,6 +9,7 @@ PreProcTool/build/installer/Landis Pre Proc Tool-SetupFiles
 PreProcTool/build/pyinstaller
 PreProcTool/build/gdal-data
 PreProcTool/build/*.spec
+PreProcTool/source/logs
 *.pyc
 
 ###############
