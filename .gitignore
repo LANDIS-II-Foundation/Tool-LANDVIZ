@@ -14,3 +14,8 @@ PreProcTool/build/*.spec
 # WebVisTool  #
 ###############
 WebVisTool/source/landisdata
+
+##############
+# SampleData #
+##############
+SampleData/
