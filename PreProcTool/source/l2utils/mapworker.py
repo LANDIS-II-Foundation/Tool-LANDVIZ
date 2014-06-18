@@ -4,7 +4,7 @@ from osgeo import osr
 import numpy as np
 from scipy import stats
 
-class Mapworker(object):
+class MapWorker(object):
 
     def __init__(self, srsWKT, geoExtent, scaleType):
         self.in_prj = srsWKT

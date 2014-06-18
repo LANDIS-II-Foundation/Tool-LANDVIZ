@@ -78,7 +78,7 @@ def main(script, *args):
         PROJECT = collector.setupProject()
         
         # LANDIS Preworker: prepair Tables and Maps
-        preworker = utils.Preworker(PROJECT, CONFIG)
+        preworker = utils.PreWorker(PROJECT, CONFIG)
 
         outputworker = utils.OutputWorker(PROJECT, CONFIG)
         outputworker.generateOutputDirs()

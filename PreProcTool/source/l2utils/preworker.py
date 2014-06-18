@@ -5,7 +5,7 @@ import l2data as landis, l2utils as utils
 import tilertools
 import json, time
 
-class Preworker(object):
+class PreWorker(object):
     """
     - Assign Spatial Reference To Maps
     - Assign NoDataValue To Maps
@@ -65,7 +65,7 @@ class Preworker(object):
 
                                     tempPath = os.path.join(self.CONFIG['PROJECT']['OUTPUT_DIR'], 'landisdata', 'modeldata', str(s.scenarioIndex), str(e.extensionIndex), str(o.outputIndex)) + "\\" + str(year) + ".png"
                                     tempPathConcat.append(tempPath)
-                                    mw = utils.Mapworker(self.PROJECT.spatialReferenceWKT, self.PROJECT.geoExtent, o.dataType)
+                                    mw = utils.MapWorker(self.PROJECT.spatialReferenceWKT, self.PROJECT.geoExtent, o.dataType)
                                     logPrepairMaps.info('prepair year = {}'.format(year))
                                     stats = mw.process(rasterMapAtYear, tempPath)
                                     #print stats
