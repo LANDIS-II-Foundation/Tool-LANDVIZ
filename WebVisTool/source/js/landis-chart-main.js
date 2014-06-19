@@ -88,10 +88,9 @@
                     arrangeApplicationData();
                     this.charts[this.charts.length-1].chartVis.chart('loadData');
                 }
+
             }
-            
-            //$(window).resize();
-            //console.log('currentcharts:', this.charts);
+            arrangeApplicationData();
         };
 
         this.addChartGroup = function(map) {

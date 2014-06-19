@@ -402,10 +402,9 @@
                     arrangeApplicationData();
                     this.charts[this.charts.length-1].chartVis.chart('loadData');
                 }
+
             }
-            
-            //$(window).resize();
-            //console.log('currentcharts:', this.charts);
+            arrangeApplicationData();
         };
 
         this.addChartGroup = function(map) {
@@ -3464,17 +3463,10 @@
                     
                     ],
                 view: new ol.View2D({
-                    // center: ol.proj.transform(s.center, 'EPSG:4326', 'EPSG:3857'),
                     center: s.center,
                     resolution: s.resolution,
                     resolutions: s.resolutions,
                     extent: s.extent
-                    // extent: [
-                    //     ol.proj.transform(s.extent[0], 'EPSG:4326', 'EPSG:3857')[0],
-                    //     ol.proj.transform(s.extent[0], 'EPSG:4326', 'EPSG:3857')[1],
-                    //     ol.proj.transform(s.extent[1], 'EPSG:4326', 'EPSG:3857')[0],
-                    //     ol.proj.transform(s.extent[1], 'EPSG:4326', 'EPSG:3857')[1]
-                    // ]
                 }),
                 controls: ol.control.defaults().extend([
                         new ol.control.ScaleLine()
