@@ -21,7 +21,7 @@ class OutputWorker(object):
             if(excEnv == '.py'):
                 distutils.dir_util.copy_tree("..\..\WebVisTool\\build\dist", self.CONFIG['PROJECT']['OUTPUT_DIR'])
             if(excEnv == '.exe'):
-                distutils.dir_util.copy_tree(appPath + "\webbase", self.ONFIG['PROJECT']['OUTPUT_DIR'])
+                distutils.dir_util.copy_tree(self.CONFIG['APPLICATION']['PATH'] + "\webbase", self.ONFIG['PROJECT']['OUTPUT_DIR'])
         except Exception as e:
             logCopyWebbase.error('{}'.format(e))
 
