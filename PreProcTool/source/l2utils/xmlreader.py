@@ -12,11 +12,11 @@ class XMLreader(object):
             #parse xml file
             self.__xmlTree = etree.parse(xmlFile)
 
-            # if xsdFile is not None:
-            #     #parse xsd file IF is there
-            #     xmlSchema = etree.XMLSchema(etree.parse(xsdFile))
-            #     #validate self.__xmlTree against self.__xmlSchema
-            #     xmlSchema.assertValid(self.__xmlTree)
+            if xsdFile is not None:
+                #parse xsd file IF is there
+                xmlSchema = etree.XMLSchema(etree.parse(xsdFile))
+                #validate self.__xmlTree against self.__xmlSchema
+                xmlSchema.assertValid(self.__xmlTree)
 
 
         except Exception as e:

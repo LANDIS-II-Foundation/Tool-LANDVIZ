@@ -3,6 +3,7 @@
 ###############
 PreProcTool/WinDevelEnv
 PreProcTool/build/build/PreProcTool
+PreProcTool/build/build/Proj4Extent
 PreProcTool/build/dist/PreProcTool
 PreProcTool/build/installer/LandisPreProcToolInstaller-cache
 PreProcTool/build/installer/LandisPreProcToolInstaller-SetupFiles
