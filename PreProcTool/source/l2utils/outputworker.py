@@ -1,7 +1,10 @@
-import sys, os, logging, distutils.core
+import sys, os, logging, distutils.core, math
 from regex import sub
 import json
 import zipfile
+
+from osgeo import ogr
+from osgeo import osr
 
 class OutputWorker(object):
     def __init__(self, PROJECT, CONFIG):
@@ -21,7 +24,7 @@ class OutputWorker(object):
             if(excEnv == '.py'):
                 distutils.dir_util.copy_tree("..\..\WebVisTool\\build\dist", self.CONFIG['PROJECT']['OUTPUT_DIR'])
             if(excEnv == '.exe'):
-                distutils.dir_util.copy_tree(self.CONFIG['APPLICATION']['PATH'] + "\webbase", self.ONFIG['PROJECT']['OUTPUT_DIR'])
+                distutils.dir_util.copy_tree(self.CONFIG['APPLICATION']['PATH'] + "\webbase", self.CONFIG['PROJECT']['OUTPUT_DIR'])
         except Exception as e:
             logCopyWebbase.error('{}'.format(e))
 
@@ -127,6 +130,34 @@ class OutputWorker(object):
         try:
             logUpdateWebPrefs = logging.getLogger('output.updateWebPrefs')
             logUpdateWebPrefs.info('Update web settings file')
+
+            extent = self.PROJECT.geoExtent
+
+            ul = ogr.Geometry(ogr.wkbPoint)
+            ul.AddPoint(float(extent['ulx']), float(extent['uly']))
+
+            lr = ogr.Geometry(ogr.wkbPoint)
+            lr.AddPoint(float(extent['lrx']), float(extent['lry']))
+
+            source = osr.SpatialReference()
+            source.ImportFromWkt(self.PROJECT.spatialReferenceWKT)
+
+            target = osr.SpatialReference()
+            target.ImportFromEPSG(3857) #WebProjection 3857 #Geographic 4326
+
+            transform = osr.CoordinateTransformation(source, target)
+
+            ul.Transform(transform)
+            lr.Transform(transform)
+
+            centerX = ul.GetX() + (abs(ul.GetX() - lr.GetX())/2.0)
+            centerY = lr.GetY() + (abs(ul.GetY() - lr.GetY())/2.0)
+
+            minX = min(ul.GetX(), lr.GetX())
+            minY = min(ul.GetY(), lr.GetY())
+            maxX = max(ul.GetX(), lr.GetX())
+            maxY = max(ul.GetY(), lr.GetY())
+
             with open(os.path.normpath(self.CONFIG['PROJECT']['OUTPUT_DIR']+"/config/default_settings.json"), "r+") as jsonFile:
                 data = json.load(jsonFile)
 
@@ -137,6 +168,8 @@ class OutputWorker(object):
                 data["map"]["basemap"]["contrast"] = self.PROJECT.initContrast
                 data["map"]["basemap"]["brightness"] = self.PROJECT.initBrightness
                 data["map"]["basemap"]["source"] = self.PROJECT.mapSource
+                data["map"]["center"] = [centerX, centerY]
+                data["map"]["extent"] = [minX, minY, maxX, maxY]
 
                 jsonFile.seek(0)  # rewind
                 jsonFile.write(json.dumps(data, sort_keys=False, indent=2))

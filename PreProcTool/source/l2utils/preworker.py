@@ -46,6 +46,7 @@ class PreWorker(object):
 
             logPrepairMaps = logging.getLogger('preworker.prepairMaps')
             logPrepairMaps.info('Start prepairing Map Output')
+
             start = time.time()
 
             for s in self.PROJECT:

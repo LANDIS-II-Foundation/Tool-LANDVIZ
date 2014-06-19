@@ -245,15 +245,10 @@
                     
                     ],
                 view: new ol.View2D({
-                    center: ol.proj.transform(s.center, 'EPSG:4326', 'EPSG:3857'),
+                    center: s.center,
                     resolution: s.resolution,
                     resolutions: s.resolutions,
-                    extent: [
-                        ol.proj.transform(s.extent[0], 'EPSG:4326', 'EPSG:3857')[0],
-                        ol.proj.transform(s.extent[0], 'EPSG:4326', 'EPSG:3857')[1],
-                        ol.proj.transform(s.extent[1], 'EPSG:4326', 'EPSG:3857')[0],
-                        ol.proj.transform(s.extent[1], 'EPSG:4326', 'EPSG:3857')[1]
-                    ]
+                    extent: s.extent
                 }),
                 controls: ol.control.defaults().extend([
                         new ol.control.ScaleLine()
