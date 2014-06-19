@@ -28,7 +28,7 @@ from optparse import OptionParser
 from tiler_functions import *
 from tiler_backend import Pyramid, resampling_lst, base_resampling_lst
 import tiler_global_mercator
-import os
+import os, logging
 import map2gdal
 
 #~ import rpdb2; rpdb2.start_embedded_debugger('nRAmgJHm')
@@ -40,7 +40,6 @@ def preprocess_src(src_opt):
     src, options = src_opt;
     opt = LooseDict(options)
     res = map2gdal.process_src(src, no_error=True, opt=opt)
-    #pf('preproccess year = {}'.format(os.path.splitext(os.path.basename(src))[0]))
     ld('preprocess_src', res)
     return res
 
@@ -62,6 +61,7 @@ def process_src(src_def_opt):
 
     prm = profile(src, dest, opt)
     pf('tile year = {}'.format(os.path.splitext(os.path.basename(src))[0]))
+    ld('tile year = {}'.format(os.path.splitext(os.path.basename(src))[0]))
     prm.walk_pyramid()
 
 #----------------------------
@@ -153,11 +153,11 @@ class GdalTiler(object):
     #----------------------------
 
         (options, args) = self.parse_args(arguments)
-        logging.basicConfig(level=logging.DEBUG if options.verbose == 2 else
-            (logging.ERROR if options.verbose == 0 else logging.INFO))
+        # logging.basicConfig(level=logging.DEBUG if options.verbose == 2 else
+        #   (logging.ERROR if options.verbose == 0 else logging.INFO))
 
-        ld(os.name)
-        ld(options)
+        # ld(os.name)
+        # ld(options)
 
         if options.verbose == 2:
             set_nothreads()
@@ -174,23 +174,19 @@ class GdalTiler(object):
         except:
             raise Exception("No sources specified")
         
-        #print type(sources), sources
-        #print options
         srcOpt = []
         for s in sources:
             srcOpt.append((s, options))
-            
-        #print srcOpt
-        
+                    
         res = parallel_map(preprocess_src, srcOpt)
         
         srcDefOpt = []
         for r in flatten(res):
             srcDefOpt.append((r[0], r[1], options))
-        #print srcDefOpt
-        #sys.exit()
+        logTile = logging.getLogger('landis.tiler')
+        logTile.debug('Start tiling process with multiprocessing')
         parallel_map(process_src, srcDefOpt)
-        pf('')
+        logTile.debug('End tiling process with multiprocessing')
 
     # __init__()
 

@@ -90,7 +90,7 @@ def set_nothreads():
     multiprocessing = None
 
 def parallel_map(func, iterable):
-    ld('parallel_map', multiprocessing)
+    # ld('parallel_map', multiprocessing)
     #~ return map(func, iterable)
 
     if multiprocessing is None or len(iterable) < 2:

@@ -53,6 +53,9 @@ def main(script, *args):
         # get the path and the file of the application file (executeable)
         appPath, appFile = os.path.split(os.path.normpath(os.path.realpath(script)))
 
+        if not os.path.isdir(appPath+'\logs'):
+            os.mkdir(appPath+'\logs')
+
         logging.basicConfig(level=logging.DEBUG,
                             format='%(asctime)s %(name)-25s %(levelname)-8s %(message)s',
                             datefmt='%m/%d/%Y %I:%M:%S %p',
@@ -61,12 +64,12 @@ def main(script, *args):
 
         console = logging.StreamHandler()
         console.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(levelname)-8s %(message)s')
+        formatter = logging.Formatter('%(message)s')
         console.setFormatter(formatter)
         logging.getLogger('').addHandler(console)
         logMain = logging.getLogger('landis.main')
         logMain.info('Start LANDIS-II PreProcTool')
-        
+
         # parse commandline arguments
         args = parseArguemnts()
         
