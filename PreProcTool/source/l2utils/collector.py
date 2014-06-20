@@ -69,6 +69,14 @@ class Collector(object):
             PROJECT.initContrast = float(basemap[0]['contrast'])
             PROJECT.initSaturation = float(basemap[0]['saturation'])
             PROJECT.mapSource = basemap[0]['source']
+
+            xpath = CONFIG['XPATH']['LEGEND']
+            legend = self.projectFileXML.queryXML(xpath)
+            logLoadMapPrefs.debug('Legend: {}'.format(legend))
+            PROJECT.initClassCount = int(legend[0]['initClassCount'])
+            PROJECT.seqCol = legend[0]['sequentialCol'] 
+            PROJECT.divCol = legend[0]['divergingCol'] 
+            PROJECT.qualCol = legend[0]['qualitativeCol']
         
         except Exception as e:
             logLoadMapPrefs.error('{}'.format(e))

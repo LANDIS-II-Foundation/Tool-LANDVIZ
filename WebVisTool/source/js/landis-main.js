@@ -5,6 +5,7 @@ $( document ).ready(function() {
 
     landisSettings = $.landisSettings();
     landisSettings.setProjectName();
+    //landisSettings.writeCurrentStateToJson();
 
     setupPubSubSystem();
 

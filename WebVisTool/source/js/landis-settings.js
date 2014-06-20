@@ -19,6 +19,17 @@
                 $('#ProjectName > h1').text(this.settings.projectname);
             }
         };
+        /*
+        this.writeCurrentStateToJson = function() {
+            var uploadPath = location.href.substring(0, location.href.lastIndexOf('/')) + "/config/export.json";
+            $.ajax({
+                type: "PUT",
+                url: uploadPath,
+                dataType: 'json',
+                async: false,
+                data: JSON.stringify({ "value": 45 })
+            });
+        };*/
         
         if(this.init) {
             return new $.landisSettings();
@@ -26,5 +37,7 @@
             this.set();
             return this;
         }
+
+
     };
 })(jQuery);

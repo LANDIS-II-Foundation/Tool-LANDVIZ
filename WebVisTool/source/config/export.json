@@ -1,0 +1,38 @@
+{
+  "projectname": "Example Project", 
+  "playback": {
+    "snap": false, 
+    "speed": 1, 
+    "time": 0
+  }, 
+  "landisdata": {
+    "path": "landisdata", 
+    "modeldata": "modeldata", 
+    "metadata": "metadata"
+  }, 
+  "map": {
+    "resolution": 305.748113140705, 
+    "resolutions": [
+      611.49622628141, 
+      305.748113140705, 
+      152.8740565703525, 
+      76.43702828517625
+    ], 
+    "basemap": {
+      "source": "terrain", 
+      "saturation": 0.0, 
+      "contrast": 1.0, 
+      "brightness": 0.0
+    }, 
+    "center": [
+      -10459305.28509282, 
+      5946792.546813006
+    ], 
+    "extent": [
+      -10660988.02767102, 
+      5794950.65581765, 
+      -10257622.542514618, 
+      6098634.43780836
+    ]
+  }
+}

@@ -25,7 +25,7 @@ XPATH:
     CSVFIELD: /landisMetadata/output/fields/field
     MAPZOOM: /landisPreProcProject/output/webVisConfig/map/zoom
     BASEMAP: /landisPreProcProject/output/webVisConfig/map/baseMap
-    CLASSESCOLROS: /landisPreProcProject/output/webVisConfig/map/defaultClassesColors
+    LEGEND: /landisPreProcProject/output/webVisConfig/map/legend
 
 ATTRIB:
     PROJECTNAME: projectName

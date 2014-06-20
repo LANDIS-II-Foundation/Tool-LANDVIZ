@@ -23,7 +23,11 @@ class Project(object):
         self.__initBrightness = 0
         self.__initSaturation = 1
         self.__allResolutions = [156543.03392804097, 78271.51696402048, 39135.75848201024, 19567.87924100512, 9783.93962050256, 4891.96981025128, 2445.98490512564, 1222.99245256282, 611.49622628141, 305.748113140705, 152.8740565703525, 76.43702828517625, 38.21851414258813, 19.109257071294063, 9.554628535647032, 4.777314267823516, 2.388657133911758, 1.194328566955879, 0.5971642834779395]
-        
+        self.__initClassCount = 3
+        self.__seqCol = "Blues"
+        self.__divCol = "PiYG"
+        self.__qualCol = "Paired"
+
 ###-Methods----------------------------------------------------------------###        
     
     def addScenario(self, scenario):
@@ -308,6 +312,42 @@ class Project(object):
     @mapSource.setter
     def mapSource(self, value):
         self.__mapSource = value
+
+    @property
+    def initClassCount(self):
+        return self.__initClassCount
+               
+    @initClassCount.setter
+    def initClassCount(self, value):
+        if value < 2:
+            value = 2
+        if value > 9:
+            value = 9
+        self.__initClassCount = value
+
+    @property
+    def seqCol(self):
+        return self.__seqCol
+               
+    @seqCol.setter
+    def seqCol(self, value):
+        self.__seqCol = value
+
+    @property
+    def divCol(self):
+        return self.__divCol
+               
+    @divCol.setter
+    def divCol(self, value):
+        self.__divCol = value
+
+    @property
+    def qualCol(self):
+        return self.__qualCol
+               
+    @qualCol.setter
+    def qualCol(self, value):
+        self.__qualCol = value
 
 ###========================================================================###    
 class Scenario(object):
