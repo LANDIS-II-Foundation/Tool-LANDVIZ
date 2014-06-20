@@ -240,7 +240,7 @@
             //FIXME: do not use selector
             $('.map-group').rastermapgroup('updateSizeOfMaps');
 
-            //arrangeApplicationData();
+            arrangeApplicationData();
 
         };
 
@@ -2955,20 +2955,41 @@
                 .appendTo(self._chartFilterDropdownContent);
 
             self._filterFieldList.on('change', function(){
-                var singleVals = [], i, uniqueVals, option;
+                var singleVals = [], i, uniqueVals, option, data;
                 for(i=0; i < self._results[0].results.rows.length; i++){
                     singleVals.push(self._results[0].results.rows[i][this.value]);
                 }
                 // usage example:
                 uniqueVals = singleVals.filter( onlyUnique );
-
+                console.log(uniqueVals);
                 option = '<option value="false">none</option>';
-                for (i=0; i<uniqueVals.length; i++){
-                    if(uniqueVals[i] != ''){
-                        option += '<option value="'+ uniqueVals[i] + '">' + uniqueVals[i] + '</option>';
+                if(uniqueVals[0] !== undefined){
+                    for (i=0; i<uniqueVals.length; i++){
+                        if(uniqueVals[i] != ''){
+                            option += '<option value="'+ uniqueVals[i] + '">' + uniqueVals[i] + '</option>';
+                        }
                     }
                 }
                 self._filterValueList.html(option);
+
+                self._flotData = [];
+                for(i=0; i < self.options.scenarios.length; i++) {
+                    
+                    //console.log(results.results.fields);
+                    data = self.generateFlotData(
+                                    [self._results[i]],
+                                    [self.options.fieldName],
+                                    'Time',
+                                    {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'},
+                                    {},
+                                    'NumSites', 1);
+                    self._flotData.push({label: landisMetadata.getScenarioAttributeById(self.options.scenarios[i],'name'), data: data});
+                    
+                }
+                self._flot.setData(self._flotData);
+
+                //Since the axes don't change, we don't need to call plot.setupGrid()
+                self._flot.draw();
             });
             
 
@@ -2978,6 +2999,7 @@
                 if(self._filterFieldList.val() != 'false' &&  this.value != 'false'){
                     filterObject[self._filterFieldList.val()] = this.value;
                 }
+                console.log("filter", filterObject);
                 self._flotData = [];
                 for(i=0; i < self.options.scenarios.length; i++) {
                     
@@ -2988,7 +3010,7 @@
                                     'Time',
                                     {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'},
                                     filterObject,
-                                    'NumSites', 554667, 1);
+                                    'NumSites', 1);
                     self._flotData.push({label: landisMetadata.getScenarioAttributeById(self.options.scenarios[i],'name'), data: data});
                     
                 }
@@ -3038,17 +3060,21 @@
                         }),
                         cf, data;
 
-                    console.log(results.results.fields);
-                    //FIXME NumSites/NumSitesCount not hardcoded!!!
+                    //console.log(results.results.fields);
+                    
                     cf = 1.0;
+                    //FIXME Conversion
+                    /*
                     if(self.options.fieldName == 'TotalDamagedSites'){
-                        //4ha for a site, ha to acres 
+                        //4ha for a site, ha to acres
+                        //FIXME get ha from file
                         cf =  4 * 2.47105381;
                         self._chartVisHeaderText.text(self.options.extensionName + ': ' + self.options.fieldName + ' [acres]');
 
-                    };
+                    };*/
+                    //FIXME NumSites/NumSitesCount not hardcoded!!!
                     //FIXME ... find a solution fot that NumSites ...
-                    data = self.generateFlotData([results], [self.options.fieldName], 'Time', {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'}, {}, 'NumSites', 554667, cf);
+                    data = self.generateFlotData([results], [self.options.fieldName], 'Time', {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'}, {}, 'NumSites', cf);
                     self._flotData.push({label: landisMetadata.getScenarioAttributeById(self.options.scenarios[s],'name'), data: data});
                     self.drawChart();
                     self._results.push(results);
@@ -3056,6 +3082,9 @@
                 
 
             }
+
+
+
             console.log('selfresults', self._results);
             option = '<option value="false">none</option>';
             for (i=0; i<self._results[0].results.fields.length; i++){
@@ -3064,29 +3093,30 @@
                 }
             }
             self._filterFieldList.append(option);
-
-           // console.log(loadCsvByScenarios.length;
-           // var myFlotData = self.generateFlotData(loadCsvByScenarios, ['Time'], 'Time', {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'}, 'NumSites', 2218062);
-           // console.log('flot', myFlotData);
     
          
         },
 
-        generateFlotData: function(csvObjectsByScenarios, parameterList , groupByParameter, excludeParameterValue, filterParameterValue, sitesNum, totalNumSites, conversionFactor){
-            console.log('FlotDataGen');
-            var charts = [], p, chart, s, dataseries, dataseriesArr, filtering, r, exclude, include, pVal, sitesNumVal;
+        generateFlotData: function(csvObjectsByScenarios, parameterList , groupByParameter, excludeParameterValue, filterParameterValue, numSitesFieldName, conversionFactor){
+            //console.log('FlotDataGen');
+            var charts = [], p, chart, s, dataseries, dataseriesArr, filtering, r, exclude, include, pVal, numSitesVal, totalNumSites;
+            // loop paramter List
             for(p = 0; p < parameterList.length; p++){
-                console.log(parameterList[p]);
-                console.log(csvObjectsByScenarios.length);
+                //console.log(parameterList[p]);
+                //console.log(csvObjectsByScenarios.length);
                 chart = [];
+                // loop scenarios
                 for(s = 0; s < csvObjectsByScenarios.length; s++){
-                    console.log('csvObj',csvObjectsByScenarios[s]);
+                    //console.log('csvObj',csvObjectsByScenarios[s]);
                     dataseries = {};
                     dataseriesArr = [];
                     filtering = false;
+                    //loop over rows in csv
+                    totalNumSites = 0;
                     for(r=0; r < csvObjectsByScenarios[s].results.rows.length; r++){
                         exclude = false;
                         for(field in excludeParameterValue) {
+                            //exclude specified values of speciefied attributes (e.g. if at year X Ecoregion Name = incactive)
                             if(csvObjectsByScenarios[s].results.rows[r][field] == excludeParameterValue[field]){
                                 exclude = true;
                             }
@@ -3108,23 +3138,25 @@
                         if(!exclude && include) {
                             //console.log(csvObjectsByScenarios[s].results.rows[r][parameterList[p]]);
                             pVal = csvObjectsByScenarios[s].results.rows[r][parameterList[p]];
-                            sitesNumVal = 1.0;
-                            if(jQuery.isEmptyObject(filterParameterValue) && jQuery.inArray(sitesNum, csvObjectsByScenarios[s].results.fields) > -1){
-                                sitesNumVal = csvObjectsByScenarios[s].results.rows[r][sitesNum];
+                            numSitesVal = 1.0;
+                            //if no filter and numSiteField is in csv
+                            if(jQuery.isEmptyObject(filterParameterValue) && jQuery.inArray(numSitesFieldName, csvObjectsByScenarios[s].results.fields) > -1){
+                                numSitesVal = csvObjectsByScenarios[s].results.rows[r][numSitesFieldName];
+                                totalNumSites += numSitesVal;
                                 filtering = true;
                             }
-                            //console.log(pVal * sitesSize * sitesNumVal);
                             if (csvObjectsByScenarios[s].results.rows[r][groupByParameter] in dataseries) {
                                 // ADD UP
-                                dataseries[csvObjectsByScenarios[s].results.rows[r][groupByParameter]] += pVal * conversionFactor * sitesNumVal;
+                                dataseries[csvObjectsByScenarios[s].results.rows[r][groupByParameter]] += pVal * conversionFactor * numSitesVal;
                             } else {
                                 // Create and ADD
                                 //console.log(csvObjectsByScenarios[s].results.rows[r][groupByParameter]);
-                                dataseries[csvObjectsByScenarios[s].results.rows[r][groupByParameter]] = pVal * conversionFactor * sitesNumVal;
+                                dataseries[csvObjectsByScenarios[s].results.rows[r][groupByParameter]] = pVal * conversionFactor * numSitesVal;
                             }
                         }
                         
                     }
+                    totalNumSites /= Object.keys(dataseries).length;
 
                     for(timestep in dataseries) {
                         if (filtering){
@@ -3137,7 +3169,7 @@
                 }
                 charts.push(chart);
             }
-            console.log("chart", dataseriesArr);
+            //console.log("chart", dataseriesArr);
             return dataseriesArr;
         },
         drawChart: function(){

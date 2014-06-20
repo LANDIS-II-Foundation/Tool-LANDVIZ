@@ -97,7 +97,7 @@
             //FIXME: do not use selector
             $('.map-group').rastermapgroup('updateSizeOfMaps');
 
-            //arrangeApplicationData();
+            arrangeApplicationData();
 
         };
 
