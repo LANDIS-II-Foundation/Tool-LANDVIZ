@@ -170,6 +170,10 @@ class OutputWorker(object):
                 data["map"]["basemap"]["source"] = self.PROJECT.mapSource
                 data["map"]["center"] = [centerX, centerY]
                 data["map"]["extent"] = [minX, minY, maxX, maxY]
+                data["map"]["legend"] = {}
+                data["map"]["legend"]["seqCol"] = self.PROJECT.seqCol
+                data["map"]["legend"]["divCol"] = self.PROJECT.divCol
+                data["map"]["legend"]["qualCol"] = self.PROJECT.qualCol
 
                 jsonFile.seek(0)  # rewind
                 jsonFile.write(json.dumps(data, sort_keys=False, indent=2))

@@ -227,13 +227,13 @@
 
         getView: function(){
             var self = this;
-            console.log("view:", self._olMap.getView());
+            //console.log("view:", self._olMap.getView());
         },
 
         drawMap: function(base_layer){
             var self = this,
                 s = landisSettings.settings.map;
-            console.log('DRAW MAP ID:'+self.options.mapId);
+            //console.log('DRAW MAP ID:'+self.options.mapId);
 
             self._olMap = new ol.Map({
                 renderer: ol.RendererHint.WEBGL,

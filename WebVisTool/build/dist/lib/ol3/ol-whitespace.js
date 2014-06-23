@@ -24040,7 +24040,7 @@ ol.webgl.getContext = function(canvas, opt_attributes) {
     try {
 
       context = canvas.getContext(ol.webgl.CONTEXT_IDS_[i], opt_attributes);
-      console.log(i, context);
+      //console.log(i, context);
       if(!goog.isNull(context)) {
         return context
       }

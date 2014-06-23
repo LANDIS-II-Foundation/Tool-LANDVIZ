@@ -60,12 +60,16 @@
                     'min': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'min', self.options.min);
+                            if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self.updateHandleValues();
                         }
                         
                     },
                     'max': function () {
                         if(self.options.dataType != 'nominal') {
-                            self._rangeSlider.slider('option', 'max', self.options.max); 
+                            self._rangeSlider.slider('option', 'max', self.options.max);
+                            if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self.updateHandleValues();
                         }
                         
                     },
@@ -296,6 +300,24 @@
              
         },
 
+        updateHandleValues: function(){
+            var self = this;
+            
+             $(self._colorSlider).children('.color-slider-handle-container').each(function(){
+                var value = self._position2value($(this).position().top),
+                    currIdx = $(this).data('color-slider-handle-index');
+                  
+                self.privateHandles[currIdx].value = value;
+                self.privateHandles[currIdx].percent = self._value2percent(value);
+                $(this).children('.color-slider-handle-value').text(value);
+      
+                //self._drawColorRamp();
+                //self._webGLRamp = self.get8BitColors100();
+                //$.pubsub( 'publish', T_COLORRAMP, self.options.mapGroupId );
+            });
+
+        },
+
         _addHandle: function(idx) {
             var self = this,
                 handleContainer;
@@ -327,7 +349,7 @@
                             $.pubsub( 'publish', T_COLORRAMP, self.options.mapGroupId );
                         },
                         stop: function(event, ui){
-                            console.log('stoped');
+                            //console.log('stoped');
                         }
                     })
                     .offset({ top: self._value2position(self.privateHandles[idx].value), left: self._colorSlider.width()})

@@ -149,10 +149,10 @@ class PreWorker(object):
 
     def createOrdinalClassification(self, min, max, middle, scaleType):
         try:
-            # FIXME: classcount not fixed (from input file)
+
             logOrdinal = logging.getLogger('preworker.ordinalClass')
 
-            classCount = 4;
+            # classCount = 4;
             classification = {}
             classification['drawReverse'] = False
 
@@ -185,7 +185,7 @@ class PreWorker(object):
             # FIXME: classcount not fixed (from input file)
         try:
             logContinuous = logging.getLogger('preworker.continuousClass')
-            classCount = 4;
+            classCount =  self.PROJECT.initClassCount + 1;
             classification = {}
             classification['drawReverse'] = False
 

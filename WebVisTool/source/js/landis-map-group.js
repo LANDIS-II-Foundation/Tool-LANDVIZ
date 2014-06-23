@@ -285,13 +285,13 @@
                 i, j,
                 h = [],
                 c,
-                color = (self.options.dataType === 'nominal') ? ("Paired") : ("Reds"), //
+                color = (self.options.dataType === 'nominal') ? (landisSettings.settings.map.legend.qualCol) : (landisSettings.settings.map.legend.seqCol), //
                 nClasses = self.stats.classification.classes.length,
                 limit = (self.stats.classification.colorSchema === 'sequential') ? (9) : ((self.stats.classification.colorSchema === 'diverging') ? (11) : (12)), //FIXME depends on dataType //LIMITS
                 nColors,
-                 nColorsToAdd,
+                nColorsToAdd,
                 randColor;
-            console.log("LIMIT", limit);
+            //console.log("LIMIT", limit);
 
             if(nClasses > limit) {
                 nColors = limit;
@@ -313,7 +313,7 @@
             for(i = 0; i < self.stats.classification.classes.length; i++){
                 h.push({value: self.stats.classification.classes[i], color: c[i]});
             }
-            console.log(h)
+            //console.log(h)
             return h;
         },
 
@@ -391,12 +391,15 @@
             var self = this,
                 lMin =  self.legendMinMax[0],
                 lMax =  self.legendMinMax[1],
-                rMin = self._mapGroupLegend.mapLegend('option', 'filterMin'),
-                rMax = self._mapGroupLegend.mapLegend('option', 'filterMax'),
+                rMin,
+                rMax,
                 i;
 
             self._mapGroupLegend.mapLegend('option', 'min', lMin);
             self._mapGroupLegend.mapLegend('option', 'max', lMax);
+
+            rMin = self._mapGroupLegend.mapLegend('option', 'filterMin');
+            rMax = self._mapGroupLegend.mapLegend('option', 'filterMax');
 
             if(self.options.dataType != 'nominal') {
                 self._writeMinMaxToLegend(rMax, rMin, lMax, lMin);
@@ -494,7 +497,7 @@
         },
 
         rearangeMapsInMapGroup: function(){
-            console.log("rearange maps in mapgroup")
+            //console.log("rearange maps in mapgroup")
             var self = this,
                 ratio = self._mapGroupMaps.outerHeight()/self._mapGroupMaps.outerWidth(),
                 i;
@@ -545,7 +548,7 @@
 
             for(i=0; i < self.rasterMaps.length; i++){
                 mapId = self.rasterMaps[i].rastermap('option', 'mapId');
-                console.log('stats for : ' + mapId);
+                //console.log('stats for : ' + mapId);
                 eosIds = mapId.split('-');
                 stats = loadJson(
                     landisSettings.settings.landisdata.path + '/'
@@ -589,7 +592,7 @@
             }
             rasterMapsToDelete.sort();
             rasterMapsToDelete.reverse();
-            //FIXME: will be destroy of widget!!!
+         
             for(map in rasterMapsToDelete){
                 
                 self.options.scenarios.splice(rasterMapsToDelete[map],1);
@@ -617,7 +620,7 @@
 
                 }
             }
-            self.updateMinMax();
+            
             self.rearangeMapsInMapGroup();
         }
         

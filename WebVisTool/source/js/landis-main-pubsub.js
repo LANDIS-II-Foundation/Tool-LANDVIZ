@@ -70,7 +70,7 @@ changeMaps = function(topic, data){
         selectedParameterIds = mapSelector.mapSelector('option','selectedParameterIds'),
         sLimit = 2;
     
-    console.log(selectedParameterIds);
+    //console.log(selectedParameterIds);
 
     if(selectedParameterIds.length < 2){
         sLimit = 4;
@@ -118,7 +118,7 @@ mapsToDraw = function(){
         }
         map.scenarios = scenarios;
         mapCandidates.push(map);
-        console.log('Map Candidate (s-e-o):'+map.scenarios+'-'+map.extension+'-'+map.output);
+        //console.log('Map Candidate (s-e-o):'+map.scenarios+'-'+map.extension+'-'+map.output);
     }
     //loadStats
 

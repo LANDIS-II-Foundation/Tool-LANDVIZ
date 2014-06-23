@@ -19,6 +19,17 @@
                 $('#ProjectName > h1').text(this.settings.projectname);
             }
         };
+        /*
+        this.writeCurrentStateToJson = function() {
+            var uploadPath = location.href.substring(0, location.href.lastIndexOf('/')) + "/config/export.json";
+            $.ajax({
+                type: "PUT",
+                url: uploadPath,
+                dataType: 'json',
+                async: false,
+                data: JSON.stringify({ "value": 45 })
+            });
+        };*/
         
         if(this.init) {
             return new $.landisSettings();
@@ -26,6 +37,8 @@
             this.set();
             return this;
         }
+
+
     };
 })(jQuery);
 ;(function($) {
@@ -159,7 +172,7 @@
            
 
             var i, seen, mapsToDelete = [], lastMapGroup;
-            console.log(mapCandidates);
+            //console.log(mapCandidates);
             for(m in this.mapGroups) {
                 seen = -1;
                 for (c in mapCandidates) {
@@ -175,7 +188,7 @@
             }
             mapsToDelete.sort();
             mapsToDelete.reverse(); 
-            console.log('mapsToDelete:', mapsToDelete);
+            //console.log('mapsToDelete:', mapsToDelete);
             for(map in mapsToDelete){
                 console.log(mapsToDelete[map]);
                 this.mapGroups[mapsToDelete[map]].rasterMapGroup.rastermapgroup('destroy');
@@ -194,12 +207,14 @@
                // console.log(seen);
                 if(seen > -1){
                     //update mapGroup
-                    console.log('update mapGroup');
+                    //console.log('update mapGroup');
 
                     this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateRasterMaps', mapCandidates[c].scenarios);
                     arrangeApplicationData();
                     //this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
                     this.mapGroups[seen].rasterMapGroup.rastermapgroup('loadStatsForMapsInMapGroup');
+                    this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateMinMax');
+
                 } else {
                     //create mapGroup 
                     //console.log('create mapGroup');
@@ -1785,13 +1800,13 @@
                 i, j,
                 h = [],
                 c,
-                color = (self.options.dataType === 'nominal') ? ("Paired") : ("Reds"), //
+                color = (self.options.dataType === 'nominal') ? (landisSettings.settings.map.legend.qualCol) : (landisSettings.settings.map.legend.seqCol), //
                 nClasses = self.stats.classification.classes.length,
                 limit = (self.stats.classification.colorSchema === 'sequential') ? (9) : ((self.stats.classification.colorSchema === 'diverging') ? (11) : (12)), //FIXME depends on dataType //LIMITS
                 nColors,
-                 nColorsToAdd,
+                nColorsToAdd,
                 randColor;
-            console.log("LIMIT", limit);
+            //console.log("LIMIT", limit);
 
             if(nClasses > limit) {
                 nColors = limit;
@@ -1813,7 +1828,7 @@
             for(i = 0; i < self.stats.classification.classes.length; i++){
                 h.push({value: self.stats.classification.classes[i], color: c[i]});
             }
-            console.log(h)
+            //console.log(h)
             return h;
         },
 
@@ -1891,12 +1906,15 @@
             var self = this,
                 lMin =  self.legendMinMax[0],
                 lMax =  self.legendMinMax[1],
-                rMin = self._mapGroupLegend.mapLegend('option', 'filterMin'),
-                rMax = self._mapGroupLegend.mapLegend('option', 'filterMax'),
+                rMin,
+                rMax,
                 i;
 
             self._mapGroupLegend.mapLegend('option', 'min', lMin);
             self._mapGroupLegend.mapLegend('option', 'max', lMax);
+
+            rMin = self._mapGroupLegend.mapLegend('option', 'filterMin');
+            rMax = self._mapGroupLegend.mapLegend('option', 'filterMax');
 
             if(self.options.dataType != 'nominal') {
                 self._writeMinMaxToLegend(rMax, rMin, lMax, lMin);
@@ -1994,7 +2012,7 @@
         },
 
         rearangeMapsInMapGroup: function(){
-            console.log("rearange maps in mapgroup")
+            //console.log("rearange maps in mapgroup")
             var self = this,
                 ratio = self._mapGroupMaps.outerHeight()/self._mapGroupMaps.outerWidth(),
                 i;
@@ -2045,7 +2063,7 @@
 
             for(i=0; i < self.rasterMaps.length; i++){
                 mapId = self.rasterMaps[i].rastermap('option', 'mapId');
-                console.log('stats for : ' + mapId);
+                //console.log('stats for : ' + mapId);
                 eosIds = mapId.split('-');
                 stats = loadJson(
                     landisSettings.settings.landisdata.path + '/'
@@ -2089,7 +2107,7 @@
             }
             rasterMapsToDelete.sort();
             rasterMapsToDelete.reverse();
-            //FIXME: will be destroy of widget!!!
+         
             for(map in rasterMapsToDelete){
                 
                 self.options.scenarios.splice(rasterMapsToDelete[map],1);
@@ -2117,7 +2135,7 @@
 
                 }
             }
-            self.updateMinMax();
+            
             self.rearangeMapsInMapGroup();
         }
         
@@ -2186,12 +2204,16 @@
                     'min': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'min', self.options.min);
+                            if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self.updateHandleValues();
                         }
                         
                     },
                     'max': function () {
                         if(self.options.dataType != 'nominal') {
-                            self._rangeSlider.slider('option', 'max', self.options.max); 
+                            self._rangeSlider.slider('option', 'max', self.options.max);
+                            if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self.updateHandleValues();
                         }
                         
                     },
@@ -2422,6 +2444,24 @@
              
         },
 
+        updateHandleValues: function(){
+            var self = this;
+            
+             $(self._colorSlider).children('.color-slider-handle-container').each(function(){
+                var value = self._position2value($(this).position().top),
+                    currIdx = $(this).data('color-slider-handle-index');
+                  
+                self.privateHandles[currIdx].value = value;
+                self.privateHandles[currIdx].percent = self._value2percent(value);
+                $(this).children('.color-slider-handle-value').text(value);
+      
+                //self._drawColorRamp();
+                //self._webGLRamp = self.get8BitColors100();
+                //$.pubsub( 'publish', T_COLORRAMP, self.options.mapGroupId );
+            });
+
+        },
+
         _addHandle: function(idx) {
             var self = this,
                 handleContainer;
@@ -2453,7 +2493,7 @@
                             $.pubsub( 'publish', T_COLORRAMP, self.options.mapGroupId );
                         },
                         stop: function(event, ui){
-                            console.log('stoped');
+                            //console.log('stoped');
                         }
                     })
                     .offset({ top: self._value2position(self.privateHandles[idx].value), left: self._colorSlider.width()})
@@ -3477,13 +3517,13 @@
 
         getView: function(){
             var self = this;
-            console.log("view:", self._olMap.getView());
+            //console.log("view:", self._olMap.getView());
         },
 
         drawMap: function(base_layer){
             var self = this,
                 s = landisSettings.settings.map;
-            console.log('DRAW MAP ID:'+self.options.mapId);
+            //console.log('DRAW MAP ID:'+self.options.mapId);
 
             self._olMap = new ol.Map({
                 renderer: ol.RendererHint.WEBGL,
@@ -3614,7 +3654,7 @@ changeMaps = function(topic, data){
         selectedParameterIds = mapSelector.mapSelector('option','selectedParameterIds'),
         sLimit = 2;
     
-    console.log(selectedParameterIds);
+    //console.log(selectedParameterIds);
 
     if(selectedParameterIds.length < 2){
         sLimit = 4;
@@ -3662,7 +3702,7 @@ mapsToDraw = function(){
         }
         map.scenarios = scenarios;
         mapCandidates.push(map);
-        console.log('Map Candidate (s-e-o):'+map.scenarios+'-'+map.extension+'-'+map.output);
+        //console.log('Map Candidate (s-e-o):'+map.scenarios+'-'+map.extension+'-'+map.output);
     }
     //loadStats
 
@@ -3737,6 +3777,7 @@ $( document ).ready(function() {
 
     landisSettings = $.landisSettings();
     landisSettings.setProjectName();
+    //landisSettings.writeCurrentStateToJson();
 
     setupPubSubSystem();
 

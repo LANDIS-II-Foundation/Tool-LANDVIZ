@@ -16,7 +16,7 @@
            
 
             var i, seen, mapsToDelete = [], lastMapGroup;
-            console.log(mapCandidates);
+            //console.log(mapCandidates);
             for(m in this.mapGroups) {
                 seen = -1;
                 for (c in mapCandidates) {
@@ -32,7 +32,7 @@
             }
             mapsToDelete.sort();
             mapsToDelete.reverse(); 
-            console.log('mapsToDelete:', mapsToDelete);
+            //console.log('mapsToDelete:', mapsToDelete);
             for(map in mapsToDelete){
                 console.log(mapsToDelete[map]);
                 this.mapGroups[mapsToDelete[map]].rasterMapGroup.rastermapgroup('destroy');
@@ -51,12 +51,14 @@
                // console.log(seen);
                 if(seen > -1){
                     //update mapGroup
-                    console.log('update mapGroup');
+                    //console.log('update mapGroup');
 
                     this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateRasterMaps', mapCandidates[c].scenarios);
                     arrangeApplicationData();
                     //this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
                     this.mapGroups[seen].rasterMapGroup.rastermapgroup('loadStatsForMapsInMapGroup');
+                    this.mapGroups[seen].rasterMapGroup.rastermapgroup('updateMinMax');
+
                 } else {
                     //create mapGroup 
                     //console.log('create mapGroup');
