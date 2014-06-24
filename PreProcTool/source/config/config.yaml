@@ -23,9 +23,9 @@ XPATH:
     PROJECTION: /landisPreProcProject/input/spatialRefernce/projection
     GEOEXTENT: /landisPreProcProject/input/spatialRefernce/extent
     CSVFIELD: /landisMetadata/output/fields/field
-    MAPZOOM: /landisPreProcProject/output/webVisConfig/map/zoom
-    BASEMAP: /landisPreProcProject/output/webVisConfig/map/baseMap
-    LEGEND: /landisPreProcProject/output/webVisConfig/map/legend
+    MAPZOOM: /landisPreProcProject/output/map/zoom
+    BASEMAP: /landisPreProcProject/output/map/baseMap
+    LEGEND: /landisPreProcProject/output/map/legend
 
 ATTRIB:
     PROJECTNAME: projectName

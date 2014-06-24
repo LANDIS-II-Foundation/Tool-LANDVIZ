@@ -17,9 +17,14 @@ def extantFolder(x):
     """
     'Type' for argparse
     checks if outputfolder exists
-    yes: return true (means to use existing output!!! UPDATE MODE) no: create folder + return false.s
     """
     if not os.path.isdir(x):
+        os.mkdir(x)
+    else:
+        i = 1
+        while os.path.isdir(x+"_{}".format(i)):
+            i += 1
+        x = x+"_{}".format(i)
         os.mkdir(x)
     return x
         

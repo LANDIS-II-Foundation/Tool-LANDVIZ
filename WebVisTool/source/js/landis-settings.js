@@ -11,6 +11,20 @@
                     alert("bad settings file");
                 }
             }
+
+            /*
+            $('#exportSettingsLink')
+                .attr('download', "export.json")
+                .attr('href', '#')
+                .attr('textContent', "Download export.json")
+                .click(function(){
+                    var data = {a:1, b:2, c:3};
+                    var json = JSON.stringify(data);
+                    var blob = new Blob([json], {type: "application/json"});
+                    var url  = URL.createObjectURL(blob);
+                    $(this).attr('href', url);
+            });*/
+
             return this;
         };
 
@@ -19,17 +33,6 @@
                 $('#ProjectName > h1').text(this.settings.projectname);
             }
         };
-        /*
-        this.writeCurrentStateToJson = function() {
-            var uploadPath = location.href.substring(0, location.href.lastIndexOf('/')) + "/config/export.json";
-            $.ajax({
-                type: "PUT",
-                url: uploadPath,
-                dataType: 'json',
-                async: false,
-                data: JSON.stringify({ "value": 45 })
-            });
-        };*/
         
         if(this.init) {
             return new $.landisSettings();

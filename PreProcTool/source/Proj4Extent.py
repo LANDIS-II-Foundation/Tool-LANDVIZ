@@ -4,6 +4,7 @@
 
 import sys
 import argparse
+import math
 from osgeo import gdal
 from osgeo import osr
 
@@ -59,6 +60,18 @@ def GetSpatialRef(inputRaster):
 
     return proj4, ext
 
+def getZoom(ext, mapWidth = 400, mapHeight = 300):
+    c = 40075016.6855785
+    dx = abs(ext[0][0] - ext[2][0])
+    dy = abs(ext[0][1] - ext[2][1])
+    mpW = dx / mapWidth
+    mpH = dy / mapHeight
+    zW = math.log(c/mpW, 2) - 8
+    zH = math.log(c/mpH, 2) - 8
+    z = math.floor(min(zW,zH))
+
+    return z
+
 def main():
     
     #Argument Pars
@@ -69,9 +82,11 @@ def main():
     
     #Fetch Spatial Reference
     proj4, ext = GetSpatialRef(args['inputfile'])
+    zoom = getZoom(ext)
     
     print "proj4=\"{}\"".format(proj4)
     print "ulx=\"{}\" uly=\"{}\" lrx=\"{}\" lry=\"{}\"".format(ext[0][0], ext[0][1], ext[2][0], ext[2][1])
+    print "min=\"{}\" max=\"{}\" init=\"{}\"".format(zoom, zoom+4, zoom+2)
     
 if __name__ == '__main__':
     main()

@@ -1,6 +1,6 @@
 ;(function ( $, window, document, undefined ) {
 
-    //Control Time Aand Bookmarks Widget
+    //Raster Map Group Widget
     $.widget('landis.rastermapgroup', {
         options: {
             scenarios: [],
@@ -279,15 +279,13 @@
         },
 
         generateHandles: function(){
-            // FIXME: dynamic from config files ...
-
             var self = this,
                 i, j,
                 h = [],
                 c,
-                color = (self.options.dataType === 'nominal') ? (landisSettings.settings.map.legend.qualCol) : (landisSettings.settings.map.legend.seqCol), //
+                color = (self.options.dataType === 'nominal') ? (landisSettings.settings.map.legend.qualCol) : ((self.stats.classification.colorSchema === 'diverging') ? (landisSettings.settings.map.legend.divCol) : (landisSettings.settings.map.legend.seqCol)),
                 nClasses = self.stats.classification.classes.length,
-                limit = (self.stats.classification.colorSchema === 'sequential') ? (9) : ((self.stats.classification.colorSchema === 'diverging') ? (11) : (12)), //FIXME depends on dataType //LIMITS
+                limit = (self.stats.classification.colorSchema === 'sequential') ? (9) : ((self.stats.classification.colorSchema === 'diverging') ? (11) : (12)),
                 nColors,
                 nColorsToAdd,
                 randColor;
