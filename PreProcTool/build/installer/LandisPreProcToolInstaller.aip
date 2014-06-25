@@ -50,46 +50,46 @@
     <ROW Directory="xsd_Dir" Directory_Parent="config_Dir" DefaultDir="xsd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="DS_Store" ComponentId="{D3E85172-19CB-463C-920A-1ECD8207CF20}" Directory_="farbtastic_Dir" Attributes="0" KeyPath="DS_Store" Type="0"/>
-    <ROW Component="DS_Store_1" ComponentId="{02D38D8C-DEAC-4BC7-AD83-D9FC4118A23D}" Directory_="jquery_Dir" Attributes="0" KeyPath="DS_Store_1" Type="0"/>
-    <ROW Component="DS_Store_2" ComponentId="{571E0BBC-EEBF-4018-BCD6-F71E3915D6AE}" Directory_="jqueryfullscreen_Dir" Attributes="0" KeyPath="DS_Store_2" Type="0"/>
-    <ROW Component="DS_Store_3" ComponentId="{46C035C4-5758-46C5-AE54-500962330D03}" Directory_="jqueryui_Dir" Attributes="0" KeyPath="DS_Store_3" Type="0"/>
-    <ROW Component="PreProcTool.exe" ComponentId="{0718C675-2963-4DAA-A5A1-49AB86C45262}" Directory_="APPDIR" Attributes="0" KeyPath="PreProcTool.exe"/>
+    <ROW Component="DS_Store" ComponentId="{523F2C70-9E49-4B8E-B227-CF7C8098C968}" Directory_="farbtastic_Dir" Attributes="0" KeyPath="DS_Store" Type="0"/>
+    <ROW Component="DS_Store_1" ComponentId="{B4CA039B-E20B-4F95-86C0-A4C6C683ABC8}" Directory_="jquery_Dir" Attributes="0" KeyPath="DS_Store_1" Type="0"/>
+    <ROW Component="DS_Store_2" ComponentId="{DC099857-EDF8-4B86-880B-A4A27F52E7E6}" Directory_="jqueryfullscreen_Dir" Attributes="0" KeyPath="DS_Store_2" Type="0"/>
+    <ROW Component="DS_Store_3" ComponentId="{D1E855F6-F7D5-41E3-B80F-4404AD297B9C}" Directory_="jqueryui_Dir" Attributes="0" KeyPath="DS_Store_3" Type="0"/>
+    <ROW Component="PreProcTool.exe" ComponentId="{8C28EEEA-A933-4902-9020-E6CB70858FA2}" Directory_="APPDIR" Attributes="0" KeyPath="PreProcTool.exe"/>
     <ROW Component="ProductInformation" ComponentId="{EACFDF5C-58D7-44C5-A262-0D4EAF87B92B}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="Proj4Extent.exe" ComponentId="{E99D9B98-C5BF-45E2-BB86-D6FDEDC41A65}" Directory_="APPDIR" Attributes="0" KeyPath="Proj4Extent.exe"/>
-    <ROW Component="_ctypes.pyd" ComponentId="{76346287-5C54-4B98-8F0F-4F7DD67962EC}" Directory_="APPDIR" Attributes="0" KeyPath="_ctypes.pyd" Type="0"/>
-    <ROW Component="black.png" ComponentId="{2CCF9107-7035-460F-B471-6BBF514F1D9B}" Directory_="img_Dir" Attributes="0" KeyPath="black.png" Type="0"/>
-    <ROW Component="colorbrewer.js" ComponentId="{92817CFC-FF77-4B88-AA54-C3AFD1DA52D9}" Directory_="colorbrewer_Dir" Attributes="0" KeyPath="colorbrewer.js" Type="0"/>
-    <ROW Component="compdcs.csv" ComponentId="{47F56477-8917-4387-B861-16A1A0CFEA8D}" Directory_="gdaldata_Dir" Attributes="0" KeyPath="compdcs.csv_1" Type="0"/>
-    <ROW Component="config.yaml" ComponentId="{200C704F-DFCB-49BF-ABBC-EF0FC533F452}" Directory_="config_Dir" Attributes="0" KeyPath="config.yaml" Type="0"/>
-    <ROW Component="default_settings.json" ComponentId="{89A7C19A-C62A-45FA-92E5-E387B1A97E02}" Directory_="config_1_Dir" Attributes="0" KeyPath="default_settings.json" Type="0"/>
-    <ROW Component="gdal111.dll" ComponentId="{3E624B2E-E504-40DB-BC71-65138DF2A51D}" Directory_="APPDIR" Attributes="0" KeyPath="gdal111.dll"/>
-    <ROW Component="geos_c.dll" ComponentId="{0F2F15AD-A40A-4B58-99D9-23B12DF5DD18}" Directory_="APPDIR" Attributes="0" KeyPath="geos_c.dll"/>
-    <ROW Component="index.html" ComponentId="{A94FDFE1-2E4B-4830-BFCE-15485D40A569}" Directory_="webbase_Dir" Attributes="0" KeyPath="index.html" Type="0"/>
-    <ROW Component="jquery.color.js" ComponentId="{A810881C-B753-4FB4-A533-C4F4025725A0}" Directory_="jquerycolor_Dir" Attributes="0" KeyPath="jquery.color.js" Type="0"/>
-    <ROW Component="jquery.dropdown.css" ComponentId="{1570DD44-6814-49F9-BE88-BEC0960438C5}" Directory_="jquerydropdown_Dir" Attributes="0" KeyPath="jquery.dropdown.css" Type="0"/>
-    <ROW Component="jquery.flot.axislabels.js" ComponentId="{A3C2F79C-B846-4FF1-8E9F-744E6AB89B83}" Directory_="flot_Dir" Attributes="0" KeyPath="jquery.flot.axislabels.js" Type="0"/>
-    <ROW Component="jquery.parse.js" ComponentId="{E2C0CF8A-9A6C-4685-8D8E-CA60BFEB2FDD}" Directory_="jquery.parsemaster_Dir" Attributes="0" KeyPath="jquery.parse.js" Type="0"/>
-    <ROW Component="jquery.parse.js_1" ComponentId="{977D8E3F-2CDB-4EC6-80AB-C5FD274A004A}" Directory_="jqueryparse_Dir" Attributes="0" KeyPath="jquery.parse.js_1" Type="0"/>
-    <ROW Component="jquery.pubsub.js" ComponentId="{E0C1FECD-93AD-40F8-B61B-B6D0F84A229D}" Directory_="jquerypubsub_Dir" Attributes="0" KeyPath="jquery.pubsub.js" Type="0"/>
-    <ROW Component="jquery.timer.js" ComponentId="{F6C5802C-99FC-4E30-814A-C5F6160DE236}" Directory_="jquerytimer_Dir" Attributes="0" KeyPath="jquery.timer.js" Type="0"/>
-    <ROW Component="jqueryui.css" ComponentId="{822A93EC-BADE-4EF2-9BB9-F44280DF7AE8}" Directory_="css_1_Dir" Attributes="0" KeyPath="jqueryui.css" Type="0"/>
-    <ROW Component="landis.css" ComponentId="{28E5918E-CA29-4A88-858D-14B0D015A6F8}" Directory_="css_Dir" Attributes="0" KeyPath="landis.css" Type="0"/>
-    <ROW Component="landisutils.js" ComponentId="{507495F5-23F3-4781-A020-23182373DCD3}" Directory_="js_Dir" Attributes="0" KeyPath="landisutils.js" Type="0"/>
-    <ROW Component="msvcm90.dll" ComponentId="{BF4A7C74-98C9-48E5-A959-A72B66DD2424}" Directory_="APPDIR" Attributes="0" KeyPath="msvcm90.dll"/>
-    <ROW Component="msvcp90.dll" ComponentId="{86F96BF6-5A5D-4AD9-BB8A-98F40EA4DB87}" Directory_="APPDIR" Attributes="0" KeyPath="msvcp90.dll"/>
-    <ROW Component="msvcr90.dll" ComponentId="{04F0542C-2247-41B3-B67F-23778FDC85F9}" Directory_="APPDIR" Attributes="0" KeyPath="msvcr90.dll"/>
-    <ROW Component="olwhitespace.js" ComponentId="{79EECD6C-210C-441E-BE14-0FBCBE37F788}" Directory_="ol3_Dir" Attributes="0" KeyPath="olwhitespace.js" Type="0"/>
-    <ROW Component="project_file.xsd" ComponentId="{343CD95E-AFB2-4745-8A08-706756548A72}" Directory_="xsd_Dir" Attributes="0" KeyPath="project_file.xsd" Type="0"/>
-    <ROW Component="pyconfig.h" ComponentId="{FB3E47F1-49CE-46D1-AF1A-012AA611009A}" Directory_="include_Dir" Attributes="0" KeyPath="pyconfig.h" Type="0"/>
-    <ROW Component="python27.dll" ComponentId="{33FA0202-A2FD-4ABD-9AA0-6C05CEBD16E7}" Directory_="APPDIR" Attributes="0" KeyPath="python27.dll"/>
-    <ROW Component="pywintypes27.dll" ComponentId="{94061A14-CF92-4500-BB4E-443047353F84}" Directory_="APPDIR" Attributes="0" KeyPath="pywintypes27.dll"/>
-    <ROW Component="startlandisvislocal.exe" ComponentId="{8408F83D-CD5F-472C-9CE1-DA4549BDADAD}" Directory_="webbase_Dir" Attributes="0" KeyPath="startlandisvislocal.exe"/>
-    <ROW Component="uiicons_3399ff_0.png" ComponentId="{B594F6B9-07B6-405E-A9EB-48135BD4A5C1}" Directory_="images_Dir" Attributes="0" KeyPath="uiicons_3399ff_0.png" Type="0"/>
-    <ROW Component="units.xml" ComponentId="{3C39F46F-7F54-4E28-842D-51E65222450D}" Directory_="xml_Dir" Attributes="0" KeyPath="units.xml" Type="0"/>
+    <ROW Component="Proj4Extent.exe" ComponentId="{BE4DA530-0C81-433A-B656-9EB7574FC71F}" Directory_="APPDIR" Attributes="0" KeyPath="Proj4Extent.exe"/>
+    <ROW Component="_ctypes.pyd" ComponentId="{7DA4DA4A-42E2-43B6-8897-0F559A8CFC0D}" Directory_="APPDIR" Attributes="0" KeyPath="_ctypes.pyd" Type="0"/>
+    <ROW Component="backup_project_file.xsd" ComponentId="{F68EC08A-7112-4D8D-8624-CD2897112261}" Directory_="xsd_Dir" Attributes="0" KeyPath="backup_project_file.xsd" Type="0"/>
+    <ROW Component="black.png" ComponentId="{ECFD9C7F-53B6-4874-85B3-DDEC3FB22287}" Directory_="img_Dir" Attributes="0" KeyPath="black.png" Type="0"/>
+    <ROW Component="colorbrewer.js" ComponentId="{2379B572-C20D-42DF-BC96-2AEBAF67F7C2}" Directory_="colorbrewer_Dir" Attributes="0" KeyPath="colorbrewer.js" Type="0"/>
+    <ROW Component="compdcs.csv" ComponentId="{46560304-0CD5-4D73-8C72-337E57397029}" Directory_="gdaldata_Dir" Attributes="0" KeyPath="compdcs.csv" Type="0"/>
+    <ROW Component="config.yaml" ComponentId="{9DE3F0C0-0411-4973-A03E-9ECB8E824189}" Directory_="config_Dir" Attributes="0" KeyPath="config.yaml" Type="0"/>
+    <ROW Component="default_settings.json" ComponentId="{1FCEDB67-9A8E-441A-A3E9-A9C904A26F8B}" Directory_="config_1_Dir" Attributes="0" KeyPath="default_settings.json" Type="0"/>
+    <ROW Component="gdal111.dll" ComponentId="{BF4F75C6-40EA-4F04-92EB-708F560044F4}" Directory_="APPDIR" Attributes="0" KeyPath="gdal111.dll"/>
+    <ROW Component="geos_c.dll" ComponentId="{636D99C4-C2A7-4CBC-A674-114554668721}" Directory_="APPDIR" Attributes="0" KeyPath="geos_c.dll"/>
+    <ROW Component="index.html" ComponentId="{A9B5BE3D-EBF2-4CC6-8931-AC42D2C6E66E}" Directory_="webbase_Dir" Attributes="0" KeyPath="index.html" Type="0"/>
+    <ROW Component="jquery.color.js" ComponentId="{D5B9FC3D-666D-456E-AF42-F9E1BE992070}" Directory_="jquerycolor_Dir" Attributes="0" KeyPath="jquery.color.js" Type="0"/>
+    <ROW Component="jquery.dropdown.css" ComponentId="{1E53800D-34C3-4AA2-8388-1FD6C549906E}" Directory_="jquerydropdown_Dir" Attributes="0" KeyPath="jquery.dropdown.css" Type="0"/>
+    <ROW Component="jquery.flot.axislabels.js" ComponentId="{C66FA1AC-E49A-4743-BAB5-4E600F9DF582}" Directory_="flot_Dir" Attributes="0" KeyPath="jquery.flot.axislabels.js" Type="0"/>
+    <ROW Component="jquery.parse.js" ComponentId="{8341D4DD-BFEE-457D-B564-AA8D642FF1CE}" Directory_="jquery.parsemaster_Dir" Attributes="0" KeyPath="jquery.parse.js" Type="0"/>
+    <ROW Component="jquery.parse.js_1" ComponentId="{B11E13CF-5729-42AF-858E-D3D694D93428}" Directory_="jqueryparse_Dir" Attributes="0" KeyPath="jquery.parse.js_1" Type="0"/>
+    <ROW Component="jquery.pubsub.js" ComponentId="{805938E3-6609-47DA-B8D5-81FC3BC7B8A0}" Directory_="jquerypubsub_Dir" Attributes="0" KeyPath="jquery.pubsub.js" Type="0"/>
+    <ROW Component="jquery.timer.js" ComponentId="{00DFEB15-FC5B-4FD8-877A-3219CD1F7C2C}" Directory_="jquerytimer_Dir" Attributes="0" KeyPath="jquery.timer.js" Type="0"/>
+    <ROW Component="jqueryui.css" ComponentId="{E74B46AD-2D3A-4D74-B519-7682AA8B3DF9}" Directory_="css_1_Dir" Attributes="0" KeyPath="jqueryui.css" Type="0"/>
+    <ROW Component="landis.css" ComponentId="{BE2BA115-A4D3-4E89-8E00-BD97FF18AFEE}" Directory_="css_Dir" Attributes="0" KeyPath="landis.css" Type="0"/>
+    <ROW Component="landisutils.js" ComponentId="{1115D13B-39D7-429A-BF4B-B88FC2A76D0E}" Directory_="js_Dir" Attributes="0" KeyPath="landisutils.js" Type="0"/>
+    <ROW Component="msvcm90.dll" ComponentId="{1480704F-ADA3-4A23-A84B-99E6302FFCE7}" Directory_="APPDIR" Attributes="0" KeyPath="msvcm90.dll"/>
+    <ROW Component="msvcp90.dll" ComponentId="{E88A35A8-5603-4EF4-B3A4-BC63E5F9C8F6}" Directory_="APPDIR" Attributes="0" KeyPath="msvcp90.dll"/>
+    <ROW Component="msvcr90.dll" ComponentId="{55B7DF54-00D7-4A89-8FA0-008054B2CDCC}" Directory_="APPDIR" Attributes="0" KeyPath="msvcr90.dll"/>
+    <ROW Component="olwhitespace.js" ComponentId="{AC2B6EA1-75E3-4964-A69B-2ED4A8A24973}" Directory_="ol3_Dir" Attributes="0" KeyPath="olwhitespace.js" Type="0"/>
+    <ROW Component="pyconfig.h" ComponentId="{9D04B694-D2DA-4F0B-AD4E-AE5F4DD9DA2F}" Directory_="include_Dir" Attributes="0" KeyPath="pyconfig.h" Type="0"/>
+    <ROW Component="python27.dll" ComponentId="{04E637AA-CE5D-44DE-8DBA-3633FD48C7F9}" Directory_="APPDIR" Attributes="0" KeyPath="python27.dll"/>
+    <ROW Component="pywintypes27.dll" ComponentId="{E4282936-3602-4CAA-84F8-C3829C430F08}" Directory_="APPDIR" Attributes="0" KeyPath="pywintypes27.dll"/>
+    <ROW Component="startlandisvislocal.exe" ComponentId="{8E03484D-3819-496E-B7E5-2FF668A58590}" Directory_="webbase_Dir" Attributes="0" KeyPath="startlandisvislocal.exe"/>
+    <ROW Component="uiicons_3399ff_0.png" ComponentId="{FAB9305A-F8A6-410C-9F86-2D25E96A4239}" Directory_="images_Dir" Attributes="0" KeyPath="uiicons_3399ff_0.png" Type="0"/>
+    <ROW Component="units.xml" ComponentId="{C4F990F0-F483-4A06-A740-AECF7F54F604}" Directory_="xml_Dir" Attributes="0" KeyPath="units.xml" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="DS_Store DS_Store_1 DS_Store_2 DS_Store_3 PreProcTool.exe ProductInformation Proj4Extent.exe _ctypes.pyd black.png colorbrewer.js compdcs.csv config.yaml default_settings.json gdal111.dll geos_c.dll index.html jquery.color.js jquery.dropdown.css jquery.flot.axislabels.js jquery.parse.js jquery.parse.js_1 jquery.pubsub.js jquery.timer.js jqueryui.css landis.css landisutils.js msvcm90.dll msvcp90.dll msvcr90.dll olwhitespace.js project_file.xsd pyconfig.h python27.dll pywintypes27.dll startlandisvislocal.exe uiicons_3399ff_0.png units.xml"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="DS_Store DS_Store_1 DS_Store_2 DS_Store_3 PreProcTool.exe ProductInformation Proj4Extent.exe _ctypes.pyd backup_project_file.xsd black.png colorbrewer.js compdcs.csv config.yaml default_settings.json gdal111.dll geos_c.dll index.html jquery.color.js jquery.dropdown.css jquery.flot.axislabels.js jquery.parse.js jquery.parse.js_1 jquery.pubsub.js jquery.timer.js jqueryui.css landis.css landisutils.js msvcm90.dll msvcp90.dll msvcr90.dll olwhitespace.js pyconfig.h python27.dll pywintypes27.dll startlandisvislocal.exe uiicons_3399ff_0.png units.xml"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -98,15 +98,15 @@
     <ROW File="DS_Store_1" Component_="DS_Store_1" FileName="DS_STO~1|.DS_Store" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery\.DS_Store" SelfReg="false" NextFile="jquery.js"/>
     <ROW File="DS_Store_2" Component_="DS_Store_2" FileName="DS_STO~1|.DS_Store" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-fullscreen\.DS_Store" SelfReg="false" NextFile="gitignore"/>
     <ROW File="DS_Store_3" Component_="DS_Store_3" FileName="DS_STO~1|.DS_Store" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-ui\.DS_Store" SelfReg="false" NextFile="uiicons_3399ff_0.png"/>
-    <ROW File="GDALLogoBW.svg_1" Component_="compdcs.csv" FileName="GDALLO~1.SVG|GDALLogoBW.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoBW.svg" SelfReg="false" NextFile="GDALLogoColor.svg_1"/>
-    <ROW File="GDALLogoColor.svg_1" Component_="compdcs.csv" FileName="GDALLO~2.SVG|GDALLogoColor.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoColor.svg" SelfReg="false" NextFile="GDALLogoGS.svg_1"/>
-    <ROW File="GDALLogoGS.svg_1" Component_="compdcs.csv" FileName="GDALLO~3.SVG|GDALLogoGS.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoGS.svg" SelfReg="false" NextFile="gdal_datum.csv_1"/>
+    <ROW File="GDALLogoBW.svg" Component_="compdcs.csv" FileName="GDALLO~1.SVG|GDALLogoBW.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoBW.svg" SelfReg="false" NextFile="GDALLogoColor.svg"/>
+    <ROW File="GDALLogoColor.svg" Component_="compdcs.csv" FileName="GDALLO~2.SVG|GDALLogoColor.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoColor.svg" SelfReg="false" NextFile="GDALLogoGS.svg"/>
+    <ROW File="GDALLogoGS.svg" Component_="compdcs.csv" FileName="GDALLO~3.SVG|GDALLogoGS.svg" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\GDALLogoGS.svg" SelfReg="false" NextFile="gdal_datum.csv"/>
     <ROW File="LICENSE.txt" Component_="DS_Store" FileName="LICENSE.txt" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\LICENSE.txt" SelfReg="false" NextFile="marker.png"/>
     <ROW File="Microsoft.VC90.CRT.manifest" Component_="_ctypes.pyd" FileName="MICROS~1.MAN|Microsoft.VC90.CRT.manifest" Attributes="0" SourcePath="..\dist\PreProcTool\Microsoft.VC90.CRT.manifest" SelfReg="false" NextFile="msvcm90.dll"/>
     <ROW File="PIL._imaging.pyd" Component_="_ctypes.pyd" FileName="PIL_IM~1.PYD|PIL._imaging.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\PIL._imaging.pyd" SelfReg="false" NextFile="PreProcTool.exe"/>
     <ROW File="PreProcTool.exe" Component_="PreProcTool.exe" FileName="PREPRO~1.EXE|PreProcTool.exe" Attributes="0" SourcePath="..\dist\PreProcTool\PreProcTool.exe" SelfReg="false" NextFile="PreProcTool.exe.manifest" DigSign="true"/>
-    <ROW File="PreProcTool.exe.manifest" Component_="_ctypes.pyd" FileName="PREPRO~1.MAN|PreProcTool.exe.manifest" Attributes="0" SourcePath="..\dist\PreProcTool\PreProcTool.exe.manifest" SelfReg="false" NextFile="pyexpat.pyd"/>
-    <ROW File="Proj4Extent.exe" Component_="Proj4Extent.exe" FileName="PROJ4E~1.EXE|Proj4Extent.exe" Attributes="0" SourcePath="..\dist\PreProcTool\Proj4Extent.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="PreProcTool.exe.manifest" Component_="_ctypes.pyd" FileName="PREPRO~1.MAN|PreProcTool.exe.manifest" Attributes="0" SourcePath="..\dist\PreProcTool\PreProcTool.exe.manifest" SelfReg="false" NextFile="Proj4Extent.exe"/>
+    <ROW File="Proj4Extent.exe" Component_="Proj4Extent.exe" FileName="PROJ4E~1.EXE|Proj4Extent.exe" Attributes="0" SourcePath="..\dist\PreProcTool\Proj4Extent.exe" SelfReg="false" NextFile="pyexpat.pyd" DigSign="true"/>
     <ROW File="README.html" Component_="DS_Store" FileName="README~1.HTM|README.html" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\README.html" SelfReg="false" NextFile="wheel.png"/>
     <ROW File="README.md" Component_="jquery.timer.js" FileName="README.md" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-timer\README.md" SelfReg="false" NextFile="DS_Store_3"/>
     <ROW File="_ctypes.pyd" Component_="_ctypes.pyd" FileName="_ctypes.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\_ctypes.pyd" SelfReg="false" NextFile="_hashlib.pyd"/>
@@ -116,39 +116,40 @@
     <ROW File="_socket.pyd" Component_="_ctypes.pyd" FileName="_socket.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\_socket.pyd" SelfReg="false" NextFile="_ssl.pyd"/>
     <ROW File="_ssl.pyd" Component_="_ctypes.pyd" FileName="_ssl.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\_ssl.pyd" SelfReg="false" NextFile="_yaml.pyd"/>
     <ROW File="_yaml.pyd" Component_="_ctypes.pyd" FileName="_yaml.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\_yaml.pyd" SelfReg="false" NextFile="bz2.pyd"/>
+    <ROW File="backup_project_file.xsd" Component_="backup_project_file.xsd" FileName="BACKUP~1.XSD|backup_project_file.xsd" Attributes="0" SourcePath="..\dist\PreProcTool\config\xsd\backup_project_file.xsd" SelfReg="false" NextFile="project_file.xsd"/>
     <ROW File="black.png" Component_="black.png" FileName="black.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\black.png" SelfReg="false" NextFile="chart_filter.png"/>
     <ROW File="bz2.pyd" Component_="_ctypes.pyd" FileName="bz2.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\bz2.pyd" SelfReg="false" NextFile="gdal111.dll"/>
     <ROW File="chart_filter.png" Component_="black.png" FileName="CHART_~1.PNG|chart_filter.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\chart_filter.png" SelfReg="false" NextFile="chart_selector.png"/>
     <ROW File="chart_selector.png" Component_="black.png" FileName="CHART_~2.PNG|chart_selector.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\chart_selector.png" SelfReg="false" NextFile="checkbox.png"/>
     <ROW File="checkbox.png" Component_="black.png" FileName="checkbox.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\checkbox.png" SelfReg="false" NextFile="empty.png"/>
     <ROW File="colorbrewer.js" Component_="colorbrewer.js" FileName="COLORB~1.JS|colorbrewer.js" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\colorbrewer\colorbrewer.js" SelfReg="false" NextFile="DS_Store"/>
-    <ROW File="compdcs.csv_1" Component_="compdcs.csv" FileName="compdcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\compdcs.csv" SelfReg="false" NextFile="coordinate_axis.csv_1"/>
+    <ROW File="compdcs.csv" Component_="compdcs.csv" FileName="compdcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\compdcs.csv" SelfReg="false" NextFile="coordinate_axis.csv"/>
     <ROW File="config.yaml" Component_="config.yaml" FileName="CONFIG~1.YAM|config.yaml" Attributes="0" SourcePath="..\dist\PreProcTool\config\config.yaml" SelfReg="false" NextFile="units.xml"/>
-    <ROW File="coordinate_axis.csv_1" Component_="compdcs.csv" FileName="COORDI~1.CSV|coordinate_axis.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\coordinate_axis.csv" SelfReg="false" NextFile="cubewerx_extra.wkt_1"/>
-    <ROW File="cubewerx_extra.wkt_1" Component_="compdcs.csv" FileName="CUBEWE~1.WKT|cubewerx_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\cubewerx_extra.wkt" SelfReg="false" NextFile="datum_shift.csv_1"/>
-    <ROW File="datum_shift.csv_1" Component_="compdcs.csv" FileName="DATUM_~1.CSV|datum_shift.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\datum_shift.csv" SelfReg="false" NextFile="ecw_cs.wkt_1"/>
+    <ROW File="coordinate_axis.csv" Component_="compdcs.csv" FileName="COORDI~1.CSV|coordinate_axis.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\coordinate_axis.csv" SelfReg="false" NextFile="cubewerx_extra.wkt"/>
+    <ROW File="cubewerx_extra.wkt" Component_="compdcs.csv" FileName="CUBEWE~1.WKT|cubewerx_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\cubewerx_extra.wkt" SelfReg="false" NextFile="datum_shift.csv"/>
+    <ROW File="datum_shift.csv" Component_="compdcs.csv" FileName="DATUM_~1.CSV|datum_shift.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\datum_shift.csv" SelfReg="false" NextFile="ecw_cs.wkt"/>
     <ROW File="default_settings.json" Component_="default_settings.json" FileName="DEFAUL~1.JSO|default_settings.json" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\config\default_settings.json" SelfReg="false" NextFile="landis.css"/>
-    <ROW File="ecw_cs.wkt_1" Component_="compdcs.csv" FileName="ecw_cs.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ecw_cs.wkt" SelfReg="false" NextFile="ellipsoid.csv_1"/>
-    <ROW File="ellipsoid.csv_1" Component_="compdcs.csv" FileName="ELLIPS~1.CSV|ellipsoid.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ellipsoid.csv" SelfReg="false" NextFile="epsg.wkt_1"/>
+    <ROW File="ecw_cs.wkt" Component_="compdcs.csv" FileName="ecw_cs.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ecw_cs.wkt" SelfReg="false" NextFile="ellipsoid.csv"/>
+    <ROW File="ellipsoid.csv" Component_="compdcs.csv" FileName="ELLIPS~1.CSV|ellipsoid.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ellipsoid.csv" SelfReg="false" NextFile="epsg.wkt"/>
     <ROW File="empty.png" Component_="black.png" FileName="empty.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\empty.png" SelfReg="false" NextFile="fullscreen.png"/>
-    <ROW File="epsg.wkt_1" Component_="compdcs.csv" FileName="epsg.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\epsg.wkt" SelfReg="false" NextFile="esri_extra.wkt_1"/>
-    <ROW File="esri_StatePlane_extra.wkt_1" Component_="compdcs.csv" FileName="ESRI_S~1.WKT|esri_StatePlane_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_StatePlane_extra.wkt" SelfReg="false" NextFile="esri_Wisconsin_extra.wkt_1"/>
-    <ROW File="esri_Wisconsin_extra.wkt_1" Component_="compdcs.csv" FileName="ESRI_W~1.WKT|esri_Wisconsin_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_Wisconsin_extra.wkt" SelfReg="false" NextFile="gcs.csv_1"/>
-    <ROW File="esri_extra.wkt_1" Component_="compdcs.csv" FileName="ESRI_E~1.WKT|esri_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_extra.wkt" SelfReg="false" NextFile="esri_StatePlane_extra.wkt_1"/>
+    <ROW File="epsg.wkt" Component_="compdcs.csv" FileName="epsg.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\epsg.wkt" SelfReg="false" NextFile="esri_extra.wkt"/>
+    <ROW File="esri_StatePlane_extra.wkt" Component_="compdcs.csv" FileName="ESRI_S~1.WKT|esri_StatePlane_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_StatePlane_extra.wkt" SelfReg="false" NextFile="esri_Wisconsin_extra.wkt"/>
+    <ROW File="esri_Wisconsin_extra.wkt" Component_="compdcs.csv" FileName="ESRI_W~1.WKT|esri_Wisconsin_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_Wisconsin_extra.wkt" SelfReg="false" NextFile="gcs.csv"/>
+    <ROW File="esri_extra.wkt" Component_="compdcs.csv" FileName="ESRI_E~1.WKT|esri_extra.wkt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\esri_extra.wkt" SelfReg="false" NextFile="esri_StatePlane_extra.wkt"/>
     <ROW File="farbtastic.css" Component_="DS_Store" FileName="FARBTA~1.CSS|farbtastic.css" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\farbtastic.css" SelfReg="false" NextFile="farbtastic.js"/>
     <ROW File="farbtastic.js" Component_="DS_Store" FileName="FARBTA~1.JS|farbtastic.js" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\farbtastic.js" SelfReg="false" NextFile="LICENSE.txt"/>
     <ROW File="fullscreen.png" Component_="black.png" FileName="FULLSC~1.PNG|fullscreen.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\fullscreen.png" SelfReg="false" NextFile="map_selector.png"/>
-    <ROW File="gcs.csv_1" Component_="compdcs.csv" FileName="gcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gcs.csv" SelfReg="false" NextFile="gcs.override.csv_1"/>
-    <ROW File="gcs.override.csv_1" Component_="compdcs.csv" FileName="GCSOVE~1.CSV|gcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gcs.override.csv" SelfReg="false" NextFile="gdalicon.png_1"/>
+    <ROW File="gcs.csv" Component_="compdcs.csv" FileName="gcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gcs.csv" SelfReg="false" NextFile="gcs.override.csv"/>
+    <ROW File="gcs.override.csv" Component_="compdcs.csv" FileName="GCSOVE~1.CSV|gcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gcs.override.csv" SelfReg="false" NextFile="gdalicon.png"/>
     <ROW File="gdal111.dll" Component_="gdal111.dll" FileName="gdal111.dll" Attributes="0" SourcePath="..\dist\PreProcTool\gdal111.dll" SelfReg="false" NextFile="geos_c.dll"/>
-    <ROW File="gdal_datum.csv_1" Component_="compdcs.csv" FileName="GDAL_D~1.CSV|gdal_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gdal_datum.csv" SelfReg="false" NextFile="geoccs.csv_1"/>
-    <ROW File="gdalicon.png_1" Component_="compdcs.csv" FileName="gdalicon.png" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gdalicon.png" SelfReg="false" NextFile="GDALLogoBW.svg_1"/>
-    <ROW File="geoccs.csv_1" Component_="compdcs.csv" FileName="geoccs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\geoccs.csv" SelfReg="false" NextFile="gt_datum.csv_1"/>
+    <ROW File="gdal_datum.csv" Component_="compdcs.csv" FileName="GDAL_D~1.CSV|gdal_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gdal_datum.csv" SelfReg="false" NextFile="geoccs.csv"/>
+    <ROW File="gdalicon.png" Component_="compdcs.csv" FileName="gdalicon.png" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gdalicon.png" SelfReg="false" NextFile="GDALLogoBW.svg"/>
+    <ROW File="geoccs.csv" Component_="compdcs.csv" FileName="geoccs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\geoccs.csv" SelfReg="false" NextFile="gt_datum.csv"/>
     <ROW File="geos_c.dll" Component_="geos_c.dll" FileName="geos_c.dll" Attributes="0" SourcePath="..\dist\PreProcTool\geos_c.dll" SelfReg="false" NextFile="lxml.etree.pyd"/>
     <ROW File="gitignore" Component_="DS_Store_2" FileName="GITIGN~1|.gitignore" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-fullscreen\.gitignore" SelfReg="false" NextFile="travis.yml"/>
-    <ROW File="gt_datum.csv_1" Component_="compdcs.csv" FileName="gt_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gt_datum.csv" SelfReg="false" NextFile="gt_ellips.csv_1"/>
-    <ROW File="gt_ellips.csv_1" Component_="compdcs.csv" FileName="GT_ELL~1.CSV|gt_ellips.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gt_ellips.csv" SelfReg="false" NextFile="header.dxf_1"/>
-    <ROW File="header.dxf_1" Component_="compdcs.csv" FileName="header.dxf" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\header.dxf" SelfReg="false" NextFile="nitf_spec.xml_1"/>
+    <ROW File="gt_datum.csv" Component_="compdcs.csv" FileName="gt_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gt_datum.csv" SelfReg="false" NextFile="gt_ellips.csv"/>
+    <ROW File="gt_ellips.csv" Component_="compdcs.csv" FileName="GT_ELL~1.CSV|gt_ellips.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\gt_ellips.csv" SelfReg="false" NextFile="header.dxf"/>
+    <ROW File="header.dxf" Component_="compdcs.csv" FileName="header.dxf" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\header.dxf" SelfReg="false" NextFile="nitf_spec.xml"/>
     <ROW File="index.html" Component_="index.html" FileName="INDEX~1.HTM|index.html" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\index.html" SelfReg="false" NextFile="landisutils.js"/>
     <ROW File="jquery.color.js" Component_="jquery.color.js" FileName="JQUERY~1.JS|jquery.color.js" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-color\jquery.color.js" SelfReg="false" NextFile="jquery.color.min.js"/>
     <ROW File="jquery.color.min.js" Component_="jquery.color.js" FileName="JQUERY~2.JS|jquery.color.min.js" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-color\jquery.color.min.js" SelfReg="false" NextFile="jquery.dropdown.css"/>
@@ -182,8 +183,8 @@
     <ROW File="msvcm90.dll" Component_="msvcm90.dll" FileName="msvcm90.dll" Attributes="0" SourcePath="..\dist\PreProcTool\msvcm90.dll" SelfReg="false" NextFile="msvcp90.dll"/>
     <ROW File="msvcp90.dll" Component_="msvcp90.dll" FileName="msvcp90.dll" Attributes="0" SourcePath="..\dist\PreProcTool\msvcp90.dll" SelfReg="false" NextFile="msvcr90.dll"/>
     <ROW File="msvcr90.dll" Component_="msvcr90.dll" FileName="msvcr90.dll" Attributes="0" SourcePath="..\dist\PreProcTool\msvcr90.dll" SelfReg="false" NextFile="numpy.core._dotblas.pyd"/>
-    <ROW File="nitf_spec.xml_1" Component_="compdcs.csv" FileName="NITF_S~1.XML|nitf_spec.xml" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\nitf_spec.xml" SelfReg="false" NextFile="nitf_spec.xsd_1"/>
-    <ROW File="nitf_spec.xsd_1" Component_="compdcs.csv" FileName="NITF_S~1.XSD|nitf_spec.xsd" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\nitf_spec.xsd" SelfReg="false" NextFile="osmconf.ini_1"/>
+    <ROW File="nitf_spec.xml" Component_="compdcs.csv" FileName="NITF_S~1.XML|nitf_spec.xml" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\nitf_spec.xml" SelfReg="false" NextFile="nitf_spec.xsd"/>
+    <ROW File="nitf_spec.xsd" Component_="compdcs.csv" FileName="NITF_S~1.XSD|nitf_spec.xsd" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\nitf_spec.xsd" SelfReg="false" NextFile="osmconf.ini"/>
     <ROW File="numpy.core._dotblas.pyd" Component_="_ctypes.pyd" FileName="NUMPYC~1.PYD|numpy.core._dotblas.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\numpy.core._dotblas.pyd" SelfReg="false" NextFile="numpy.core.multiarray.pyd"/>
     <ROW File="numpy.core.multiarray.pyd" Component_="_ctypes.pyd" FileName="NUMPYC~2.PYD|numpy.core.multiarray.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\numpy.core.multiarray.pyd" SelfReg="false" NextFile="numpy.core.scalarmath.pyd"/>
     <ROW File="numpy.core.scalarmath.pyd" Component_="_ctypes.pyd" FileName="NUMPYC~3.PYD|numpy.core.scalarmath.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\numpy.core.scalarmath.pyd" SelfReg="false" NextFile="numpy.core.umath.pyd"/>
@@ -200,30 +201,30 @@
     <ROW File="osgeo._gdalconst.pyd" Component_="_ctypes.pyd" FileName="OSGEO_~3.PYD|osgeo._gdalconst.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\osgeo._gdalconst.pyd" SelfReg="false" NextFile="osgeo._ogr.pyd"/>
     <ROW File="osgeo._ogr.pyd" Component_="_ctypes.pyd" FileName="OSGEO_~4.PYD|osgeo._ogr.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\osgeo._ogr.pyd" SelfReg="false" NextFile="osgeo._osr.pyd"/>
     <ROW File="osgeo._osr.pyd" Component_="_ctypes.pyd" FileName="OSGEO_~5.PYD|osgeo._osr.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\osgeo._osr.pyd" SelfReg="false" NextFile="PIL._imaging.pyd"/>
-    <ROW File="osmconf.ini_1" Component_="compdcs.csv" FileName="osmconf.ini" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\osmconf.ini" SelfReg="false" NextFile="ozi_datum.csv_1"/>
-    <ROW File="ozi_datum.csv_1" Component_="compdcs.csv" FileName="OZI_DA~1.CSV|ozi_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ozi_datum.csv" SelfReg="false" NextFile="ozi_ellips.csv_1"/>
-    <ROW File="ozi_ellips.csv_1" Component_="compdcs.csv" FileName="OZI_EL~1.CSV|ozi_ellips.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ozi_ellips.csv" SelfReg="false" NextFile="pci_datum.txt_1"/>
-    <ROW File="pci_datum.txt_1" Component_="compdcs.csv" FileName="PCI_DA~1.TXT|pci_datum.txt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pci_datum.txt" SelfReg="false" NextFile="pci_ellips.txt_1"/>
-    <ROW File="pci_ellips.txt_1" Component_="compdcs.csv" FileName="PCI_EL~1.TXT|pci_ellips.txt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pci_ellips.txt" SelfReg="false" NextFile="pcs.csv_1"/>
-    <ROW File="pcs.csv_1" Component_="compdcs.csv" FileName="pcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pcs.csv" SelfReg="false" NextFile="pcs.override.csv_1"/>
-    <ROW File="pcs.override.csv_1" Component_="compdcs.csv" FileName="PCSOVE~1.CSV|pcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pcs.override.csv" SelfReg="false" NextFile="prime_meridian.csv_1"/>
+    <ROW File="osmconf.ini" Component_="compdcs.csv" FileName="osmconf.ini" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\osmconf.ini" SelfReg="false" NextFile="ozi_datum.csv"/>
+    <ROW File="ozi_datum.csv" Component_="compdcs.csv" FileName="OZI_DA~1.CSV|ozi_datum.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ozi_datum.csv" SelfReg="false" NextFile="ozi_ellips.csv"/>
+    <ROW File="ozi_ellips.csv" Component_="compdcs.csv" FileName="OZI_EL~1.CSV|ozi_ellips.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\ozi_ellips.csv" SelfReg="false" NextFile="pci_datum.txt"/>
+    <ROW File="pci_datum.txt" Component_="compdcs.csv" FileName="PCI_DA~1.TXT|pci_datum.txt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pci_datum.txt" SelfReg="false" NextFile="pci_ellips.txt"/>
+    <ROW File="pci_ellips.txt" Component_="compdcs.csv" FileName="PCI_EL~1.TXT|pci_ellips.txt" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pci_ellips.txt" SelfReg="false" NextFile="pcs.csv"/>
+    <ROW File="pcs.csv" Component_="compdcs.csv" FileName="pcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pcs.csv" SelfReg="false" NextFile="pcs.override.csv"/>
+    <ROW File="pcs.override.csv" Component_="compdcs.csv" FileName="PCSOVE~1.CSV|pcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\pcs.override.csv" SelfReg="false" NextFile="prime_meridian.csv"/>
     <ROW File="playback_control.png" Component_="black.png" FileName="PLAYBA~1.PNG|playback_control.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\playback_control.png" SelfReg="false" NextFile="playback_pref.png"/>
     <ROW File="playback_pref.png" Component_="black.png" FileName="PLAYBA~2.PNG|playback_pref.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\playback_pref.png" SelfReg="false" NextFile="scenario_selector.png"/>
-    <ROW File="prime_meridian.csv_1" Component_="compdcs.csv" FileName="PRIME_~1.CSV|prime_meridian.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\prime_meridian.csv" SelfReg="false" NextFile="projop_wparm.csv_1"/>
-    <ROW File="project_file.xsd" Component_="project_file.xsd" FileName="PROJEC~1.XSD|project_file.xsd" Attributes="0" SourcePath="..\dist\PreProcTool\config\xsd\project_file.xsd" SelfReg="false" NextFile="compdcs.csv_1"/>
-    <ROW File="projop_wparm.csv_1" Component_="compdcs.csv" FileName="PROJOP~1.CSV|projop_wparm.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\projop_wparm.csv" SelfReg="false" NextFile="s57agencies.csv_1"/>
+    <ROW File="prime_meridian.csv" Component_="compdcs.csv" FileName="PRIME_~1.CSV|prime_meridian.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\prime_meridian.csv" SelfReg="false" NextFile="projop_wparm.csv"/>
+    <ROW File="project_file.xsd" Component_="backup_project_file.xsd" FileName="PROJEC~1.XSD|project_file.xsd" Attributes="0" SourcePath="..\dist\PreProcTool\config\xsd\project_file.xsd" SelfReg="false" NextFile="compdcs.csv"/>
+    <ROW File="projop_wparm.csv" Component_="compdcs.csv" FileName="PROJOP~1.CSV|projop_wparm.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\projop_wparm.csv" SelfReg="false" NextFile="s57agencies.csv"/>
     <ROW File="pyconfig.h" Component_="pyconfig.h" FileName="pyconfig.h" Attributes="0" SourcePath="..\dist\PreProcTool\include\pyconfig.h" SelfReg="false" NextFile="default_settings.json"/>
     <ROW File="pyexpat.pyd" Component_="_ctypes.pyd" FileName="pyexpat.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\pyexpat.pyd" SelfReg="false" NextFile="python27.dll"/>
     <ROW File="python27.dll" Component_="python27.dll" FileName="python27.dll" Attributes="0" SourcePath="..\dist\PreProcTool\python27.dll" SelfReg="false" NextFile="pywintypes27.dll"/>
     <ROW File="pywintypes27.dll" Component_="pywintypes27.dll" FileName="PYWINT~1.DLL|pywintypes27.dll" Attributes="0" SourcePath="..\dist\PreProcTool\pywintypes27.dll" SelfReg="false" NextFile="scipy.integrate._dop.pyd"/>
-    <ROW File="s57agencies.csv_1" Component_="compdcs.csv" FileName="S57AGE~1.CSV|s57agencies.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57agencies.csv" SelfReg="false" NextFile="s57attributes.csv_1"/>
-    <ROW File="s57attributes.csv_1" Component_="compdcs.csv" FileName="S57ATT~1.CSV|s57attributes.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes.csv" SelfReg="false" NextFile="s57attributes_aml.csv_1"/>
-    <ROW File="s57attributes_aml.csv_1" Component_="compdcs.csv" FileName="S57ATT~2.CSV|s57attributes_aml.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes_aml.csv" SelfReg="false" NextFile="s57attributes_iw.csv_1"/>
-    <ROW File="s57attributes_iw.csv_1" Component_="compdcs.csv" FileName="S57ATT~3.CSV|s57attributes_iw.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes_iw.csv" SelfReg="false" NextFile="s57expectedinput.csv_1"/>
-    <ROW File="s57expectedinput.csv_1" Component_="compdcs.csv" FileName="S57EXP~1.CSV|s57expectedinput.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57expectedinput.csv" SelfReg="false" NextFile="s57objectclasses.csv_1"/>
-    <ROW File="s57objectclasses.csv_1" Component_="compdcs.csv" FileName="S57OBJ~1.CSV|s57objectclasses.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses.csv" SelfReg="false" NextFile="s57objectclasses_aml.csv_1"/>
-    <ROW File="s57objectclasses_aml.csv_1" Component_="compdcs.csv" FileName="S57OBJ~2.CSV|s57objectclasses_aml.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses_aml.csv" SelfReg="false" NextFile="s57objectclasses_iw.csv_1"/>
-    <ROW File="s57objectclasses_iw.csv_1" Component_="compdcs.csv" FileName="S57OBJ~3.CSV|s57objectclasses_iw.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses_iw.csv" SelfReg="false" NextFile="seed_2d.dgn_1"/>
+    <ROW File="s57agencies.csv" Component_="compdcs.csv" FileName="S57AGE~1.CSV|s57agencies.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57agencies.csv" SelfReg="false" NextFile="s57attributes.csv"/>
+    <ROW File="s57attributes.csv" Component_="compdcs.csv" FileName="S57ATT~1.CSV|s57attributes.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes.csv" SelfReg="false" NextFile="s57attributes_aml.csv"/>
+    <ROW File="s57attributes_aml.csv" Component_="compdcs.csv" FileName="S57ATT~2.CSV|s57attributes_aml.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes_aml.csv" SelfReg="false" NextFile="s57attributes_iw.csv"/>
+    <ROW File="s57attributes_iw.csv" Component_="compdcs.csv" FileName="S57ATT~3.CSV|s57attributes_iw.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57attributes_iw.csv" SelfReg="false" NextFile="s57expectedinput.csv"/>
+    <ROW File="s57expectedinput.csv" Component_="compdcs.csv" FileName="S57EXP~1.CSV|s57expectedinput.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57expectedinput.csv" SelfReg="false" NextFile="s57objectclasses.csv"/>
+    <ROW File="s57objectclasses.csv" Component_="compdcs.csv" FileName="S57OBJ~1.CSV|s57objectclasses.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses.csv" SelfReg="false" NextFile="s57objectclasses_aml.csv"/>
+    <ROW File="s57objectclasses_aml.csv" Component_="compdcs.csv" FileName="S57OBJ~2.CSV|s57objectclasses_aml.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses_aml.csv" SelfReg="false" NextFile="s57objectclasses_iw.csv"/>
+    <ROW File="s57objectclasses_iw.csv" Component_="compdcs.csv" FileName="S57OBJ~3.CSV|s57objectclasses_iw.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\s57objectclasses_iw.csv" SelfReg="false" NextFile="seed_2d.dgn"/>
     <ROW File="scenario_selector.png" Component_="black.png" FileName="SCENAR~1.PNG|scenario_selector.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\img\scenario_selector.png" SelfReg="false" NextFile="index.html"/>
     <ROW File="scipy.integrate._dop.pyd" Component_="_ctypes.pyd" FileName="SCIPYI~1.PYD|scipy.integrate._dop.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\scipy.integrate._dop.pyd" SelfReg="false" NextFile="scipy.integrate._odepack.pyd"/>
     <ROW File="scipy.integrate._odepack.pyd" Component_="_ctypes.pyd" FileName="SCIPYI~2.PYD|scipy.integrate._odepack.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\scipy.integrate._odepack.pyd" SelfReg="false" NextFile="scipy.integrate._quadpack.pyd"/>
@@ -261,12 +262,12 @@
     <ROW File="scipy.stats.mvn.pyd" Component_="_ctypes.pyd" FileName="SCIPY~15.PYD|scipy.stats.mvn.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\scipy.stats.mvn.pyd" SelfReg="false" NextFile="scipy.stats.statlib.pyd"/>
     <ROW File="scipy.stats.statlib.pyd" Component_="_ctypes.pyd" FileName="SCIPY~16.PYD|scipy.stats.statlib.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\scipy.stats.statlib.pyd" SelfReg="false" NextFile="scipy.stats.vonmises_cython.pyd"/>
     <ROW File="scipy.stats.vonmises_cython.pyd" Component_="_ctypes.pyd" FileName="SCIPY~17.PYD|scipy.stats.vonmises_cython.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\scipy.stats.vonmises_cython.pyd" SelfReg="false" NextFile="select.pyd"/>
-    <ROW File="seed_2d.dgn_1" Component_="compdcs.csv" FileName="seed_2d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_2d.dgn" SelfReg="false" NextFile="seed_3d.dgn_1"/>
-    <ROW File="seed_3d.dgn_1" Component_="compdcs.csv" FileName="seed_3d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_3d.dgn" SelfReg="false" NextFile="stateplane.csv_1"/>
+    <ROW File="seed_2d.dgn" Component_="compdcs.csv" FileName="seed_2d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_2d.dgn" SelfReg="false" NextFile="seed_3d.dgn"/>
+    <ROW File="seed_3d.dgn" Component_="compdcs.csv" FileName="seed_3d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_3d.dgn" SelfReg="false" NextFile="stateplane.csv"/>
     <ROW File="select.pyd" Component_="_ctypes.pyd" FileName="select.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\select.pyd" SelfReg="false" NextFile="unicodedata.pyd"/>
-    <ROW File="startlandisvislocal.exe" Component_="startlandisvislocal.exe" FileName="START-~1.EXE|start-landis-vis-local.exe" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\start-landis-vis-local.exe" SelfReg="false" NextFile="_ctypes.pyd" DigSign="true"/>
-    <ROW File="stateplane.csv_1" Component_="compdcs.csv" FileName="STATEP~1.CSV|stateplane.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\stateplane.csv" SelfReg="false" NextFile="trailer.dxf_1"/>
-    <ROW File="trailer.dxf_1" Component_="compdcs.csv" FileName="trailer.dxf" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\trailer.dxf" SelfReg="false" NextFile="unit_of_measure.csv_1"/>
+    <ROW File="startlandisvislocal.exe" Component_="startlandisvislocal.exe" FileName="START-~1.EXE|start-landis-vis-local.exe" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\start-landis-vis-local.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="stateplane.csv" Component_="compdcs.csv" FileName="STATEP~1.CSV|stateplane.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\stateplane.csv" SelfReg="false" NextFile="trailer.dxf"/>
+    <ROW File="trailer.dxf" Component_="compdcs.csv" FileName="trailer.dxf" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\trailer.dxf" SelfReg="false" NextFile="unit_of_measure.csv"/>
     <ROW File="travis.yml" Component_="DS_Store_2" FileName="TRAVIS~1.YML|.travis.yml" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-fullscreen\.travis.yml" SelfReg="false" NextFile="jquery.fullscreen.js"/>
     <ROW File="uiicons_3399ff_0.png" Component_="uiicons_3399ff_0.png" FileName="UI-ICO~1.PNG|ui-icons_3399ff_0.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-ui\css\images\ui-icons_3399ff_0.png" SelfReg="false" NextFile="uiicons_525252_0.png"/>
     <ROW File="uiicons_525252_0.png" Component_="uiicons_3399ff_0.png" FileName="UI-ICO~2.PNG|ui-icons_525252_0.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-ui\css\images\ui-icons_525252_0.png" SelfReg="false" NextFile="uiicons_66B3FF_0.png"/>
@@ -274,14 +275,14 @@
     <ROW File="uiicons_d4d4d4_0.png" Component_="uiicons_3399ff_0.png" FileName="UI-ICO~4.PNG|ui-icons_d4d4d4_0.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-ui\css\images\ui-icons_d4d4d4_0.png" SelfReg="false" NextFile="uiicons_ffffff_0.png"/>
     <ROW File="uiicons_ffffff_0.png" Component_="uiicons_3399ff_0.png" FileName="UI-ICO~5.PNG|ui-icons_ffffff_0.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-ui\css\images\ui-icons_ffffff_0.png" SelfReg="false" NextFile="jqueryui.css"/>
     <ROW File="unicodedata.pyd" Component_="_ctypes.pyd" FileName="UNICOD~1.PYD|unicodedata.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\unicodedata.pyd" SelfReg="false" NextFile="win32api.pyd"/>
-    <ROW File="unit_of_measure.csv_1" Component_="compdcs.csv" FileName="UNIT_O~1.CSV|unit_of_measure.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\unit_of_measure.csv" SelfReg="false" NextFile="vertcs.csv_1"/>
-    <ROW File="units.xml" Component_="units.xml" FileName="units.xml" Attributes="0" SourcePath="..\dist\PreProcTool\config\xml\units.xml" SelfReg="false" NextFile="project_file.xsd"/>
-    <ROW File="vertcs.csv_1" Component_="compdcs.csv" FileName="vertcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\vertcs.csv" SelfReg="false" NextFile="vertcs.override.csv_1"/>
-    <ROW File="vertcs.override.csv_1" Component_="compdcs.csv" FileName="VERTCS~1.CSV|vertcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\vertcs.override.csv" SelfReg="false" NextFile="pyconfig.h"/>
+    <ROW File="unit_of_measure.csv" Component_="compdcs.csv" FileName="UNIT_O~1.CSV|unit_of_measure.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\unit_of_measure.csv" SelfReg="false" NextFile="vertcs.csv"/>
+    <ROW File="units.xml" Component_="units.xml" FileName="units.xml" Attributes="0" SourcePath="..\dist\PreProcTool\config\xml\units.xml" SelfReg="false" NextFile="backup_project_file.xsd"/>
+    <ROW File="vertcs.csv" Component_="compdcs.csv" FileName="vertcs.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\vertcs.csv" SelfReg="false" NextFile="vertcs.override.csv"/>
+    <ROW File="vertcs.override.csv" Component_="compdcs.csv" FileName="VERTCS~1.CSV|vertcs.override.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\vertcs.override.csv" SelfReg="false" NextFile="pyconfig.h"/>
     <ROW File="wheel.png" Component_="DS_Store" FileName="wheel.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\wheel.png" SelfReg="false" NextFile="jquery.flot.axislabels.js"/>
     <ROW File="win32api.pyd" Component_="_ctypes.pyd" FileName="win32api.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32api.pyd" SelfReg="false" NextFile="win32pdh.pyd"/>
     <ROW File="win32pdh.pyd" Component_="_ctypes.pyd" FileName="win32pdh.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pdh.pyd" SelfReg="false" NextFile="win32pipe.pyd"/>
-    <ROW File="win32pipe.pyd" Component_="_ctypes.pyd" FileName="WIN32P~1.PYD|win32pipe.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pipe.pyd" SelfReg="false" NextFile="Proj4Extent.exe"/>
+    <ROW File="win32pipe.pyd" Component_="_ctypes.pyd" FileName="WIN32P~1.PYD|win32pipe.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pipe.pyd" SelfReg="false" NextFile="config.yaml"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>

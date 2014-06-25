@@ -1,10 +1,6 @@
 ;(function ( $, window, document, undefined ) {
 
-    // define your widget under a namespace of your choice
-    // with additional parameters e.g.
-    // $.widget( "namespace.widgetname", (optional) - an
-    // existing widget prototype to inherit from, an object
-    // literal to become the widget's prototype );
+    //landis map legend widget
 
     $.widget( "landis.mapLegend", {
 

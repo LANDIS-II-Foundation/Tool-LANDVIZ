@@ -12,7 +12,7 @@
                 }
             }
 
-            /*
+            /* EXPERIMENTAL
             $('#exportSettingsLink')
                 .attr('download', "export.json")
                 .attr('href', '#')

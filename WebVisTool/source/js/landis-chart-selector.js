@@ -40,21 +40,6 @@
                      }
                 };
 
-            // check value
-            // switch(key) {
-            //     case 'mainScenarioId':
-            //         value = parseInt(value);
-            //         break;
-            //     case 'compareScenarioId':
-            //         value = parseInt(value);
-            //         break;
-            //     case 'timeMax':
-            //         if(value <= self.options.currentTime) {
-            //             value = self.options.currentTime;
-            //         } 
-            //         break;
-            // }
-            // base
             this._super(key, value);
 
             if (key in fnMap) {
@@ -206,9 +191,6 @@
                 
                 
             });
-
-
-
                
         },
 
