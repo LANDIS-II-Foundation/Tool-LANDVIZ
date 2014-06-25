@@ -86,7 +86,7 @@ def main():
     
     print "proj4=\"{}\"".format(proj4)
     print "ulx=\"{}\" uly=\"{}\" lrx=\"{}\" lry=\"{}\"".format(ext[0][0], ext[0][1], ext[2][0], ext[2][1])
-    print "min=\"{}\" max=\"{}\" init=\"{}\"".format(zoom, zoom+4, zoom+2)
+    print "min=\"{}\" max=\"{}\" init=\"{}\"".format(int(zoom), int(zoom+4), int(zoom+2))
     
 if __name__ == '__main__':
     main()
