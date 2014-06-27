@@ -17,6 +17,8 @@ PreProcTool/source/logs
 # WebVisTool  #
 ###############
 WebVisTool/source/landisdata
+WebVisTool/source/megan_landisdata
+WebVisTool/source/megan_config
 
 ##############
 # SampleData #

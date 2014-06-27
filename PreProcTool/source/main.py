@@ -97,7 +97,7 @@ def main(script, *args):
         outputworker.saveMetadataJson()
         outputworker.copyWebbase()
         outputworker.updateWebsettings()
-        outputworker.zipOutputDir()
+        # outputworker.zipOutputDir()
 
         logMain.info('End of LANDIS-II PreProcTool.')
 

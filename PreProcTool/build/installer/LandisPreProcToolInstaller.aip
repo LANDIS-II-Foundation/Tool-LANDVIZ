@@ -50,42 +50,42 @@
     <ROW Directory="xsd_Dir" Directory_Parent="config_Dir" DefaultDir="xsd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="DS_Store" ComponentId="{523F2C70-9E49-4B8E-B227-CF7C8098C968}" Directory_="farbtastic_Dir" Attributes="0" KeyPath="DS_Store" Type="0"/>
-    <ROW Component="DS_Store_1" ComponentId="{B4CA039B-E20B-4F95-86C0-A4C6C683ABC8}" Directory_="jquery_Dir" Attributes="0" KeyPath="DS_Store_1" Type="0"/>
-    <ROW Component="DS_Store_2" ComponentId="{DC099857-EDF8-4B86-880B-A4A27F52E7E6}" Directory_="jqueryfullscreen_Dir" Attributes="0" KeyPath="DS_Store_2" Type="0"/>
-    <ROW Component="DS_Store_3" ComponentId="{D1E855F6-F7D5-41E3-B80F-4404AD297B9C}" Directory_="jqueryui_Dir" Attributes="0" KeyPath="DS_Store_3" Type="0"/>
-    <ROW Component="PreProcTool.exe" ComponentId="{8C28EEEA-A933-4902-9020-E6CB70858FA2}" Directory_="APPDIR" Attributes="0" KeyPath="PreProcTool.exe"/>
+    <ROW Component="DS_Store" ComponentId="{E7E2405E-0FA5-4933-96B8-CC3070F4052F}" Directory_="farbtastic_Dir" Attributes="0" KeyPath="DS_Store" Type="0"/>
+    <ROW Component="DS_Store_1" ComponentId="{32002F7D-09F2-4B24-93D8-A31EBCBAEB4E}" Directory_="jquery_Dir" Attributes="0" KeyPath="DS_Store_1" Type="0"/>
+    <ROW Component="DS_Store_2" ComponentId="{7C45B369-43C6-43EB-8014-B060E0A1C145}" Directory_="jqueryfullscreen_Dir" Attributes="0" KeyPath="DS_Store_2" Type="0"/>
+    <ROW Component="DS_Store_3" ComponentId="{EB2EA314-2EB8-4BCC-878A-789D493C6CD3}" Directory_="jqueryui_Dir" Attributes="0" KeyPath="DS_Store_3" Type="0"/>
+    <ROW Component="PreProcTool.exe" ComponentId="{504C32A4-51EF-4887-8081-29E6FD5A335E}" Directory_="APPDIR" Attributes="0" KeyPath="PreProcTool.exe"/>
     <ROW Component="ProductInformation" ComponentId="{EACFDF5C-58D7-44C5-A262-0D4EAF87B92B}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="Proj4Extent.exe" ComponentId="{BE4DA530-0C81-433A-B656-9EB7574FC71F}" Directory_="APPDIR" Attributes="0" KeyPath="Proj4Extent.exe"/>
-    <ROW Component="_ctypes.pyd" ComponentId="{7DA4DA4A-42E2-43B6-8897-0F559A8CFC0D}" Directory_="APPDIR" Attributes="0" KeyPath="_ctypes.pyd" Type="0"/>
+    <ROW Component="Proj4Extent.exe" ComponentId="{304B3AF8-74A0-4AEE-9410-22D8ECC5DDCA}" Directory_="APPDIR" Attributes="0" KeyPath="Proj4Extent.exe"/>
+    <ROW Component="_ctypes.pyd" ComponentId="{E25B6A37-BE00-4BDA-B529-A29C1AEA04DB}" Directory_="APPDIR" Attributes="0" KeyPath="_ctypes.pyd" Type="0"/>
     <ROW Component="backup_project_file.xsd" ComponentId="{F68EC08A-7112-4D8D-8624-CD2897112261}" Directory_="xsd_Dir" Attributes="0" KeyPath="backup_project_file.xsd" Type="0"/>
-    <ROW Component="black.png" ComponentId="{ECFD9C7F-53B6-4874-85B3-DDEC3FB22287}" Directory_="img_Dir" Attributes="0" KeyPath="black.png" Type="0"/>
-    <ROW Component="colorbrewer.js" ComponentId="{2379B572-C20D-42DF-BC96-2AEBAF67F7C2}" Directory_="colorbrewer_Dir" Attributes="0" KeyPath="colorbrewer.js" Type="0"/>
+    <ROW Component="black.png" ComponentId="{A656942B-4377-4868-99D8-FB5842A0015B}" Directory_="img_Dir" Attributes="0" KeyPath="black.png" Type="0"/>
+    <ROW Component="colorbrewer.js" ComponentId="{D5835781-9F5B-476C-B60D-92680B7C3EDE}" Directory_="colorbrewer_Dir" Attributes="0" KeyPath="colorbrewer.js" Type="0"/>
     <ROW Component="compdcs.csv" ComponentId="{46560304-0CD5-4D73-8C72-337E57397029}" Directory_="gdaldata_Dir" Attributes="0" KeyPath="compdcs.csv" Type="0"/>
     <ROW Component="config.yaml" ComponentId="{9DE3F0C0-0411-4973-A03E-9ECB8E824189}" Directory_="config_Dir" Attributes="0" KeyPath="config.yaml" Type="0"/>
-    <ROW Component="default_settings.json" ComponentId="{1FCEDB67-9A8E-441A-A3E9-A9C904A26F8B}" Directory_="config_1_Dir" Attributes="0" KeyPath="default_settings.json" Type="0"/>
-    <ROW Component="gdal111.dll" ComponentId="{BF4F75C6-40EA-4F04-92EB-708F560044F4}" Directory_="APPDIR" Attributes="0" KeyPath="gdal111.dll"/>
-    <ROW Component="geos_c.dll" ComponentId="{636D99C4-C2A7-4CBC-A674-114554668721}" Directory_="APPDIR" Attributes="0" KeyPath="geos_c.dll"/>
-    <ROW Component="index.html" ComponentId="{A9B5BE3D-EBF2-4CC6-8931-AC42D2C6E66E}" Directory_="webbase_Dir" Attributes="0" KeyPath="index.html" Type="0"/>
-    <ROW Component="jquery.color.js" ComponentId="{D5B9FC3D-666D-456E-AF42-F9E1BE992070}" Directory_="jquerycolor_Dir" Attributes="0" KeyPath="jquery.color.js" Type="0"/>
-    <ROW Component="jquery.dropdown.css" ComponentId="{1E53800D-34C3-4AA2-8388-1FD6C549906E}" Directory_="jquerydropdown_Dir" Attributes="0" KeyPath="jquery.dropdown.css" Type="0"/>
-    <ROW Component="jquery.flot.axislabels.js" ComponentId="{C66FA1AC-E49A-4743-BAB5-4E600F9DF582}" Directory_="flot_Dir" Attributes="0" KeyPath="jquery.flot.axislabels.js" Type="0"/>
-    <ROW Component="jquery.parse.js" ComponentId="{8341D4DD-BFEE-457D-B564-AA8D642FF1CE}" Directory_="jquery.parsemaster_Dir" Attributes="0" KeyPath="jquery.parse.js" Type="0"/>
-    <ROW Component="jquery.parse.js_1" ComponentId="{B11E13CF-5729-42AF-858E-D3D694D93428}" Directory_="jqueryparse_Dir" Attributes="0" KeyPath="jquery.parse.js_1" Type="0"/>
-    <ROW Component="jquery.pubsub.js" ComponentId="{805938E3-6609-47DA-B8D5-81FC3BC7B8A0}" Directory_="jquerypubsub_Dir" Attributes="0" KeyPath="jquery.pubsub.js" Type="0"/>
-    <ROW Component="jquery.timer.js" ComponentId="{00DFEB15-FC5B-4FD8-877A-3219CD1F7C2C}" Directory_="jquerytimer_Dir" Attributes="0" KeyPath="jquery.timer.js" Type="0"/>
-    <ROW Component="jqueryui.css" ComponentId="{E74B46AD-2D3A-4D74-B519-7682AA8B3DF9}" Directory_="css_1_Dir" Attributes="0" KeyPath="jqueryui.css" Type="0"/>
-    <ROW Component="landis.css" ComponentId="{BE2BA115-A4D3-4E89-8E00-BD97FF18AFEE}" Directory_="css_Dir" Attributes="0" KeyPath="landis.css" Type="0"/>
-    <ROW Component="landisutils.js" ComponentId="{1115D13B-39D7-429A-BF4B-B88FC2A76D0E}" Directory_="js_Dir" Attributes="0" KeyPath="landisutils.js" Type="0"/>
-    <ROW Component="msvcm90.dll" ComponentId="{1480704F-ADA3-4A23-A84B-99E6302FFCE7}" Directory_="APPDIR" Attributes="0" KeyPath="msvcm90.dll"/>
-    <ROW Component="msvcp90.dll" ComponentId="{E88A35A8-5603-4EF4-B3A4-BC63E5F9C8F6}" Directory_="APPDIR" Attributes="0" KeyPath="msvcp90.dll"/>
-    <ROW Component="msvcr90.dll" ComponentId="{55B7DF54-00D7-4A89-8FA0-008054B2CDCC}" Directory_="APPDIR" Attributes="0" KeyPath="msvcr90.dll"/>
-    <ROW Component="olwhitespace.js" ComponentId="{AC2B6EA1-75E3-4964-A69B-2ED4A8A24973}" Directory_="ol3_Dir" Attributes="0" KeyPath="olwhitespace.js" Type="0"/>
+    <ROW Component="default_settings.json" ComponentId="{C9C7DCD8-BF1F-4879-A3DF-FF9B6C0C19E5}" Directory_="config_1_Dir" Attributes="0" KeyPath="default_settings.json" Type="0"/>
+    <ROW Component="gdal111.dll" ComponentId="{21976ED8-C115-4E26-810F-02B2C2599ECD}" Directory_="APPDIR" Attributes="0" KeyPath="gdal111.dll"/>
+    <ROW Component="geos_c.dll" ComponentId="{62B4DC4F-67D7-43B5-AD28-BCEBCB633039}" Directory_="APPDIR" Attributes="0" KeyPath="geos_c.dll"/>
+    <ROW Component="index.html" ComponentId="{87FB67A2-2D55-479F-850B-2791C24B4E29}" Directory_="webbase_Dir" Attributes="0" KeyPath="index.html" Type="0"/>
+    <ROW Component="jquery.color.js" ComponentId="{C6A9AE8E-A987-4881-8630-B395A0EDEC3E}" Directory_="jquerycolor_Dir" Attributes="0" KeyPath="jquery.color.js" Type="0"/>
+    <ROW Component="jquery.dropdown.css" ComponentId="{78AA2E5B-1770-4687-A9F7-20267D0EF57F}" Directory_="jquerydropdown_Dir" Attributes="0" KeyPath="jquery.dropdown.css" Type="0"/>
+    <ROW Component="jquery.flot.axislabels.js" ComponentId="{6CD782F4-513C-4FE1-8D6D-07AA170B9B44}" Directory_="flot_Dir" Attributes="0" KeyPath="jquery.flot.axislabels.js" Type="0"/>
+    <ROW Component="jquery.parse.js" ComponentId="{10D4648F-6B1D-4415-81CF-0C7C84FC1F1F}" Directory_="jquery.parsemaster_Dir" Attributes="0" KeyPath="jquery.parse.js" Type="0"/>
+    <ROW Component="jquery.parse.js_1" ComponentId="{08DAF29C-F681-4F67-9CE9-ECCB4591CCAD}" Directory_="jqueryparse_Dir" Attributes="0" KeyPath="jquery.parse.js_1" Type="0"/>
+    <ROW Component="jquery.pubsub.js" ComponentId="{BE2C3AAA-1BE0-41D4-850F-AB19D49FD7BB}" Directory_="jquerypubsub_Dir" Attributes="0" KeyPath="jquery.pubsub.js" Type="0"/>
+    <ROW Component="jquery.timer.js" ComponentId="{ABFB9BDF-AAF0-4C11-ACBA-FAC8834B5FE7}" Directory_="jquerytimer_Dir" Attributes="0" KeyPath="jquery.timer.js" Type="0"/>
+    <ROW Component="jqueryui.css" ComponentId="{6E8A5408-F2D0-4750-B23B-F9AA7BBF7455}" Directory_="css_1_Dir" Attributes="0" KeyPath="jqueryui.css" Type="0"/>
+    <ROW Component="landis.css" ComponentId="{1224CC73-F426-48D0-AE0E-721E3286E108}" Directory_="css_Dir" Attributes="0" KeyPath="landis.css" Type="0"/>
+    <ROW Component="landisutils.js" ComponentId="{C4FE834D-3B50-4403-8E73-D1CEC5254651}" Directory_="js_Dir" Attributes="0" KeyPath="landisutils.js" Type="0"/>
+    <ROW Component="msvcm90.dll" ComponentId="{2A8A932C-EF15-4461-8874-17060471774B}" Directory_="APPDIR" Attributes="0" KeyPath="msvcm90.dll"/>
+    <ROW Component="msvcp90.dll" ComponentId="{B57FB386-2DDF-46D3-95DB-2582B44F13B7}" Directory_="APPDIR" Attributes="0" KeyPath="msvcp90.dll"/>
+    <ROW Component="msvcr90.dll" ComponentId="{88AFA0E8-F65C-4F3C-815C-C991BC9FE559}" Directory_="APPDIR" Attributes="0" KeyPath="msvcr90.dll"/>
+    <ROW Component="olwhitespace.js" ComponentId="{261C95B1-A0CE-4025-BE4F-AD9A06C7EE46}" Directory_="ol3_Dir" Attributes="0" KeyPath="olwhitespace.js" Type="0"/>
     <ROW Component="pyconfig.h" ComponentId="{9D04B694-D2DA-4F0B-AD4E-AE5F4DD9DA2F}" Directory_="include_Dir" Attributes="0" KeyPath="pyconfig.h" Type="0"/>
-    <ROW Component="python27.dll" ComponentId="{04E637AA-CE5D-44DE-8DBA-3633FD48C7F9}" Directory_="APPDIR" Attributes="0" KeyPath="python27.dll"/>
-    <ROW Component="pywintypes27.dll" ComponentId="{E4282936-3602-4CAA-84F8-C3829C430F08}" Directory_="APPDIR" Attributes="0" KeyPath="pywintypes27.dll"/>
-    <ROW Component="startlandisvislocal.exe" ComponentId="{8E03484D-3819-496E-B7E5-2FF668A58590}" Directory_="webbase_Dir" Attributes="0" KeyPath="startlandisvislocal.exe"/>
-    <ROW Component="uiicons_3399ff_0.png" ComponentId="{FAB9305A-F8A6-410C-9F86-2D25E96A4239}" Directory_="images_Dir" Attributes="0" KeyPath="uiicons_3399ff_0.png" Type="0"/>
+    <ROW Component="python27.dll" ComponentId="{D9DA607B-AA2F-4CE0-88F2-1D95DE9A27B2}" Directory_="APPDIR" Attributes="0" KeyPath="python27.dll"/>
+    <ROW Component="pywintypes27.dll" ComponentId="{19EA523E-712D-4D52-9BAD-9AFC9A1B47F8}" Directory_="APPDIR" Attributes="0" KeyPath="pywintypes27.dll"/>
+    <ROW Component="startlandisvislocal.exe" ComponentId="{745A96A7-A314-4FB4-902D-21F198DF0D43}" Directory_="webbase_Dir" Attributes="0" KeyPath="startlandisvislocal.exe"/>
+    <ROW Component="uiicons_3399ff_0.png" ComponentId="{0FE681BB-6F28-4DD6-B842-3DF1F0126F54}" Directory_="images_Dir" Attributes="0" KeyPath="uiicons_3399ff_0.png" Type="0"/>
     <ROW Component="units.xml" ComponentId="{C4F990F0-F483-4A06-A740-AECF7F54F604}" Directory_="xml_Dir" Attributes="0" KeyPath="units.xml" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
@@ -265,7 +265,7 @@
     <ROW File="seed_2d.dgn" Component_="compdcs.csv" FileName="seed_2d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_2d.dgn" SelfReg="false" NextFile="seed_3d.dgn"/>
     <ROW File="seed_3d.dgn" Component_="compdcs.csv" FileName="seed_3d.dgn" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\seed_3d.dgn" SelfReg="false" NextFile="stateplane.csv"/>
     <ROW File="select.pyd" Component_="_ctypes.pyd" FileName="select.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\select.pyd" SelfReg="false" NextFile="unicodedata.pyd"/>
-    <ROW File="startlandisvislocal.exe" Component_="startlandisvislocal.exe" FileName="START-~1.EXE|start-landis-vis-local.exe" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\start-landis-vis-local.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="startlandisvislocal.exe" Component_="startlandisvislocal.exe" FileName="START-~1.EXE|start-landis-vis-local.exe" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\start-landis-vis-local.exe" SelfReg="false" NextFile="_ctypes.pyd" DigSign="true"/>
     <ROW File="stateplane.csv" Component_="compdcs.csv" FileName="STATEP~1.CSV|stateplane.csv" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\stateplane.csv" SelfReg="false" NextFile="trailer.dxf"/>
     <ROW File="trailer.dxf" Component_="compdcs.csv" FileName="trailer.dxf" Attributes="0" SourcePath="..\dist\PreProcTool\gdal-data\trailer.dxf" SelfReg="false" NextFile="unit_of_measure.csv"/>
     <ROW File="travis.yml" Component_="DS_Store_2" FileName="TRAVIS~1.YML|.travis.yml" Attributes="6" SourcePath="..\dist\PreProcTool\webbase\lib\jquery-fullscreen\.travis.yml" SelfReg="false" NextFile="jquery.fullscreen.js"/>
@@ -282,7 +282,7 @@
     <ROW File="wheel.png" Component_="DS_Store" FileName="wheel.png" Attributes="0" SourcePath="..\dist\PreProcTool\webbase\lib\farbtastic\wheel.png" SelfReg="false" NextFile="jquery.flot.axislabels.js"/>
     <ROW File="win32api.pyd" Component_="_ctypes.pyd" FileName="win32api.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32api.pyd" SelfReg="false" NextFile="win32pdh.pyd"/>
     <ROW File="win32pdh.pyd" Component_="_ctypes.pyd" FileName="win32pdh.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pdh.pyd" SelfReg="false" NextFile="win32pipe.pyd"/>
-    <ROW File="win32pipe.pyd" Component_="_ctypes.pyd" FileName="WIN32P~1.PYD|win32pipe.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pipe.pyd" SelfReg="false" NextFile="config.yaml"/>
+    <ROW File="win32pipe.pyd" Component_="_ctypes.pyd" FileName="WIN32P~1.PYD|win32pipe.pyd" Attributes="0" SourcePath="..\dist\PreProcTool\win32pipe.pyd" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>

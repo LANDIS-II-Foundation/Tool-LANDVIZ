@@ -196,7 +196,7 @@
                                     [self._results[i]],
                                     [self.options.fieldName],
                                     'Time',
-                                    {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'},
+                                    {'EcoregionName': ['inactiv','inactive'], 'Ecoregion': ['inactiv','inactive']},
                                     {},
                                     'NumSites', 1);
                     //console.log(self._results[i]);
@@ -226,7 +226,7 @@
                                     [self._results[i]],
                                     [self.options.fieldName],
                                     'Time',
-                                    {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'},
+                                    {'EcoregionName': ['inactiv','inactive'], 'Ecoregion': ['inactiv','inactive']},
                                     filterObject,
                                     'NumSites', 1);
                     self._flotData.push({label: landisMetadata.getScenarioAttributeById(self.options.scenarios[i],'name'), data: data});
@@ -278,7 +278,8 @@
                         self._chartVisHeaderText.text(self.options.extensionName + ': ' + self.options.fieldName + ' [acres]');
 
                     };*/
-                    data = self.generateFlotData([results], [self.options.fieldName], 'Time', {'EcoregionName': 'inactiv', 'Ecoregion': 'inactiv'}, {}, 'NumSites', cf);
+
+                    data = self.generateFlotData([results], [self.options.fieldName], 'Time', {'EcoregionName': ['inactiv','inactive'], 'Ecoregion': ['inactiv','inactive']}, {}, 'NumSites', cf);
                     self._flotData.push({label: landisMetadata.getScenarioAttributeById(self.options.scenarios[s],'name'), data: data});
                     self.drawChart();
                     self._results.push(results);
@@ -321,9 +322,14 @@
                         exclude = false;
                         for(field in excludeParameterValue) {
                             //exclude specified values of speciefied attributes (e.g. if at year X Ecoregion Name = incactive)
-                            if(csvObjectsByScenarios[s].results.rows[r][field] == excludeParameterValue[field]){
-                                exclude = true;
+                            for(var ex=0; ex < excludeParameterValue[field].length; ex++) {
+                                //console.log(excludeParameterValue[field][ex]);
+                                //console.log(csvObjectsByScenarios[s].results.rows[r][field]);
+                                if(csvObjectsByScenarios[s].results.rows[r][field] == excludeParameterValue[field][ex]){
+                                    exclude = true;
+                                } 
                             }
+                            
                         }
                         include = true;
                         if(!jQuery.isEmptyObject(filterParameterValue)){
@@ -342,6 +348,7 @@
                         if(!exclude && include) {
                             //console.log(csvObjectsByScenarios[s].results.rows[r][parameterList[p]]);
                             pVal = csvObjectsByScenarios[s].results.rows[r][parameterList[p]];
+                            //console.log(pVal);
                             numSitesVal = 1.0;
                             //if no filter and numSiteField is in csv
                             if(jQuery.isEmptyObject(filterParameterValue) && jQuery.inArray(numSitesFieldName, csvObjectsByScenarios[s].results.fields) > -1){
@@ -373,7 +380,7 @@
                 }
                 charts.push(chart);
             }
-            //console.log("chart", dataseriesArr);
+           // console.log("chart", dataseriesArr);
             return dataseriesArr;
         },
         drawChart: function(){

@@ -236,8 +236,7 @@ class Project(object):
     def zoomMin(self, value):
         if value < 0:
             value = 0
-        if value > self.__zoomMax:
-            value = self.__zoomMax
+
         self.__zoomMin = value
     
     @property
@@ -248,8 +247,6 @@ class Project(object):
     def zoomMax(self, value):
         if value > 18:
             value = 18
-        if value < self.__zoomMin:
-            value = self.__zoomMin
 
         self.__zoomMax = value
 

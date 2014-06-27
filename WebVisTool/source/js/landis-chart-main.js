@@ -59,6 +59,7 @@
                     this.charts[seen].chartVis.chart('updateChartData', chartCandidates[c].scenarios);
                 } else {
                     //create Chart Flot instance 
+                    
                     this.charts.push(chartCandidates[c]);
 
                     this.charts[this.charts.length-1].chartVis = $('<div>').chart({

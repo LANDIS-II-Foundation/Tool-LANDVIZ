@@ -44,6 +44,8 @@ class PreWorker(object):
             maxZoom = self.PROJECT.zoomMax
             z = self.PROJECT.getZoomString()
 
+            print z
+
             logPrepairMaps = logging.getLogger('preworker.prepairMaps')
             logPrepairMaps.info('Start prepairing Map Output')
 
