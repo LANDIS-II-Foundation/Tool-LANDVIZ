@@ -168,7 +168,9 @@
             var i, allMapObjects = [];
             if(this.mapGroups.length > 0){
                 for(i = 0; i < this.mapGroups.length; i++){
-                    allMapObjects.push(this.mapGroups[i].rasterMapGroup.rastermapgroup('getAllMapObjects'));
+                    //allMapObjects.push(this.mapGroups[i].rasterMapGroup.rastermapgroup('getAllMapObjects'));
+                    allMapObjects.push(this.mapGroups[i].rasterMapGroup.rastermapgroup('option','unit'));
+
                 }
                 console.log(allMapObjects);
             }
@@ -178,7 +180,7 @@
             return new $.landisMaps();
         } else {
             this.set();
-            return this;
+            return this;    
         }
     };
 })(jQuery);
