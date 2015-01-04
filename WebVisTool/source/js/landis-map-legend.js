@@ -56,7 +56,9 @@
                     'min': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'min', self.options.min);
-                            if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self._rangeSlider.slider('values',0, self.options.min); 
+                            //if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self._setOption('filterMin', self.options.min);
                             self.updateHandleValues();
                         }
                         
@@ -64,7 +66,9 @@
                     'max': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'max', self.options.max);
-                            if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self._rangeSlider.slider('values',1, self.options.max); 
+                            //if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self._setOption('filterMax', self.options.max);
                             self.updateHandleValues();
                         }
                         
@@ -78,7 +82,7 @@
                         //continue;
                     },
                     'filterMin': function () {
-                       // console.log(self.options.filterMin);
+                        //console.log(self.options.filterMin);
                         $.pubsub( 'publish', T_MINMAX, self.options.mapGroupId );
                     },
                     'filterMax': function() {

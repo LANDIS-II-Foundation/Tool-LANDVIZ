@@ -367,6 +367,11 @@
             return self.rasterMaps.length;
         },
 
+        getRasterMaps: function(){
+            var self = this;
+            return self.rasterMaps;
+        },
+
         setupMinMax: function(){
             var self = this,
                 lMin = self.legendMinMax[0],
@@ -386,11 +391,12 @@
         },
 
         updateMinMax: function(){
+            console.log('update min max Legend');
             var self = this,
                 lMin =  self.legendMinMax[0],
                 lMax =  self.legendMinMax[1],
-                rMin,
-                rMax,
+                rMin =  self.legendMinMax[0],
+                rMax =  self.legendMinMax[1],
                 i;
 
             self._mapGroupLegend.mapLegend('option', 'min', lMin);
@@ -408,9 +414,29 @@
                 self.rasterMaps[i].rastermap('updateTimeSeriesLayerMinMax', lMin, lMax, rMin, rMax);
             }
 
-
-
         },
+
+        filterMinMax: function() {
+            var self = this,
+                lMin =  self.legendMinMax[0],
+                lMax =  self.legendMinMax[1],
+                rMin =  self.legendMinMax[0],
+                rMax =  self.legendMinMax[1],
+                i;
+
+            rMin = self._mapGroupLegend.mapLegend('option', 'filterMin');
+            rMax = self._mapGroupLegend.mapLegend('option', 'filterMax');
+
+            if(self.options.dataType != 'nominal') {
+                self._writeMinMaxToLegend(rMax, rMin, lMax, lMin);
+            }
+
+            for(i = 0; i < self.rasterMaps.length; i++) {
+
+                self.rasterMaps[i].rastermap('updateTimeSeriesLayerMinMax', lMin, lMax, rMin, rMax);
+            }
+        },
+
 
         _writeMinMaxToLegend: function(rMax, rMin, lMax, lMin){
             var self = this;
@@ -446,6 +472,21 @@
                 return false;
             }
             
+        },
+
+        getMapGroupLegend: function(){
+            var self = this;
+            return self._mapGroupLegend;
+        },
+
+        getMapGroupSideBar: function(){
+            var self = this;
+            return self._mapGroupSideBar;
+        },
+
+        getMapGroupMaps: function(){
+            var self = this;
+            return self._mapGroupMaps;
         },
 
         drawRasterMaps: function(){
@@ -532,6 +573,18 @@
                     }
                     break;
             }
+        },
+
+        setMinMax: function(min, max) {
+            var self = this;
+            self.legendMinMax[0] = min;
+            self.legendMinMax[1] = max;
+            self.updateMinMax();
+        },
+
+        getMinMax: function() {
+            var self = this;
+            return self.legendMinMax;
         },
 
         loadStatsForMapsInMapGroup: function(){

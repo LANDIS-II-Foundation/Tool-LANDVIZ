@@ -103,7 +103,7 @@
 
         };
 
-        this.bindViewsToFirstMap = function(){
+        this.bindViewsToFirstMap = function(){  
             //collectAllMaps
             var i, j, allMapObjects = [];
             if(this.mapGroups.length > 0){
@@ -143,7 +143,7 @@
             var i;
             for(i=0; i < this.mapGroups.length; i++){
                 if (this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupId') == mapGroupId) {
-                    this.mapGroups[i].rasterMapGroup.rastermapgroup('updateMinMax');
+                    this.mapGroups[i].rasterMapGroup.rastermapgroup('filterMinMax');
                 }
             }
            
@@ -164,18 +164,75 @@
             }
         };
 
-        this.syncMaps = function(){
-            var i, allMapObjects = [];
+        this.syncMapGroupsByUnit = function(){
+            var i, u, m, unit, minMax, mins = [], maxs = [], mapGroupsByUnit = {}, ramp, legend, rMaps = [], sb;
             if(this.mapGroups.length > 0){
                 for(i = 0; i < this.mapGroups.length; i++){
-                    //allMapObjects.push(this.mapGroups[i].rasterMapGroup.rastermapgroup('getAllMapObjects'));
-                    allMapObjects.push(this.mapGroups[i].rasterMapGroup.rastermapgroup('option','unit'));
+
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option','unit');
+                    if(unit != '') {
+                        if(!mapGroupsByUnit.hasOwnProperty(unit)) {
+                            mapGroupsByUnit[unit] = [];
+                        }
+                        mapGroupsByUnit[unit].push(i)
+                    }
+                }
+                //console.log(mapGroupsByUnit);
+            }
+
+            for (u in mapGroupsByUnit) {
+                if (!mapGroupsByUnit.hasOwnProperty(u)) {
+                    //The current property is not a direct property of p
+                    continue;
+                }
+                //Do your logic with the property here
+                if(mapGroupsByUnit[u].length > 1) {
+                    for(i = 0; i < mapGroupsByUnit[u].length; i++){
+                        if(i > 0) {
+                            sb = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
+                            
+                        }
+                        minMax = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
+                        mins.push(minMax[0]);
+                        maxs.push(minMax[1]);
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupMaps').css('width', '100%');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('option',)
+                        //get min and max of mapgroups
+                        //calculate new min Max
+                        //sync Legend?
+                    }
+                    minMax[0] = Math.min.apply(Math, mins);
+                    minMax[1] = Math.max.apply(Math, maxs);
+            
+                    legend = this.mapGroups[mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                    ramp = legend.mapLegend('getWebGlColorRamp');
+
+                    for(i = 0; i < mapGroupsByUnit[u].length; i++){
+                        this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
+
+                        rMaps = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
+                        //console.log(rMaps);
+                        for(m = 0; m < rMaps.length; m++) {
+                            rMaps[m].rastermap('updateTimeSeriesLayerMinMax', minMax[0], minMax[1], minMax[0], minMax[1]);
+                            rMaps[m].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                        }
+
+                    }
+
+                /*var ramp = self._mapGroupLegend.mapLegend('getWebGlColorRamp');
+                for(i = 0; i < self.rasterMaps.length; i++) {
+                    self.rasterMaps[i].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                }*/
+                    
 
                 }
-                console.log(allMapObjects);
             }
         };
         
+
+
         if(this.init) {
             return new $.landisMaps();
         } else {
