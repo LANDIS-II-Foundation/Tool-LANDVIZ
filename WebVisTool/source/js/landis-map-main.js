@@ -166,6 +166,7 @@
 
         this.syncMapGroupsByUnit = function(){
             var i, u, m, unit, minMax, mins = [], maxs = [], mapGroupsByUnit = {}, ramp, legend, rMaps = [], sb;
+            mapSync = true;
             if(this.mapGroups.length > 0){
                 for(i = 0; i < this.mapGroups.length; i++){
 
@@ -189,7 +190,10 @@
                 if(mapGroupsByUnit[u].length > 1) {
                     for(i = 0; i < mapGroupsByUnit[u].length; i++){
                         if(i > 0) {
+                            //Deactivate Side Bar
                             sb = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
+                            sb.children().hide();
+                            sb.append('Synced');
                             
                         }
                         minMax = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
@@ -209,6 +213,7 @@
                     legend = this.mapGroups[mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('getMapGroupLegend');
                     ramp = legend.mapLegend('getWebGlColorRamp');
 
+                    //set render options
                     for(i = 0; i < mapGroupsByUnit[u].length; i++){
                         this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
 

@@ -1,4 +1,4 @@
-var landisMetadata, landisMaps, landisCharts, landisSettings;
+var landisMetadata, landisMaps, landisCharts, landisSettings, mapSync = false;
 
 //START APPLICATION
 $( document ).ready(function() {
