@@ -4,6 +4,7 @@
         this.set = function() {
             this.init = true;
             this.mapGroups = [];
+            this.mapGroupsByUnit = {}
             return this;
         };
 
@@ -130,10 +131,24 @@
         };
 
         this.updateColorRamp = function(mapGroupId){
-            var i;
+            var i, j, m, unit, rMaps = [], legend, ramp;
+
             for(i=0; i < this.mapGroups.length; i++){
                 if (this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupId') == mapGroupId) {
-                    this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                    if(!mapSync){
+                        this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                    } else {
+                        unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
+                        legend = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                        ramp = legend.mapLegend('getWebGlColorRamp');
+                        for(j=0; j < this.mapGroupsByUnit[unit].length; j++) {
+                            //this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                            rMaps = this.mapGroups[j].rasterMapGroup.rastermapgroup('getRasterMaps');
+                            for(m = 0; m < rMaps.length; m++) {
+                                rMaps[m].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                            }
+                        }
+                    }
                     break;
                 }   
             }
@@ -165,38 +180,42 @@
         };
 
         this.syncMapGroupsByUnit = function(){
-            var i, u, m, unit, minMax, mins = [], maxs = [], mapGroupsByUnit = {}, ramp, legend, rMaps = [], sb;
+            var i, u, m, unit, minMax, mins = [], maxs = [], ramp, legend, rMaps = [], sb;
+            //FIXME move to unSync
+            this.mapGroupsByUnit = {};
             mapSync = true;
+
+            //Populate Object with units!
             if(this.mapGroups.length > 0){
                 for(i = 0; i < this.mapGroups.length; i++){
 
-                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option','unit');
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
                     if(unit != '') {
-                        if(!mapGroupsByUnit.hasOwnProperty(unit)) {
-                            mapGroupsByUnit[unit] = [];
+                        if(!this.mapGroupsByUnit.hasOwnProperty(unit)) {
+                            this.mapGroupsByUnit[unit] = [];
                         }
-                        mapGroupsByUnit[unit].push(i)
+                        this.mapGroupsByUnit[unit].push(i);
                     }
                 }
                 //console.log(mapGroupsByUnit);
             }
 
-            for (u in mapGroupsByUnit) {
-                if (!mapGroupsByUnit.hasOwnProperty(u)) {
+            for (u in this.mapGroupsByUnit) {
+                if (!this.mapGroupsByUnit.hasOwnProperty(u)) {
                     //The current property is not a direct property of p
                     continue;
                 }
                 //Do your logic with the property here
-                if(mapGroupsByUnit[u].length > 1) {
-                    for(i = 0; i < mapGroupsByUnit[u].length; i++){
+                if(this.mapGroupsByUnit[u].length > 1) {
+                    for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
                         if(i > 0) {
                             //Deactivate Side Bar
-                            sb = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
+                            sb = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
                             sb.children().hide();
                             sb.append('Synced');
                             
                         }
-                        minMax = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
+                        minMax = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
                         mins.push(minMax[0]);
                         maxs.push(minMax[1]);
                         //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupMaps').css('width', '100%');
@@ -210,14 +229,14 @@
                     minMax[0] = Math.min.apply(Math, mins);
                     minMax[1] = Math.max.apply(Math, maxs);
             
-                    legend = this.mapGroups[mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                    legend = this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('getMapGroupLegend');
                     ramp = legend.mapLegend('getWebGlColorRamp');
 
                     //set render options
-                    for(i = 0; i < mapGroupsByUnit[u].length; i++){
-                        this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
+                    for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
+                        this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
 
-                        rMaps = this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
+                        rMaps = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
                         //console.log(rMaps);
                         for(m = 0; m < rMaps.length; m++) {
                             rMaps[m].rastermap('updateTimeSeriesLayerMinMax', minMax[0], minMax[1], minMax[0], minMax[1]);
