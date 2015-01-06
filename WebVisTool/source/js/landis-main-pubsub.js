@@ -60,6 +60,8 @@ changeScenarios = function (topic, data){
 
     mapsToDraw();
     chartsToDraw();
+    landisMaps.unsyncMapGroups();
+    landisMaps.checkMapSync();
 
 },
 
@@ -82,6 +84,8 @@ changeMaps = function(topic, data){
 
     mapsToDraw();
     updateTimeInterval();
+    landisMaps.unsyncMapGroups();
+    landisMaps.checkMapSync();
 
 },
 
@@ -127,8 +131,6 @@ mapsToDraw = function(){
     landisMaps.bindViewsToFirstMap();
     //arrangeApplicationData();
     landisMaps.rearangeMapsInMapGroup();
-
-    landisMaps.checkMapSync();
 
 },
 

@@ -391,7 +391,7 @@
         },
 
         updateMinMax: function(){
-            console.log('update min max Legend');
+            //console.log('update min max Legend');
             var self = this,
                 lMin =  self.legendMinMax[0],
                 lMax =  self.legendMinMax[1],

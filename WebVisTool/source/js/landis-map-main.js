@@ -195,12 +195,19 @@
         };
 
         this.unsyncMapGroups = function() {
+            var i;
             mapSync = false;
+            $('#syncMapGroupsByUnit').removeClass('isSynced');
             $('.syncedInfo').remove();
             $('.map-group-sidebar').children().not("[name='checkbox-mode-change']").show();
 
             //FIXME = > SET ORIGINAL MIN MAX .. and RERender
-            //REMOVE INFO "SYNCED"
+
+            for(i=0; i < this.mapGroups.length; i++){
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('loadStatsForMapsInMapGroup');
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('updateMinMax');
+            }
 
         };
 
@@ -237,7 +244,7 @@
                             //Deactivate Side Bar
                             sb = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
                             sb.children().hide();
-                            sb.append('<p class="syncedInfo">Synced</p>');
+                            sb.append('<p class="syncedInfo" style="font-size: 10pt;">This map view is synchronized - use legend of '+ this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('option', 'outputName') + ' ['+ u +']</p>');
                             
                         }
                         minMax = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
@@ -258,9 +265,9 @@
                     ramp = legend.mapLegend('getWebGlColorRamp');
 
                     //set render options
+                    this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
                     for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
-                        //this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
-
+                        
                         rMaps = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
                         //console.log(rMaps);
                         for(m = 0; m < rMaps.length; m++) {
