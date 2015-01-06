@@ -153,20 +153,26 @@
         };
 
         this.updateMinMax = function(mapGroupId){
-            var i, j, m, unit, rMaps = [];
+            var i, j, m, unit, rMaps = [], legend, filterMin, filterMax, minMax;
             for(i=0; i < this.mapGroups.length; i++){
                 if (this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupId') == mapGroupId) {
+                    this.mapGroups[i].rasterMapGroup.rastermapgroup('filterMinMax');
                     unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
                     if(mapSync && this.mapGroupsByUnit.hasOwnProperty(unit)){
+                        legend = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                        filterMin = legend.mapLegend('option', 'filterMin');
+                        filterMax = legend.mapLegend('option', 'filterMax');
+                        minMax = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMinMax');
                         for(j=0; j < this.mapGroupsByUnit[unit].length; j++) {
+
                             rMaps = this.mapGroups[this.mapGroupsByUnit[unit][j]].rasterMapGroup.rastermapgroup('getRasterMaps');
                             for(m = 0; m < rMaps.length; m++) {
-                                rMaps[m].rastermap('updateTimeSeriesLayerMinMax', a,b,c,d);
+                                rMaps[m].rastermap('updateTimeSeriesLayerMinMax', minMax[0], minMax[1],filterMin, filterMax);
                             }
                         }
-                    } else {
+                    }/* else {
                         this.mapGroups[i].rasterMapGroup.rastermapgroup('filterMinMax');
-                    }
+                    }*/
                     break;
                 }
             }
@@ -253,7 +259,7 @@
 
                     //set render options
                     for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
-                        this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
+                        //this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
 
                         rMaps = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
                         //console.log(rMaps);
