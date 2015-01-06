@@ -126,8 +126,9 @@ mapsToDraw = function(){
     landisMaps.checkMapCandidates(mapCandidates);
     landisMaps.bindViewsToFirstMap();
     //arrangeApplicationData();
-    landisMaps.rearangeMapsInMapGroup(); 
+    landisMaps.rearangeMapsInMapGroup();
 
+    landisMaps.checkMapSync();
 
 },
 
