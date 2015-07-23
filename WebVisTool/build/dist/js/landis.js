@@ -157,12 +157,12 @@
             return this;
         }
     };
-})(jQuery);
-;(function($) {
+})(jQuery);;(function($) {
     $.landisMaps = function() { 
         this.set = function() {
             this.init = true;
             this.mapGroups = [];
+            this.mapGroupsByUnit = {}
             return this;
         };
 
@@ -262,7 +262,7 @@
 
         };
 
-        this.bindViewsToFirstMap = function(){
+        this.bindViewsToFirstMap = function(){  
             //collectAllMaps
             var i, j, allMapObjects = [];
             if(this.mapGroups.length > 0){
@@ -289,20 +289,50 @@
         };
 
         this.updateColorRamp = function(mapGroupId){
-            var i;
+            var i, j, m, unit, rMaps = [], legend, ramp;
+
             for(i=0; i < this.mapGroups.length; i++){
                 if (this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupId') == mapGroupId) {
-                    this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
+                    if(mapSync && this.mapGroupsByUnit.hasOwnProperty(unit)){                
+                        legend = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                        ramp = legend.mapLegend('getWebGlColorRamp');
+                        for(j=0; j < this.mapGroupsByUnit[unit].length; j++) {
+                            rMaps = this.mapGroups[this.mapGroupsByUnit[unit][j]].rasterMapGroup.rastermapgroup('getRasterMaps');
+                            for(m = 0; m < rMaps.length; m++) {
+                                rMaps[m].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                            }
+                        }
+                    } else {
+                        this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                    }
                     break;
                 }   
             }
         };
 
         this.updateMinMax = function(mapGroupId){
-            var i;
+            var i, j, m, unit, rMaps = [], legend, filterMin, filterMax, minMax;
             for(i=0; i < this.mapGroups.length; i++){
                 if (this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupId') == mapGroupId) {
-                    this.mapGroups[i].rasterMapGroup.rastermapgroup('updateMinMax');
+                    this.mapGroups[i].rasterMapGroup.rastermapgroup('filterMinMax');
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
+                    if(mapSync && this.mapGroupsByUnit.hasOwnProperty(unit)){
+                        legend = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                        filterMin = legend.mapLegend('option', 'filterMin');
+                        filterMax = legend.mapLegend('option', 'filterMax');
+                        minMax = this.mapGroups[i].rasterMapGroup.rastermapgroup('getMinMax');
+                        for(j=0; j < this.mapGroupsByUnit[unit].length; j++) {
+
+                            rMaps = this.mapGroups[this.mapGroupsByUnit[unit][j]].rasterMapGroup.rastermapgroup('getRasterMaps');
+                            for(m = 0; m < rMaps.length; m++) {
+                                rMaps[m].rastermap('updateTimeSeriesLayerMinMax', minMax[0], minMax[1],filterMin, filterMax);
+                            }
+                        }
+                    }/* else {
+                        this.mapGroups[i].rasterMapGroup.rastermapgroup('filterMinMax');
+                    }*/
+                    break;
                 }
             }
            
@@ -322,12 +352,135 @@
                 this.mapGroups[i].rasterMapGroup.rastermapgroup('updateTime');
             }
         };
+
+        this.unsyncMapGroups = function() {
+            var i;
+            mapSync = false;
+            $('#syncMapGroupsByUnit').removeClass('isSynced');
+            $('.syncedInfo').remove();
+            $('.map-group-sidebar').children().not("[name='checkbox-mode-change']").show();
+
+            //FIXME = > SET ORIGINAL MIN MAX .. and RERender
+
+            for(i=0; i < this.mapGroups.length; i++){
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('loadStatsForMapsInMapGroup');
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('updateColorRamp');
+                this.mapGroups[i].rasterMapGroup.rastermapgroup('updateMinMax');
+            }
+
+        };
+
+        this.syncMapGroupsByUnit = function(){
+            var i, u, m, unit, minMax, mins = [], maxs = [], ramp, legend, rMaps = [], sb;
+            //FIXME move to unSync
+            this.mapGroupsByUnit = {};
+            mapSync = true;
+
+            //Populate Object with units!
+            if(this.mapGroups.length > 0){
+                for(i = 0; i < this.mapGroups.length; i++){
+
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');  
+                    if(unit != '') {
+                        if(!this.mapGroupsByUnit.hasOwnProperty(unit)) {
+                            this.mapGroupsByUnit[unit] = [];
+                        }
+                        this.mapGroupsByUnit[unit].push(i);
+                    }
+                }
+                //console.log(mapGroupsByUnit);
+            }
+
+            for (u in this.mapGroupsByUnit) {
+                if (!this.mapGroupsByUnit.hasOwnProperty(u)) {
+                    //The current property is not a direct property of p
+                    continue;
+                }
+                //Do your logic with the property here
+                if(this.mapGroupsByUnit[u].length > 1) {
+                    for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
+                        if(i > 0) {
+                            //Deactivate Side Bar
+                            sb = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupSideBar');
+                            sb.children().hide();
+                            sb.append('<p class="syncedInfo" style="font-size: 10pt;">This map view is synchronized - use legend of '+ this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('option', 'outputName') + ' ['+ u +']</p>');
+                            
+                        }
+                        minMax = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMinMax');
+                        mins.push(minMax[0]);
+                        maxs.push(minMax[1]);
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getMapGroupMaps').css('width', '100%');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('updateSizeOfMaps');
+                        //this.mapGroups[mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('option',)
+                        //get min and max of mapgroups
+                        //calculate new min Max
+                        //sync Legend?
+                    }
+                    minMax[0] = Math.min.apply(Math, mins);
+                    minMax[1] = Math.max.apply(Math, maxs);
+            
+                    legend = this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('getMapGroupLegend');
+                    ramp = legend.mapLegend('getWebGlColorRamp');
+
+                    //set render options
+                    this.mapGroups[this.mapGroupsByUnit[u][0]].rasterMapGroup.rastermapgroup('setMinMax', minMax[0], minMax[1]);
+                    for(i = 0; i < this.mapGroupsByUnit[u].length; i++){
+                        
+                        rMaps = this.mapGroups[this.mapGroupsByUnit[u][i]].rasterMapGroup.rastermapgroup('getRasterMaps');
+                        //console.log(rMaps);
+                        for(m = 0; m < rMaps.length; m++) {
+                            rMaps[m].rastermap('updateTimeSeriesLayerMinMax', minMax[0], minMax[1], minMax[0], minMax[1]);
+                            rMaps[m].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                        }
+
+                    }
+
+                /*var ramp = self._mapGroupLegend.mapLegend('getWebGlColorRamp');
+                for(i = 0; i < self.rasterMaps.length; i++) {
+                    self.rasterMaps[i].rastermap('updateTimeSeriesLayerColorRamp', ramp);
+                }*/
+                    
+
+                }
+            }
+        };
+
+        this.checkMapSync = function(){
+            var i, unit, units = [], syncable = false;
+            //Button: enable if at least two Map Groups have same unit; otherwise disable and unsync
+            if(this.mapGroups.length > 0){
+                for(i = 0; i < this.mapGroups.length; i++){
+                    unit = this.mapGroups[i].rasterMapGroup.rastermapgroup('option', 'unit');
+                    if(unit != '') {
+                        if ($.inArray(unit, units) > -1) {
+                            //any unit occurs two times->enable sync button
+                            $('#syncMapGroupsByUnit').addClass('syncAble');
+                            syncable = true;
+                            break;
+                        } else{
+                            units.push(unit);
+                        }
+                    }
+                }
+                if(!syncable){
+                    $('#syncMapGroupsByUnit').removeClass('syncAble');
+                    syncable = false;
+                }
+            } else {
+                //disable button and unsync
+                $('#syncMapGroupsByUnit').removeClass('syncAble');
+                syncable = false;
+            }
+        };
         
+
+
         if(this.init) {
             return new $.landisMaps();
         } else {
             this.set();
-            return this;
+            return this;    
         }
     };
 })(jQuery);
@@ -1859,6 +2012,11 @@
             return self.rasterMaps.length;
         },
 
+        getRasterMaps: function(){
+            var self = this;
+            return self.rasterMaps;
+        },
+
         setupMinMax: function(){
             var self = this,
                 lMin = self.legendMinMax[0],
@@ -1878,11 +2036,12 @@
         },
 
         updateMinMax: function(){
+            //console.log('update min max Legend');
             var self = this,
                 lMin =  self.legendMinMax[0],
                 lMax =  self.legendMinMax[1],
-                rMin,
-                rMax,
+                rMin =  self.legendMinMax[0],
+                rMax =  self.legendMinMax[1],
                 i;
 
             self._mapGroupLegend.mapLegend('option', 'min', lMin);
@@ -1900,9 +2059,29 @@
                 self.rasterMaps[i].rastermap('updateTimeSeriesLayerMinMax', lMin, lMax, rMin, rMax);
             }
 
-
-
         },
+
+        filterMinMax: function() {
+            var self = this,
+                lMin =  self.legendMinMax[0],
+                lMax =  self.legendMinMax[1],
+                rMin =  self.legendMinMax[0],
+                rMax =  self.legendMinMax[1],
+                i;
+
+            rMin = self._mapGroupLegend.mapLegend('option', 'filterMin');
+            rMax = self._mapGroupLegend.mapLegend('option', 'filterMax');
+
+            if(self.options.dataType != 'nominal') {
+                self._writeMinMaxToLegend(rMax, rMin, lMax, lMin);
+            }
+
+            for(i = 0; i < self.rasterMaps.length; i++) {
+
+                self.rasterMaps[i].rastermap('updateTimeSeriesLayerMinMax', lMin, lMax, rMin, rMax);
+            }
+        },
+
 
         _writeMinMaxToLegend: function(rMax, rMin, lMax, lMin){
             var self = this;
@@ -1938,6 +2117,21 @@
                 return false;
             }
             
+        },
+
+        getMapGroupLegend: function(){
+            var self = this;
+            return self._mapGroupLegend;
+        },
+
+        getMapGroupSideBar: function(){
+            var self = this;
+            return self._mapGroupSideBar;
+        },
+
+        getMapGroupMaps: function(){
+            var self = this;
+            return self._mapGroupMaps;
         },
 
         drawRasterMaps: function(){
@@ -2024,6 +2218,18 @@
                     }
                     break;
             }
+        },
+
+        setMinMax: function(min, max) {
+            var self = this;
+            self.legendMinMax[0] = min;
+            self.legendMinMax[1] = max;
+            self.updateMinMax();
+        },
+
+        getMinMax: function() {
+            var self = this;
+            return self.legendMinMax;
         },
 
         loadStatsForMapsInMapGroup: function(){
@@ -2175,7 +2381,9 @@
                     'min': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'min', self.options.min);
-                            if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self._rangeSlider.slider('values',0, self.options.min); 
+                            //if(self.options.filterMin < self.options.min) self._setOption('filterMin', self.options.min); 
+                            self._setOption('filterMin', self.options.min);
                             self.updateHandleValues();
                         }
                         
@@ -2183,7 +2391,9 @@
                     'max': function () {
                         if(self.options.dataType != 'nominal') {
                             self._rangeSlider.slider('option', 'max', self.options.max);
-                            if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self._rangeSlider.slider('values',1, self.options.max); 
+                            //if(self.options.filterMax > self.options.max) self._setOption('filterMax', self.options.max); 
+                            self._setOption('filterMax', self.options.max);
                             self.updateHandleValues();
                         }
                         
@@ -2197,7 +2407,7 @@
                         //continue;
                     },
                     'filterMin': function () {
-                       // console.log(self.options.filterMin);
+                        //console.log(self.options.filterMin);
                         $.pubsub( 'publish', T_MINMAX, self.options.mapGroupId );
                     },
                     'filterMax': function() {
@@ -3556,6 +3766,8 @@ changeScenarios = function (topic, data){
 
     mapsToDraw();
     chartsToDraw();
+    landisMaps.unsyncMapGroups();
+    landisMaps.checkMapSync();
 
 },
 
@@ -3578,6 +3790,8 @@ changeMaps = function(topic, data){
 
     mapsToDraw();
     updateTimeInterval();
+    landisMaps.unsyncMapGroups();
+    landisMaps.checkMapSync();
 
 },
 
@@ -3622,8 +3836,7 @@ mapsToDraw = function(){
     landisMaps.checkMapCandidates(mapCandidates);
     landisMaps.bindViewsToFirstMap();
     //arrangeApplicationData();
-    landisMaps.rearangeMapsInMapGroup(); 
-
+    landisMaps.rearangeMapsInMapGroup();
 
 },
 
@@ -3682,7 +3895,7 @@ function setupPubSubSystem(){
     $.pubsub( 'subscribe', T_STOPPLAYBACK, stopPlayback );
     $.pubsub( 'subscribe', T_COLORRAMP, updateColorRamp );
     $.pubsub( 'subscribe', T_MINMAX, updateMinMax );
-}var landisMetadata, landisMaps, landisCharts, landisSettings;
+}var landisMetadata, landisMaps, landisCharts, landisSettings, mapSync = false;
 
 //START APPLICATION
 $( document ).ready(function() {
@@ -3722,10 +3935,12 @@ $( document ).ready(function() {
         hiddenUIContainer: '#HiddenUIContainer'
     });
 
+    
+
 });
 $( document ).ready(function() {
 
-    $('#toggleFullscreen').on('click', function (e  ) {
+    $('#toggleFullscreen').on('click', function (e) {
             $(document).toggleFullScreen();
             
     });
@@ -3736,6 +3951,25 @@ $( document ).ready(function() {
         } else {
             $('#toggleFullscreen').removeClass('isFull');
         }
+    });
+
+    $('#syncMapGroupsByUnit').on('click', function(e) {
+        /*if (!$(this).hasClass('syncAble')){
+            console.log('NOT SYNC ABLE');
+        }*/
+        if($(this).hasClass('syncAble')){
+            if(!$(this).hasClass('isSynced')) {
+                //SYNC
+                landisMaps.syncMapGroupsByUnit();
+                $(this).addClass('isSynced');
+            } else {
+                //UNSYNC
+                landisMaps.unsyncMapGroups();
+                $(this).removeClass('isSynced');
+            }
+
+        }
+
     });
 
 });

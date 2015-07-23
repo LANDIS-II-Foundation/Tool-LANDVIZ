@@ -69,6 +69,7 @@ body {
     height: 30px;
     width: 30px;
     cursor: pointer;
+    float: left;
 }
 
 #toggleFullscreen.fullscreen:hover {
@@ -81,6 +82,33 @@ body {
 
 #toggleFullscreen.fullscreen.isFull:hover {
     background-position: 0px -90px;
+}
+
+#syncMapGroupsByUnit.syncmaps {
+    background: url(../img/map_sync.png) no-repeat 0px 0px;
+    height: 30px;
+    width: 30px;
+    cursor: not-allowed;
+    float: left;
+    margin-right: 15px;
+}
+
+#syncMapGroupsByUnit.syncmaps.syncAble {
+    background-position: 0px -30px;
+    cursor: pointer;
+}
+
+#syncMapGroupsByUnit.syncmaps.syncAble:hover {
+    background-position: 0px -60px;
+}
+
+#syncMapGroupsByUnit.syncmaps.isSynced {
+    background-position: 0px -90px;
+    cursor: pointer;
+}
+
+#syncMapGroupsByUnit.syncmaps.isSynced:hover {
+    background-position: 0px -120px;
 }
 
 /* -- css-checkbox -- */

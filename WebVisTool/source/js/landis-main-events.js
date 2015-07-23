@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    $('#toggleFullscreen').on('click', function (e  ) {
+    $('#toggleFullscreen').on('click', function (e) {
             $(document).toggleFullScreen();
             
     });
@@ -11,6 +11,25 @@ $( document ).ready(function() {
         } else {
             $('#toggleFullscreen').removeClass('isFull');
         }
+    });
+
+    $('#syncMapGroupsByUnit').on('click', function(e) {
+        /*if (!$(this).hasClass('syncAble')){
+            console.log('NOT SYNC ABLE');
+        }*/
+        if($(this).hasClass('syncAble')){
+            if(!$(this).hasClass('isSynced')) {
+                //SYNC
+                landisMaps.syncMapGroupsByUnit();
+                $(this).addClass('isSynced');
+            } else {
+                //UNSYNC
+                landisMaps.unsyncMapGroups();
+                $(this).removeClass('isSynced');
+            }
+
+        }
+
     });
 
 });
