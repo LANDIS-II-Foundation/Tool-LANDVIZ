@@ -1,4 +1,4 @@
-LandisVisualizationDevel
+LANDVIZ Development (LANDIS-II-Visualization)
 ========================
 
 LANDIS-II Visualization Development
