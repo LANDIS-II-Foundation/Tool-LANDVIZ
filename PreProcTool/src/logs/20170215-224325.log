@@ -1,0 +1,38 @@
+02/15/2017 10:43:25 PM landis.main               INFO     Start LANDIS-II PreProcTool
+02/15/2017 10:43:25 PM collector.setupConfig     INFO     Setup application configuration
+02/15/2017 10:43:25 PM collector.setupConfig     DEBUG    Detect Application Folder: C:\data\development\landviz\py27\LANDVIZ-master\PreProcTool\source\main.py
+02/15/2017 10:43:25 PM collector.setupConfig     DEBUG    Detect Project File: C:\data\development\landviz\py27\test_project_file.xml
+02/15/2017 10:43:25 PM collector.setupConfig     DEBUG    Detect Output Folder: C:\data\development\landviz\py27\sample_output
+02/15/2017 10:43:25 PM collector.createProject   INFO     Create Project
+02/15/2017 10:43:25 PM collector.createProject   DEBUG    Load Information from project file: C:\data\development\landviz\py27\test_project_file.xml
+02/15/2017 10:43:25 PM collector.createProject   INFO     Project name: "Example Project Name"
+02/15/2017 10:43:25 PM collector.loadSRS         INFO     Load spatial refrence and geo extent from the project xml file
+02/15/2017 10:43:25 PM collector.loadSRS         DEBUG    SRS definition: PROJCS["unnamed",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_center",23],PARAMETER["longitude_of_center",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]
+02/15/2017 10:43:25 PM collector.loadSRS         DEBUG    geo extent: {'lry': '2277083.5926', 'lrx': '-2180708.84151', 'ulx': '-2225528.84151', 'uly': '2326223.5926'}
+02/15/2017 10:43:25 PM collector.loadMapPrefs    INFO     Load Map Preferences form project xml file
+02/15/2017 10:43:25 PM collector.loadMapPrefs    DEBUG    Zoom: [{'max': '13', 'init': '11', 'min': '9'}]
+02/15/2017 10:43:25 PM collector.loadMapPrefs    DEBUG    Basemap: [{'source': 'terrain', 'saturation': '0', 'contrast': '1', 'brightness': '0'}]
+02/15/2017 10:43:25 PM collector.loadMapPrefs    DEBUG    Legend: [{'qualitativeCol': 'Paired', 'sequentialCol': 'Reds', 'initClassCount': '3', 'divergingCol': 'PiYG'}]
+02/15/2017 10:43:25 PM collector.loadDataStruct  INFO     Load Datastructure from Lanids Metadata
+02/15/2017 10:43:25 PM output.genOutputDirs      INFO     Generate output directories
+02/15/2017 10:43:25 PM output.genOutputDirs      DEBUG    Create landisdata directory: ..\..\..\sample_output\landisdata
+02/15/2017 10:43:25 PM preworker.prepairTables   INFO     Start prepairing Table Output
+02/15/2017 10:43:25 PM preworker.prepairTables   INFO     End prepairing Table Output [time: 0.0120000839233 sec]
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     Start prepairing Map Output
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     scenario: BAU_short_clip
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     extension: Dynamic Fire System
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     output: Severity
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     prepair year = 0 [year not available]
+02/15/2017 10:43:25 PM preworker.prepairMaps     INFO     prepair year = 1
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 2
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 3
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 4
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 5
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 6
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 7
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 8
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 9
+02/15/2017 10:43:26 PM preworker.prepairMaps     INFO     prepair year = 10
+02/15/2017 10:43:27 PM landis.tiler              DEBUG    Start tiling process with multiprocessing
+02/15/2017 10:43:28 PM preworker.prepairMaps     ERROR    too many values to unpack
+02/15/2017 10:43:28 PM preworker.prepairMaps     DEBUG    <type 'exceptions.ValueError'>::preworker.py::83

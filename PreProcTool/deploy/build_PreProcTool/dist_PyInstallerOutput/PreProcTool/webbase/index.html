@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LANDIS-II-Visualization</title>
+	<meta charset="utf-8">
+
+	<link type="text/css" href="lib/jquery-ui/css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/landis-utils.js"></script>
+	<script type="text/javascript" src="lib/colorbrewer/colorbrewer.js"></script>
+
+	<script type="text/javascript" src="lib/jquery-fullscreen/jquery.fullscreen.min.js"></script>	
+	<script type="text/javascript" src="lib/jquery-parse/jquery.parse.js"></script>
+	<script type="text/javascript" src="lib/jquery-pubsub/jquery.pubsub.js"></script>
+	<script type="text/javascript" src="lib/jquery-color/jquery.color.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-timer/jquery.timer.js"></script>
+
+	<link type="text/css" href="lib/jquery-dropdown/jquery.dropdown.css" rel="stylesheet" />
+	<script type="text/javascript" src="lib/jquery-dropdown/jquery.dropdown.js"></script>
+
+	<script type="text/javascript" src="lib/flot/jquery.flot.js"></script>
+	<script type="text/javascript" src="lib/flot/jquery.flot.crosshair.time.js"></script>
+	<script type="text/javascript" src="lib/flot/jquery.flot.axislabels.js"></script>
+
+
+	<link type="text/css" href="css/layout.css" rel="stylesheet" />
+	<link type="text/css" href="lib/ol3/ol.css" rel="stylesheet" />
+
+	<script type="text/javascript" src="lib/farbtastic/farbtastic.js"></script>
+ 	<link rel="stylesheet" href="lib/farbtastic/farbtastic.css" type="text/css" />
+
+	<!--LANDIS WIDGETS-->
+
+	<link type="text/css" href="css/landis.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/landis.min.js"></script>
+
+</head>
+<body>
+	<div id="ApplicationControl">
+		<div id="ProjectName">
+			<h2>LANDIS-II-Visualization</h2>
+			<h1></h1>
+		</div>
+		<div id="Selectors">
+			<div id="ScenarioSelector"></div>
+			<div id="MapSelector"></div>
+			<div id="ChartSelector"></div>
+		</div>
+		<div id="TimeControl"></div>
+		<div id="ControlsRight">
+			<div id="syncMapGroupsByUnit" class="syncmaps"></div>
+			<div id="toggleFullscreen" class="fullscreen"></div>
+		</div>
+	</div>
+
+	<div id="ApplicationData">
+		<div id="MapContainer"></div>
+		<div id="ChartContainer"></div>
+	</div>
+
+	<div id="HiddenUIContainer"></div>
+
+	<script type="text/javascript" src="lib/ol3/ol-whitespace.js"></script>
+	<script type="text/javascript" src="lib/flot/jquery.flot.resize.js"></script>
+</body>
+</html>

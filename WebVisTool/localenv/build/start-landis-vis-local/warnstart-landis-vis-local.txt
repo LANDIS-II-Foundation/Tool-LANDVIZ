@@ -1,116 +1,71 @@
-W: no module named _systemrestart (delayed, conditional import by cherrypy.process.wspbus)
-W: no module named termios (top-level import by tty)
-W: no module named _dummy_threading (top-level import by dummy_threading)
-W: no module named http (conditional import by cherrypy._cpcompat)
-W: no module named cl (delayed, conditional import by aifc)
-W: no module named compiler.walk (top-level import by compiler.future)
-W: no module named OpenSSL (top-level import by cherrypy.wsgiserver.ssl_pyopenssl)
-W: no module named simplejson (top-level import by cherrypy._cpcompat)
-W: no module named _thread (top-level import by cherrypy._cpcompat)
-W: no module named posix (conditional import by __main__)
-W: no module named pwd (delayed, conditional import by posixpath)
-W: no module named org (top-level import by pickle)
-W: no module named org (delayed import by xml.sax)
-W: no module named fcntl (top-level import by cherrypy.process.wspbus)
-W: no module named cherrypy.tools (top-level import by cherrypy._cptree)
-W: no module named compiler.walk (top-level import by compiler.pycodegen)
-W: no module named fcntl (conditional import by subprocess)
-W: no module named queue (top-level import by cherrypy.wsgiserver.wsgiserver2)
-W: no module named compiler.walk (top-level import by compiler.syntax)
-W: no module named builtins (delayed import by cherrypy.lib.reprconf)
-W: no module named memcache (delayed import by cherrypy.lib.sessions)
-W: no module named compiler.parse (top-level import by compiler.pycodegen)
-W: no module named java (conditional import by xml.sax._exceptions)
-W: no module named flup (delayed import by cherrypy.process.servers)
-W: no module named cherrypy.lib.file_generator (top-level import by cherrypy._cprequest)
-W: no module named _xmlrpclib (top-level import by xmlrpclib)
-W: no module named readline (delayed import by pdb)
-W: no module named email.Header (delayed, conditional import by cherrypy.lib.httputil)
-W: no module named cherrypy.lib.set_vary_header (top-level import by cherrypy.lib.encoding)
-W: no module named xmlrpc (delayed import by cherrypy.lib.xmlrpcutil)
-W: no module named _scproxy (conditional import by urllib)
-W: no module named pwd (delayed import by getpass)
-W: no module named EasyDialogs (conditional import by getpass)
-W: no module named termios (top-level import by getpass)
-W: no module named fcntl (top-level import by cherrypy.wsgiserver.wsgiserver2)
-W: no module named org (top-level import by copy)
-W: no module named fcntl (top-level import by tempfile)
-W: no module named compiler.parseFile (conditional import by compiler.symbols)
-W: no module named readline (delayed, conditional import by cmd)
-W: no module named compiler.walk (conditional import by compiler.symbols)
-W: no module named routes (delayed import by cherrypy._cpdispatch)
-W: no module named grp (top-level import by cherrypy.process.plugins)
-W: no module named _xmlplus (top-level import by xml)
-W: no module named cl (delayed import by aifc)
-W: no module named cherrypy.lib.file_generator (top-level import by cherrypy.lib.encoding)
-W: no module named xmlparse (top-level import by pyexpat)
-W: no module named posix (conditional import by pyi_os_path)
-W: no module named builtins (top-level import by cherrypy._cpcompat)
-W: no module named compiler.parseFile (conditional import by compiler.future)
-W: no module named configparser (top-level import by cherrypy.lib.reprconf)
-W: no module named _emx_link (conditional import by os)
-W: no module named compiler.walk (conditional import by compiler.future)
-W: no module named posix (conditional import by os)
-W: no module named cherrypy.lib.attributes (top-level import by cherrypy._cpserver)
-W: no module named xmltok (top-level import by pyexpat)
-W: no module named rourl2path (conditional import by urllib)
-W: no module named cherrypy.lib.file_generator_limited (top-level import by cherrypy.lib.static)
-W: no module named ctypes.windll (conditional import by cherrypy.wsgiserver.wsgiserver2)
-W: no module named pwd (delayed import by webbrowser)
-W: no module named fcntl (conditional import by cherrypy._cpcompat_subprocess)
-W: no module named SOCKS (top-level import by ftplib)
-W: no module named ctypes.WinError (conditional import by cherrypy.wsgiserver.wsgiserver2)
-W: no module named pwd (top-level import by cherrypy.process.plugins)
-W: no module named builtins (top-level import by cherrypy.lib.reprconf)
-W: __all__ is built strangely at line 0 - dummy_threading (C:\Python27\lib\dummy_threading.pyc)
-W: delayed  exec statement detected at line 0 - bdb (C:\Python27\lib\bdb.pyc)
-W: delayed  eval hack detected at line 0 - bdb (C:\Python27\lib\bdb.pyc)
-W: delayed  eval hack detected at line 0 - bdb (C:\Python27\lib\bdb.pyc)
-W: delayed  __import__ hack detected at line 0 - optparse (C:\Python27\lib\optparse.pyc)
-W: delayed conditional __import__ hack detected at line 0 - doctest (C:\Python27\lib\doctest.pyc)
-W: delayed  exec statement detected at line 0 - doctest (C:\Python27\lib\doctest.pyc)
-W: delayed conditional __import__ hack detected at line 0 - doctest (C:\Python27\lib\doctest.pyc)
-W: __all__ is built strangely at line 0 - tokenize (C:\Python27\lib\tokenize.pyc)
-W: __all__ is built strangely at line 0 - tokenize (C:\Python27\lib\tokenize.pyc)
-W: delayed conditional __import__ hack detected at line 0 - pyi_archive (C:\LandisVisualizationDevel\PreProcTool\build\pyinstaller\PyInstaller\loader\pyi_archive.pyc)
-W: delayed  __import__ hack detected at line 0 - pickle (C:\Python27\lib\pickle.pyc)
-W: delayed  __import__ hack detected at line 0 - pickle (C:\Python27\lib\pickle.pyc)
-W: top-level conditional exec statement detected at line 0 - cherrypy.wsgiserver (C:\Python27\lib\site-packages\cherrypy\wsgiserver\__init__.pyc)
-W: delayed  __import__ hack detected at line 0 - encodings (C:\Python27\lib\encodings\__init__.pyc)
-W: delayed  __import__ hack detected at line 0 - pydoc (C:\Python27\lib\pydoc.pyc)
-W: delayed  __import__ hack detected at line 0 - pydoc (C:\Python27\lib\pydoc.pyc)
-W: __all__ is built strangely at line 0 - dis (C:\Python27\lib\dis.pyc)
-W: __all__ is built strangely at line 0 - hashlib (C:\Python27\lib\hashlib.pyc)
-W: delayed conditional eval hack detected at line 0 - warnings (C:\Python27\lib\warnings.pyc)
-W: delayed conditional __import__ hack detected at line 0 - warnings (C:\Python27\lib\warnings.pyc)
-W: delayed conditional exec statement detected at line 0 - pyi_importers (C:\LandisVisualizationDevel\PreProcTool\build\pyinstaller\PyInstaller\loader\pyi_importers.pyc)
-W: delayed conditional eval hack detected at line 0 - cherrypy.lib.reprconf (C:\Python27\lib\site-packages\cherrypy\lib\reprconf.pyc)
-W: delayed conditional eval hack detected at line 0 - cherrypy.lib.reprconf (C:\Python27\lib\site-packages\cherrypy\lib\reprconf.pyc)
-W: delayed conditional __import__ hack detected at line 0 - cherrypy.lib.reprconf (C:\Python27\lib\site-packages\cherrypy\lib\reprconf.pyc)
-W: delayed  exec statement detected at line 0 - cherrypy.wsgiserver.ssl_pyopenssl (C:\Python27\lib\site-packages\cherrypy\wsgiserver\ssl_pyopenssl.pyc)
-W: delayed  eval hack detected at line 0 - compiler.transformer (C:\Python27\lib\compiler\transformer.pyc)
-W: delayed conditional eval hack detected at line 0 - compiler.transformer (C:\Python27\lib\compiler\transformer.pyc)
-W: delayed  eval hack detected at line 0 - compiler.transformer (C:\Python27\lib\compiler\transformer.pyc)
-W: delayed conditional eval hack detected at line 0 - compiler.transformer (C:\Python27\lib\compiler\transformer.pyc)
-W: delayed  __import__ hack detected at line 0 - email (C:\Python27\lib\email\__init__.pyc)
-W: delayed  __import__ hack detected at line 0 - ctypes (C:\Python27\lib\ctypes\__init__.pyc)
-W: delayed  __import__ hack detected at line 0 - ctypes (C:\Python27\lib\ctypes\__init__.pyc)
-W: delayed  exec statement detected at line 0 - pdb (C:\Python27\lib\pdb.pyc)
-W: delayed conditional eval hack detected at line 0 - pdb (C:\Python27\lib\pdb.pyc)
-W: delayed  eval hack detected at line 0 - pdb (C:\Python27\lib\pdb.pyc)
-W: delayed conditional eval hack detected at line 0 - pdb (C:\Python27\lib\pdb.pyc)
-W: delayed  eval hack detected at line 0 - pdb (C:\Python27\lib\pdb.pyc)
-W: delayed  __import__ hack detected at line 0 - pkgutil (C:\Python27\lib\pkgutil.pyc)
-W: delayed conditional __import__ hack detected at line 0 - pkgutil (C:\Python27\lib\pkgutil.pyc)
-W: __all__ is built strangely at line 0 - collections (C:\Python27\lib\collections.pyc)
-W: delayed  exec statement detected at line 0 - collections (C:\Python27\lib\collections.pyc)
-W: delayed conditional __import__ hack detected at line 0 - unittest.main (C:\Python27\lib\unittest\main.pyc)
-W: delayed  exec statement detected at line 0 - cgi (C:\Python27\lib\cgi.pyc)
-W: __all__ is built strangely at line 0 - cherrypy.lib.httpauth (C:\Python27\lib\site-packages\cherrypy\lib\httpauth.pyc)
-W: delayed conditional __import__ hack detected at line 0 - unittest.loader (C:\Python27\lib\unittest\loader.pyc)
-W: delayed conditional __import__ hack detected at line 0 - unittest.loader (C:\Python27\lib\unittest\loader.pyc)
-W: delayed  __import__ hack detected at line 0 - unittest.loader (C:\Python27\lib\unittest\loader.pyc)
-W: __all__ is built strangely at line 0 - __future__ (C:\Python27\lib\__future__.pyc)
-W: delayed conditional __import__ hack detected at line 0 - cherrypy.wsgiserver.wsgiserver2 (C:\Python27\lib\site-packages\cherrypy\wsgiserver\wsgiserver2.pyc)
-W: delayed  __import__ hack detected at line 0 - xml.sax (C:\Python27\lib\xml\sax\__init__.pyc)
-W: delayed  eval hack detected at line 0 - gettext (C:\Python27\lib\gettext.pyc)
+missing module named org - imported by copy
+missing module named readline - imported by cmd, pdb
+missing module named pwd - imported by posixpath, shutil, tarfile, getpass, distutils.util, CGIHTTPServer, cherrypy.process.plugins, webbrowser
+missing module named fcntl - imported by tempfile, subprocess, cherrypy.process.wspbus, cheroot.server, cherrypy.lib.lockfile
+missing module named _sysconfigdata - imported by distutils.sysconfig, sysconfig
+missing module named grp - imported by shutil, tarfile, cherrypy.process.plugins
+missing module named pyimod03_importers - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named 'org.python' - imported by pickle, xml.sax
+missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named _thread.RLock - imported by _thread, pkg_resources._vendor.pyparsing
+missing module named _thread.get_ident - imported by _thread, future.backports.misc, cherrypy._cpcompat, cheroot._compat
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources
+missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
+missing module named 'importlib.machinery' - imported by pkg_resources
+missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, pkg_resources._vendor.packaging.requirements
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources
+missing module named _imp - imported by pkg_resources
+missing module named _scproxy - imported by urllib, future.backports.urllib.request
+missing module named EasyDialogs - imported by getpass
+missing module named termios - imported by getpass, tty
+missing module named SOCKS - imported by ftplib
+missing module named rourl2path - imported by urllib
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions
+missing module named _xmlplus - imported by xml
+missing module named 'Carbon.File' - imported by plistlib
+missing module named 'Carbon.Files' - imported by plistlib
+missing module named Carbon - imported by plistlib
+missing module named vms_lib - imported by platform
+missing module named java - imported by platform
+missing module named MacOS - imported by platform
+missing module named macresource - imported by MacOS
+missing module named gestalt - imported by platform
+missing module named winreg.OpenKeyEx - imported by winreg, platform
+missing module named winreg.HKEY_LOCAL_MACHINE - imported by winreg, platform
+missing module named winreg.QueryValueEx - imported by winreg, platform
+missing module named winreg.CloseKey - imported by winreg, platform
+missing module named 'dbm.ndbm' - imported by future.moves.dbm.ndbm
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu
+missing module named 'dbm.gnu' - imported by future.moves.dbm.gnu
+missing module named 'dbm.dumb' - imported by future.moves.dbm.dumb
+missing module named bsddb3 - imported by bsddb
+missing module named _pybsddb - imported by bsddb, bsddb.db
+missing module named dbm - imported by future.standard_library, future.moves.dbm, whichdb, anydbm, future.moves.dbm.ndbm
+missing module named 'test.support' - imported by future.moves.test.support
+missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
+missing module named _datetime - imported by future.backports.datetime
+missing module named _dummy_threading - imported by dummy_threading
+missing module named simplejson - imported by cherrypy._cpcompat, cheroot._compat
+missing module named 'urllib.request' - imported by cherrypy._cpcompat, cheroot._compat
+missing module named 'urllib.parse' - imported by cherrypy._cpcompat, cheroot.server, cheroot._compat
+missing module named _systemrestart - imported by cherrypy.process.wspbus
+missing module named 'flup.server' - imported by cherrypy.process.servers
+missing module named flup - imported by cherrypy.process.servers
+missing module named memcache - imported by cherrypy.lib.sessions
+missing module named configparser - imported by cherrypy.lib.reprconf
+missing module named _xmlrpclib - imported by xmlrpclib
+missing module named 'six.moves.urllib' - imported by 'six.moves.urllib'
+runtime module named six.moves - imported by cheroot.wsgi, cheroot.server, cheroot.workers.threadpool
+missing module named six.moves.filter - imported by six.moves, cheroot.wsgi
+missing module named routes - imported by cherrypy._cpdispatch
+missing module named riscosenviron - imported by os
+missing module named riscospath - imported by os
+missing module named riscos - imported by os
+missing module named ce - imported by os
+missing module named _emx_link - imported by os
+missing module named os2 - imported by os
+missing module named posix - imported by os
+missing module named resource - imported by posix
