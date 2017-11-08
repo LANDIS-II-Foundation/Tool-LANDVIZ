@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<landisMapUnits>    
+    <unit mapUnit="g C m-2 yr-1" usUnit="" convertionFactor="" />
+    <unit mapUnit="g Biomass " usUnit="" convertionFactor="" />
+    <unit mapUnit="" usUnit="" convertionFactor="" />
+    <unit mapUnit="" usUnit="" convertionFactor="" />
+</landisMapUnits>

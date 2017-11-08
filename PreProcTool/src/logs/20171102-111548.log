@@ -1,0 +1,314 @@
+11/02/2017 11:15:48 AM landis.main               INFO     Start LANDIS-II PreProcTool
+11/02/2017 11:15:48 AM collector.setupConfig     INFO     Setup application configuration
+11/02/2017 11:15:48 AM collector.setupConfig     DEBUG    Detect Application Folder: C:\Users\bdmarron\Desktop\LANDVIZ\LANDVIZ\PreProcTool\src\main.py
+11/02/2017 11:15:48 AM collector.setupConfig     DEBUG    Detect Project File: C:\Users\bdmarron\Desktop\LANDVIZ\LANDVIZ\PreProcTool\building_PreProcTool\example\preproc_VizTool_example.xml
+11/02/2017 11:15:48 AM collector.setupConfig     DEBUG    Detect Output Folder: C:\Users\bdmarron\Desktop\LANDVIZ\LANDVIZ\PreProcTool\building_PreProcTool\PreProcTool_prebuild_test\sample_output
+11/02/2017 11:15:48 AM collector.createProject   INFO     Create Project
+11/02/2017 11:15:48 AM collector.createProject   DEBUG    Load Information from project file: C:\Users\bdmarron\Desktop\LANDVIZ\LANDVIZ\PreProcTool\building_PreProcTool\example\preproc_VizTool_example.xml
+11/02/2017 11:15:48 AM collector.createProject   INFO     Project name: "Chippewa National Forest Landscape"
+11/02/2017 11:15:48 AM collector.loadSRS         INFO     Load spatial refrence and geo extent from the project xml file
+11/02/2017 11:15:48 AM collector.loadSRS         DEBUG    SRS definition: PROJCS["UTM Zone 15, Northern Hemisphere",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-93],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["Meter",1]]
+11/02/2017 11:15:48 AM collector.loadSRS         DEBUG    geo extent: {'lry': '5202717.52204077', 'lrx': '466234.717985773', 'ulx': '373434.717985773', 'uly': '5300017.52204077'}
+11/02/2017 11:15:48 AM collector.loadMapPrefs    INFO     Load Map Preferences form project xml file
+11/02/2017 11:15:48 AM collector.loadMapPrefs    DEBUG    Zoom: [{'max': '11', 'init': '9', 'min': '7'}]
+11/02/2017 11:15:48 AM collector.loadMapPrefs    DEBUG    Basemap: [{'source': 'osm', 'saturation': '0', 'contrast': '1', 'brightness': '0'}]
+11/02/2017 11:15:48 AM collector.loadMapPrefs    DEBUG    Legend: [{'qualitativeCol': 'Paired', 'sequentialCol': 'Reds', 'initClassCount': '3', 'divergingCol': 'PiYG'}]
+11/02/2017 11:15:48 AM collector.loadDataStruct  INFO     Load Datastructure from Lanids Metadata
+11/02/2017 11:15:48 AM output.genOutputDirs      INFO     Generate output directories
+11/02/2017 11:15:48 AM output.genOutputDirs      DEBUG    Create landisdata directory: sample_output\landisdata
+11/02/2017 11:15:48 AM preworker.prepairTables   INFO     Start prepairing Table Output
+11/02/2017 11:15:48 AM preworker.prepairTables   INFO     End prepairing Table Output [time: 0.029000043869 sec]
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     Start prepairing Map Output
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     extension: Base Wind
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     output: severity
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     prepair year = 0 [year not available]
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:15:48 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:15:49 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:15:50 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:15:53 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:15:53 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:15:53 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:15:53 AM preworker.prepairMaps     INFO     output: Species Biomass Map: abiebals
+11/02/2017 11:15:53 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:15:54 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:15:55 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:15:55 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:15:55 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:15:56 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:15:59 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acernegu
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:15:59 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:00 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:01 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:04 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acerrubr
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:04 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:05 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:06 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:10 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acersacc
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:10 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:11 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:11 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:11 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:12 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:15 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     output: Species Biomass Map: betualle
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:15 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:16 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:16 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:16 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:16 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:16 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:17 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:20 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     output: Species Biomass Map: betupapy
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:20 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:21 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:21 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:21 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:21 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:21 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:22 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:22 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:23 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:27 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     output: Species Biomass Map: fraxamer
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:27 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:28 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:28 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:28 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:28 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:29 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:32 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     scenario: Baseline Climate, BaseWind
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     output: Species Biomass Map: fraxnigr
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:32 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:33 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:33 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:33 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:33 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:33 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:34 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:38 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     extension: Base Wind
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     output: severity
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 0 [year not available]
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:38 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:39 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:39 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:43 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:43 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:16:43 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:43 AM preworker.prepairMaps     INFO     output: Species Biomass Map: abiebals
+11/02/2017 11:16:43 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:43 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:44 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:45 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:45 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:46 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:49 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acernegu
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:49 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:50 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:51 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:54 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acerrubr
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:16:54 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:16:55 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:16:55 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:16:55 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:16:55 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:16:55 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:16:56 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:16:59 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:16:59 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:16:59 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:16:59 AM preworker.prepairMaps     INFO     output: Species Biomass Map: acersacc
+11/02/2017 11:16:59 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:16:59 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:17:00 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:17:01 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:17:01 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:17:01 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:17:05 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     output: Species Biomass Map: betualle
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:17:05 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:17:06 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:17:06 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:17:06 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:17:06 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:17:07 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:17:10 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     output: Species Biomass Map: betupapy
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:17:10 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:17:11 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:17:12 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:17:12 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:17:16 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     output: Species Biomass Map: fraxamer
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:17:16 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:17:17 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:17:18 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:17:21 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     scenario: Climate Change, BaseWind
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     extension: Output Leaf Biomass
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     output: Species Biomass Map: fraxnigr
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     prepair year = 0
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     prepair year = 10
+11/02/2017 11:17:21 AM preworker.prepairMaps     INFO     prepair year = 20
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 30
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 40
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 50
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 60
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 70
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 80
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 90
+11/02/2017 11:17:22 AM preworker.prepairMaps     INFO     prepair year = 100
+11/02/2017 11:17:23 AM landis.tiler              DEBUG    Start tiling process with multiprocessing
+11/02/2017 11:17:27 AM landis.tiler              DEBUG    End tiling process with multiprocessing
+11/02/2017 11:17:27 AM preworker.prepairMaps     INFO     End prepairing Map Output [time: 98.6029999256 sec]
+11/02/2017 11:17:27 AM output.saveMetadata       INFO     Save Metadata as JSON files
+11/02/2017 11:17:27 AM output.copyWebbase        INFO     Copy webbase to output directory
+11/02/2017 11:17:27 AM output.copyWebbase        ERROR    cannot copy tree '..\..\WebVisTool\build\dist': not a directory
+11/02/2017 11:17:27 AM output.copyWebbase        DEBUG    <class 'distutils.errors.DistutilsFileError'>::outputworker.py::25
