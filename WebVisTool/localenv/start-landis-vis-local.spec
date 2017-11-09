@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['start-landis-vis-local.py'],
-             pathex=['C:\\data\\development\\landviz\\py27\\LANDVIZ-master\\WebVisTool\\localenv'],
+             pathex=['C:\\Users\\bdmarron\\Desktop\\my_LANDVIZ\\LANDVIZ\\WebVisTool\\localenv'],
              binaries=[],
              datas=[],
              hiddenimports=[],

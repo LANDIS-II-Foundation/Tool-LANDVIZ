@@ -1,0 +1,28 @@
+{
+  "classification": {
+    "classes": [
+      2, 
+      3, 
+      4, 
+      5, 
+      6
+    ], 
+    "colorSchema": "sequential", 
+    "drawReverse": false, 
+    "legendMax": 6, 
+    "legendMiddle": 4.0, 
+    "legendMin": 2
+  }, 
+  "overTime": {
+    "gdalDataType": 1, 
+    "middle": 4.0, 
+    "minMaxMasked": [
+      2, 
+      6
+    ], 
+    "minMaxUnmasked": [
+      1.0, 
+      6.0
+    ]
+  }
+}
