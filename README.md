@@ -11,11 +11,11 @@ PreProcTool: Development environment for the PrePrcoTool
 
 WebWisTool: Development environment for the WebVisTool
 
-</br>
-</br>
+<br></br>
+<br></br>
 ## LANDVIZ v1.2
 
-## Updates 
+#### Updates 
 * Added "Load" button (#22).
 * Added "modal" to onload (#23) - Information showing on the modal is old.  It still needs to be updated.
 * Added "Information" button for external web liks.  The user can add web links in XML (#24).
