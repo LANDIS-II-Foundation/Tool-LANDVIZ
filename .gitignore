@@ -3,6 +3,7 @@
 ###############
 src/PreProcTool/build
 src/PreProcTool/dist
+src/PreProcTool/Proj4Extent.spec
 
 ###############
 # WebVisTool  #
