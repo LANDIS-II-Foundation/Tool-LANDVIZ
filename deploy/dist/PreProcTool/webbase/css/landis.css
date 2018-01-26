@@ -330,7 +330,7 @@ textarea.bookmark-note {
     color: #666;
     font-size: 9pt;
     font-family: Helvetica, Arial, sans-serif;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;  
 }
 
@@ -340,7 +340,7 @@ textarea.bookmark-note {
   height:30px;
   padding-left: 30px;
 
-  margin-right: 0px;
+  margin-right: 10px;
   cursor: pointer;
 
   float: left;
@@ -736,6 +736,18 @@ label.css-label {
     float:left;
 }
 */
+
+
+/* CGA */
+.help-content{
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    display: none;
+  }:focus {outline:none;}
+  ::-moz-focus-inner {border:0;}
+  ::-webkit-focus-inner {border:0;}
 
 
 

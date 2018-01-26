@@ -35,7 +35,7 @@ class OutputWorker(object):
                 # 01/10/2018
                 templatePath = os.path.normpath(os.path.join(self.CONFIG['APPLICATION']['PATH'], '..\\..\\WebVisTool\\build\\dist'))
                 distutils.dir_util.copy_tree(templatePath, self.CONFIG['PROJECT']['OUTPUT_DIR'])
-                utils.Weblinks(self.CONFIG['PROJECT']['INPUT_XML'], templatePath, templatePath)
+                utils.Weblinks(self.CONFIG['PROJECT']['INPUT_XML'], templatePath, self.CONFIG['PROJECT']['OUTPUT_DIR'])
             else:
                 distutils.dir_util.copy_tree(
                     self.CONFIG['APPLICATION']['PATH'] + "\webbase", self.CONFIG['PROJECT']['OUTPUT_DIR'])

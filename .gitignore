@@ -4,11 +4,20 @@
 src/PreProcTool/build
 src/PreProcTool/dist
 src/PreProcTool/Proj4Extent.spec
+src/PreProcTool/src/logs
+
 
 ###############
 # WebVisTool  #
 ###############
 src/WebVisTool
+
+###########
+# Testings #
+###########
+deploy/dist/PreProcTool/logs
+example/sample/example_project/sample_output*
+src/PreProcTool/test/sample_output*
 
 *.pyc
 .vscode
