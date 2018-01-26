@@ -22,5 +22,9 @@ WebWisTool: Development environment for the WebVisTool
 * Adjusted colors on graphs (#25).
 * "Reset" button added (#26).
 
+#### Notes
+* #24 text and video needs to be reviewed and modified.
+* Documentations need to be updated.
+
 
 
