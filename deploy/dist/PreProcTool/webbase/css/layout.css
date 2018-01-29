@@ -1,0 +1,406 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    color: #666;
+}
+
+#ApplicationControl {
+    width: 100%;
+    min-height: 58px;
+    height: auto;
+    background-color: #ccc;
+    clear: both;
+    border-bottom: 2px solid #666;
+    display: block;
+    overflow: auto;
+}
+
+#ProjectName {
+    float: left;
+    text-align: center;
+    line-height: 9pt;
+    min-height: 58px;
+    padding: 0 10px 0 10px;
+}
+
+#ProjectName h1 {
+    font-size: 12pt;
+}
+
+#ProjectName h2 {
+    font-size: 9pt;
+}
+
+#Selectors {
+    float: left;
+    padding: 14px;
+}
+
+#ScenarioSelector,
+#MapSelector,
+#ChartSelector,
+#Reload,
+#Reset {
+    float: left;
+}
+
+#TimeControl {
+    float: left;
+    margin: 0;
+    height: 48px;
+    padding: 5px;
+}
+
+#ApplicationData {
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+}
+
+#ControlsRight {
+    float: right;
+    padding: 14px;
+}
+
+#toggleFullscreen.fullscreen {
+    background: url(../img/fullscreen.png) no-repeat 0px 0px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    float: left;
+}
+
+#toggleFullscreen.fullscreen:hover {
+    background-position: 0px -30px;
+}
+
+#toggleFullscreen.fullscreen.isFull {
+    background-position: 0px -60px;
+}
+
+#toggleFullscreen.fullscreen.isFull:hover {
+    background-position: 0px -90px;
+}
+
+#syncMapGroupsByUnit.syncmaps {
+    background: url(../img/map_sync.png) no-repeat 0px 0px;
+    height: 30px;
+    width: 30px;
+    cursor: not-allowed;
+    float: left;
+    margin-right: 15px;
+}
+
+#syncMapGroupsByUnit.syncmaps.syncAble {
+    background-position: 0px -30px;
+    cursor: pointer;
+}
+
+#syncMapGroupsByUnit.syncmaps.syncAble:hover {
+    background-position: 0px -60px;
+}
+
+#syncMapGroupsByUnit.syncmaps.isSynced {
+    background-position: 0px -90px;
+    cursor: pointer;
+}
+
+#syncMapGroupsByUnit.syncmaps.isSynced:hover {
+    background-position: 0px -120px;
+}
+
+
+/* -- css-checkbox -- */
+
+input[type=checkbox].css-checkbox {
+    display: none;
+}
+
+input[type=checkbox].css-checkbox+label.css-label {
+    padding-left: 19px;
+    height: 14px;
+    display: block;
+    line-height: 17px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+input[type=checkbox].css-checkbox:checked+label.css-label {
+    background-position: 0 -14px;
+}
+
+input[type=checkbox].css-checkbox:checked:disabled+label.css-label {
+    background-position: 0 -28px;
+    cursor: not-allowed;
+}
+
+input[type=checkbox].css-checkbox:disabled+label.css-label {
+    background-position: 0 -42px;
+    cursor: not-allowed;
+}
+
+label.css-label {
+    background-image: url(../img/checkbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* CGA */
+
+
+/* Reload button */
+
+.reload-control .reload-control-container {
+    position: relative;
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.reload-control .reload-control-button {
+    background: url(../img/load.png) no-repeat 0px 0px;
+    position: relative;
+    height: 30px;
+    padding-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.reload-control .reload-control-button>span {
+    line-height: 30px;
+    font-size: 11pt;
+    padding-left: 5px;
+}
+
+.reload-control .reload-control-button:hover {
+    background-position: 0px -30px;
+    color: #39f;
+}
+
+
+/* Reset button */
+
+.reset-control .reset-control-container {
+    position: relative;
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.reset-control .reset-control-button {
+    background: url(../img/cancel.png) no-repeat 0px 0px;
+    position: relative;
+    height: 30px;
+    padding-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.reset-control .reset-control-button>span {
+    line-height: 30px;
+    font-size: 11pt;
+    padding-left: 5px;
+}
+
+.reset-control .reset-control-button:hover {
+    background-position: 0px -30px;
+    color: #39f;
+}
+
+
+/* Info button */
+
+#Info {
+    float: left;
+    padding: 14px;
+}
+
+.info-control .info-control-container {
+    position: relative;
+    color: #666;
+    font-size: 11pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.info-control .info-control-button {
+    background: url(../img/info.png) no-repeat 0px 0px;
+    position: relative;
+    height: 30px;
+    padding-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.info-control .info-control-button>span {
+    line-height: 30px;
+    font-size: 11pt;
+    padding-left: 5px;
+}
+
+.info-control-button:hover {
+    background-position: 0px -30px;
+    color: #39f;
+}
+
+.dropdown-info-control {
+    color: #666;
+    font-size: 9pt;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+ ::-moz-focus-inner {
+    border: 0;
+}
+
+ ::-webkit-focus-inner {
+    border: 0;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 25%;
+    /* Location of the box */
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    transform: translate(-50%, -50%);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 20px;
+    background-color: rgb(26, 161, 38);
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 30px;
+}
+
+.modal-footer {
+    padding: 2px 20px 20px;
+    background-color: #fff;
+    color: white;
+}
+
+
+
+.default-btn {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.center {
+    text-align: center;
+}
