@@ -34,7 +34,7 @@ class Weblinks(object):
             # get weblinks from xml file
             x = etree.parse(self.__xmlF)
             root = x.getroot()
-            z = root.xpath('/weblinks/link')
+            z = root.xpath('//weblinks//link')
 
             # I/O get template.html file
             html = open(self.__htmlTemplateF, 'r')
