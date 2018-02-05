@@ -6,12 +6,6 @@ src/PreProcTool/dist
 src/PreProcTool/Proj4Extent.spec
 src/PreProcTool/src/logs
 
-
-###############
-# WebVisTool  #
-###############
-src/WebVisTool
-
 ###########
 # Testings #
 ###########
