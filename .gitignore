@@ -6,6 +6,11 @@ src/PreProcTool/dist
 src/PreProcTool/Proj4Extent.spec
 src/PreProcTool/src/logs
 
+###############
+# WebVizTool #
+###############
+src/WebVizTool/localenv/start-landis-vis-local.spec
+
 ###########
 # Testings #
 ###########
