@@ -14,7 +14,7 @@ src/WebVizTool/localenv/start-landis-vis-local.spec
 ###########
 # Testings #
 ###########
-example/
+
 src/PreProcTool/test/sample_output*
 
 *.pyc
