@@ -7,9 +7,9 @@ missing module named grp - imported by shutil, tarfile, cherrypy.process.plugins
 missing module named pyimod03_importers - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
 missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
 missing module named 'org.python' - imported by pickle, xml.sax
-missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named ordereddict - imported by backports.configparser.helpers, pkg_resources._vendor.pyparsing
 missing module named _thread.RLock - imported by _thread, pkg_resources._vendor.pyparsing
-missing module named _thread.get_ident - imported by _thread, future.backports.misc, cherrypy._cpcompat, cheroot._compat
+missing module named _thread.get_ident - imported by _thread, future.backports.misc, cherrypy._cpcompat, backports.configparser.helpers
 missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
 missing module named com - imported by pkg_resources._vendor.appdirs
 missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources
@@ -48,14 +48,13 @@ missing module named 'test.support' - imported by future.moves.test.support
 missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
 missing module named _datetime - imported by future.backports.datetime
 missing module named _dummy_threading - imported by dummy_threading
-missing module named simplejson - imported by cherrypy._cpcompat, cheroot._compat
-missing module named 'urllib.request' - imported by cherrypy._cpcompat, cheroot._compat
-missing module named 'urllib.parse' - imported by cherrypy._cpcompat, cheroot.server, cheroot._compat
+missing module named simplejson - imported by cherrypy._cpcompat
+missing module named 'urllib.request' - imported by cherrypy._cpcompat
+missing module named 'urllib.parse' - imported by cherrypy._cpcompat
 missing module named _systemrestart - imported by cherrypy.process.wspbus
 missing module named 'flup.server' - imported by cherrypy.process.servers
 missing module named flup - imported by cherrypy.process.servers
 missing module named memcache - imported by cherrypy.lib.sessions
-missing module named configparser - imported by cherrypy.lib.reprconf
 missing module named _xmlrpclib - imported by xmlrpclib
 missing module named 'six.moves.urllib' - imported by 'six.moves.urllib'
 runtime module named six.moves - imported by cheroot.wsgi, cheroot.server, cheroot.workers.threadpool
