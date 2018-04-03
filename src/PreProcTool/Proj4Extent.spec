@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['src\\Proj4Extent.py'],
-             pathex=[],
+             pathex=['C:\\Users\\mshukun\\Documents\\LANDVIZ\\src\\PreProcTool'],
              binaries=[],
              datas=[],
              hiddenimports=[],
