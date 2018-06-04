@@ -35,9 +35,10 @@ WebWisTool: Development environment for the WebVisTool
 	<link label="Dynamic Ecosystems &amp; Landscape Lab" href="https://sites.google.com/a/ncsu.edu/dynamic-ecosystems-landscape-lab" />
 </weblinks>
 ```
-If you don't have any links to include then remove ```<link>``` tags.
+The ```<weblinks>``` tag requires at least one ```<link>``` child node in order to run the application successfully. 
 ```xml
 <weblinks>
+	<link label="LandViz" href="https://sites.google.com/site/landismodel/tools/viz-tool" />
 </weblinks>
 ```
 3. Dobule click **_example/example\_project/run\_preproctool\_example.bat_** file.  The **"sample\_output"** file will be created after the successful run.
