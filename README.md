@@ -28,7 +28,7 @@ WebWisTool: Development environment for the WebVisTool
 
 #### Testing
 1. Download or clone the project and unzip.
-2. Go to **_example/example\_project_** folder and open **_preproc\_VizTool\_example.xml_** file. The tag ```<weblinks></weblinks>``` is a new to this release.  Modify ```<link>``` applicable to your project.
+2. Go to **_example/example\_project_** folder and open **_preproc\_VizTool\_example.xml_** file. The tag ```<weblinks></weblinks>``` is a new to this release.  Modify ```<link>``` applicable to your project.  The order of tags is important so use **_preproc\_VizTool\_example.xml_** as a template.
 ```xml
 <weblinks>
 	<link label="LandViz" href="https://sites.google.com/site/landismodel/tools/viz-tool" />
