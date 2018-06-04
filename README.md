@@ -28,16 +28,17 @@ WebWisTool: Development environment for the WebVisTool
 
 #### Testing
 1. Download or clone the project and unzip.
-2. Go to **_example/example\_project_** folder and open **_preproc\_VizTool\_example.xml_** file. The tag ```<weblinks></weblinks>``` is a new to this release.  Modify ```<link>``` applicable to your project.
+2. Go to **_example/example\_project_** folder and open **_preproc\_VizTool\_example.xml_** file. The tag ```<weblinks></weblinks>``` is a new to this release.  Modify ```<link>``` applicable to your project.  The order of tags is important so use **_preproc\_VizTool\_example.xml_** as a template.
 ```xml
 <weblinks>
 	<link label="LandViz" href="https://sites.google.com/site/landismodel/tools/viz-tool" />
 	<link label="Dynamic Ecosystems &amp; Landscape Lab" href="https://sites.google.com/a/ncsu.edu/dynamic-ecosystems-landscape-lab" />
 </weblinks>
 ```
-If you don't have any links to include then remove ```<link>``` tags.
+The ```<weblinks>``` tag requires at least one ```<link>``` child node in order to run the application successfully. 
 ```xml
 <weblinks>
+	<link label="LandViz" href="https://sites.google.com/site/landismodel/tools/viz-tool" />
 </weblinks>
 ```
 3. Dobule click **_example/example\_project/run\_preproctool\_example.bat_** file.  The **"sample\_output"** file will be created after the successful run.
