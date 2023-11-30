@@ -31,7 +31,7 @@ Example files can be [downloaded from GitHub](https://downgit.github.io/#/home?u
 
 # Citation
 
-[Gustafson, Eric; Lucash, Melissa; Liem, Johannes; Jenny, Helen; Scheller, Rob; Barrett, Kelly, Brian Sturtevant. 2016. Seeing the future impacts of climate change and forest management: a landscape visualization system for forest managers. Gen. Tech. Rep. NRS-164. Newtown Square, PA: U.S. Department of Agriculture, Forest Service, Northern Research Station. 18 p.](http://www.nrs.fs.fed.us/pubs/53235)
+Gustafson, Eric; Lucash, Melissa; Liem, Johannes; Jenny, Helen; Scheller, Rob; Barrett, Kelly, Brian Sturtevant. 2016. Seeing the future impacts of climate change and forest management: a landscape visualization system for forest managers. Gen. Tech. Rep. NRS-164. Newtown Square, PA: U.S. Department of Agriculture, Forest Service, Northern Research Station. 18 p.[DOWNLOAD](https://www.fs.usda.gov/research/treesearch/53235)
 
 # Support
 
