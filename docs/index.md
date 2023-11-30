@@ -27,7 +27,7 @@ LandViz is not specific to LANDIS-II.  It is a generic tool for displaying map d
 
 # Example Files
 
-Example files can be [downloaded from GitHub](https://downgit.github.io/#/home?url=https://github.com/LANDIS-II-Foundation/LANDVIZ/tree/master/example/example_project).
+Example files can be [downloaded from GitHub](https://downgit.github.io/#/home?url=https://github.com/LANDIS-II-Foundation/LANDVIZ/tree/master/example/example_project).  Note that Chrome will flag this as 'Dangerous'.  It is safe to proceed.
 
 # Citation
 
