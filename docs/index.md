@@ -6,7 +6,7 @@ Prior to using the Viz Tool, the modeler runs LANDIS-II (or any model that provi
 
 This visualization tool was developed with colleagues Johannes Liem and Helen Jenny at Oregon State University.  
 
-[View Example HERE](http://cnfworkshop6.cnr.ncsu.edu/landviz/landviz/)
+[View Example HERE - UNDER CONSTRUCTION]()
 
 # Release Notes
 
@@ -43,5 +43,3 @@ If you come across any issue or suspected bug, please post about it in the [issu
 # Author
 
 [The LANDIS-II Foundation](http://www.landis-ii.org)
-
-Mail : rschell@ncsu.edu
