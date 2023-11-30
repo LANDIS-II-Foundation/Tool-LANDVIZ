@@ -23,7 +23,7 @@ LandViz is not specific to LANDIS-II.  It is a generic tool for displaying map d
 
 # Download
 
-- The latest version can be [download HERE](https://github.com/LANDIS-II-Foundation/LANDVIZ/blob/master/deploy/installer/LandisPreProcToolInstaller.msi). To install it on your computer, launch the installer.
+- The latest version can be [download HERE](https://github.com/LANDIS-II-Foundation/LANDVIZ/blob/master/deploy/installer/LandisPreProcToolInstaller.msi). Note:  You will see a notice that the file is to big to view.  That's OK, you don't want to see it.  Instead, look for the download button, immediately to the right of the button labeled 'Raw'.  To install it on your computer, launch the installer.
 
 # Example Files
 
